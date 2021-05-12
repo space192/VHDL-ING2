@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clockM:fS1|clockout'
+Slack : -3.281
+TNS   : -182.884
+
+Type  : Slow 1200mV 85C Model Setup 'EtatFeu:fs2|clkOut'
+Slack : -2.636
+TNS   : -54.556
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.609
+TNS   : -47.101
+
+Type  : Slow 1200mV 85C Model Hold 'clockM:fS1|clockout'
+Slack : 0.639
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.642
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'EtatFeu:fs2|clkOut'
+Slack : 0.645
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -40.881
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockM:fS1|clockout'
+Slack : -1.403
+TNS   : -91.195
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'EtatFeu:fs2|clkOut'
+Slack : -1.403
+TNS   : -44.896
+
+Type  : Slow 1200mV 0C Model Setup 'clockM:fS1|clockout'
+Slack : -2.897
+TNS   : -163.172
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -2.384
+TNS   : -40.604
+
+Type  : Slow 1200mV 0C Model Setup 'EtatFeu:fs2|clkOut'
+Slack : -2.369
+TNS   : -46.035
+
+Type  : Slow 1200mV 0C Model Hold 'clockM:fS1|clockout'
+Slack : 0.590
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.595
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'EtatFeu:fs2|clkOut'
+Slack : 0.597
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -40.881
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockM:fS1|clockout'
+Slack : -1.403
+TNS   : -91.195
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'EtatFeu:fs2|clkOut'
+Slack : -1.403
+TNS   : -44.896
+
+Type  : Fast 1200mV 0C Model Setup 'clockM:fS1|clockout'
+Slack : -0.797
+TNS   : -38.444
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.589
+TNS   : -5.817
+
+Type  : Fast 1200mV 0C Model Setup 'EtatFeu:fs2|clkOut'
+Slack : -0.491
+TNS   : -4.433
+
+Type  : Fast 1200mV 0C Model Hold 'clockM:fS1|clockout'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.247
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'EtatFeu:fs2|clkOut'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -31.112
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockM:fS1|clockout'
+Slack : -1.000
+TNS   : -65.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'EtatFeu:fs2|clkOut'
+Slack : -1.000
+TNS   : -32.000
+
+------------------------------------------------------------

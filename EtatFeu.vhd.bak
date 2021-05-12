@@ -1,0 +1,41 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use work.all;
+
+entity EtatFeu is port(
+	clkS : in std_logic;
+	ledRS, ledRO, ledRV : out std_logic;
+	max : out integer);
+end EtatFeu;
+
+
+architecture structural of EtatFeu is
+signal count : integer range 0 to 3 := 0;
+begin
+	process(clkS)
+	begin
+		if clkS'event and clkS = '1' then
+			if count = 2 then
+			count <= 0;
+			else
+				count <= count + 1;
+			end if;
+		end if;
+		if count = 0 then
+			max <= 9;
+			ledRS <= '1';
+			ledRO <= '0';
+			ledRV <= '0';
+		elsif count = 1 then
+			max <= 6;
+			ledRS <= '0';
+			ledRO <= '1';
+			ledRV <= '0';
+		elsif count = 2 then
+			max <= 3;
+			ledRS <= '0';
+			ledRO <= '0';
+			ledRV <= '1';
+		end if;
+	end process;
+end structural;

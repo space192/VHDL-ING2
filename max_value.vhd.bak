@@ -1,0 +1,15 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.all;
+
+
+entity max_value is
+	port();
+end max_value;
+
+
+architecture structural of max_value is
+begin
+	
+end structural;

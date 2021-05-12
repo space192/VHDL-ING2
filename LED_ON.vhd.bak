@@ -1,0 +1,14 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use work.all;
+
+entity LED_ON is port(
+	LED : out std_logic);
+end LED_ON;
+
+
+architecture structural of LED_ON is
+
+begin
+	LED <= 1;
+end structural;
