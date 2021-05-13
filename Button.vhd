@@ -13,7 +13,7 @@ generic(
 port(
 	clk: in std_logic;
 	reset: in std_logic; --Active Low
-	input: in std_logic;
+	--input: in std_logic;
 	debounce: out std_logic
 );
 end entity;
@@ -25,18 +25,18 @@ architecture arch of Button_Debounce is
 begin
 
 process(clk) --Clock Divider
-variable count: integer := 0;
+variable count_debounce: integer := 0;
 begin
 	if (clk'event and clk = '1') then
 		if (reset = '0') then
-			count := 0;
+			count_debounce := 0;
 			sample_pulse <= '0';
 		else
-			if (count < delay) then
+			if (count_debounce < delay) then
 				count := count + 1;
 				sample_pulse <= '0';
 			else
-				count := 0;
+				count_debounce := 0;
 				sample_pulse <= '1';
 			end if;
 		end if;
@@ -47,11 +47,11 @@ process(clk) --Sampling Process
 begin
 	if (clk'event and clk = '1') then
 		if (reset = '0') then
-			sample <= (others => input);
+			sample <= (others => button);
 		else
 			if (sample_pulse = '1') then
 				sample(9 downto 1) <= sample(8 downto 0); -- Left Shift
-				sample(0) <= input;
+				sample(0) <= button;
 			end if;
 		end if;
 	end if;
@@ -74,6 +74,7 @@ begin
 					if (sample = "0000000000") then --Active Low Pulse Out
 						if (flag = '0') then
 							debounce <= '1';
+							count := '4';
 							flag := '1';
 						else
 							debounce <= '0';
@@ -100,6 +101,7 @@ begin
 					if (sample = "1111111111") then --Active High Pulse Out
 						if (flag = '0') then
 							debounce <= '1';
+							count := '0';
 							flag := '1';
 						else
 							debounce <= '0';
