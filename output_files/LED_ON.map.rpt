@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LED_ON
-Thu May 13 13:44:54 2021
+Thu May 13 15:40:38 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -58,13 +58,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 13 13:44:54 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 13 15:40:37 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LED_ON                                      ;
 ; Top-level Entity Name              ; LED_ON                                      ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3,820                                       ;
-;     Total combinational functions  ; 3,817                                       ;
+; Total logic elements               ; 3,799                                       ;
+;     Total combinational functions  ; 3,796                                       ;
 ;     Dedicated logic registers      ; 180                                         ;
 ; Total registers                    ; 180                                         ;
 ; Total pins                         ; 70                                          ;
@@ -200,6 +200,7 @@ refer to the applicable agreement for further details.
 ; max_value.vhd                    ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/max_value.vhd                                            ;         ;
 ; AffichageTemps.vhd               ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/AffichageTemps.vhd                                       ;         ;
 ; VGA.vhd                          ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/VGA.vhd                                                  ;         ;
+; RegisterLED.vhd                  ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/RegisterLED.vhd                                          ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
@@ -246,16 +247,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 3,820                  ;
+; Estimated Total logic elements              ; 3,799                  ;
 ;                                             ;                        ;
-; Total combinational functions               ; 3817                   ;
+; Total combinational functions               ; 3796                   ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 1534                   ;
-;     -- 3 input functions                    ; 1131                   ;
-;     -- <=2 input functions                  ; 1152                   ;
+;     -- 4 input functions                    ; 1547                   ;
+;     -- 3 input functions                    ; 1124                   ;
+;     -- <=2 input functions                  ; 1125                   ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 2738                   ;
+;     -- normal mode                          ; 2717                   ;
 ;     -- arithmetic mode                      ; 1079                   ;
 ;                                             ;                        ;
 ; Total registers                             ; 180                    ;
@@ -268,8 +269,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; EtatFeu:fs2|count2[31] ;
 ; Maximum fan-out                             ; 139                    ;
-; Total fan-out                               ; 12265                  ;
-; Average fan-out                             ; 2.96                   ;
+; Total fan-out                               ; 12304                  ;
+; Average fan-out                             ; 2.98                   ;
 +---------------------------------------------+------------------------+
 
 
@@ -278,9 +279,9 @@ refer to the applicable agreement for further details.
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                            ; Entity Name     ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |LED_ON                                        ; 3817 (1236)         ; 180 (1)                   ; 0           ; 0          ; 10           ; 0       ; 5         ; 70   ; 0            ; 0          ; |LED_ON                                                                                                                        ; LED_ON          ; work         ;
+; |LED_ON                                        ; 3796 (1245)         ; 180 (1)                   ; 0           ; 0          ; 10           ; 0       ; 5         ; 70   ; 0            ; 0          ; |LED_ON                                                                                                                        ; LED_ON          ; work         ;
 ;    |AffichageTemps:fs3_Temps|                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|AffichageTemps:fs3_Temps                                                                                               ; AffichageTemps  ; work         ;
-;    |EtatFeu:fs2|                               ; 2197 (166)          ; 65 (65)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2                                                                                                            ; EtatFeu         ; work         ;
+;    |EtatFeu:fs2|                               ; 2167 (136)          ; 65 (65)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2                                                                                                            ; EtatFeu         ; work         ;
 ;       |lpm_divide:Div0|                        ; 492 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0                                                                                            ; lpm_divide      ; work         ;
 ;          |lpm_divide_fbo:auto_generated|       ; 492 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0|lpm_divide_fbo:auto_generated                                                              ; lpm_divide_fbo  ; work         ;
 ;             |abs_divider_kbg:divider|          ; 492 (8)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                                      ; abs_divider_kbg ; work         ;
@@ -291,7 +292,7 @@ refer to the applicable agreement for further details.
 ;             |abs_divider_4dg:divider|          ; 1539 (8)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider                                      ; abs_divider_4dg ; work         ;
 ;                |alt_u_div_ske:divider|         ; 1510 (1510)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider|alt_u_div_ske:divider                ; alt_u_div_ske   ; work         ;
 ;                |lpm_abs_8b9:my_abs_num|        ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider|lpm_abs_8b9:my_abs_num               ; lpm_abs_8b9     ; work         ;
-;    |VGA:VGA_Sub|                               ; 132 (132)           ; 55 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|VGA:VGA_Sub                                                                                                            ; VGA             ; work         ;
+;    |VGA:VGA_Sub|                               ; 126 (126)           ; 55 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|VGA:VGA_Sub                                                                                                            ; VGA             ; work         ;
 ;    |afficheur:fs3_affichage_dizaine_feu1|      ; 29 (29)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_dizaine_feu1                                                                                   ; afficheur       ; work         ;
 ;    |afficheur:fs3_affichage_dizaine_feu2|      ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_dizaine_feu2                                                                                   ; afficheur       ; work         ;
 ;    |afficheur:fs3_affichage_unite_feu1|        ; 31 (31)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_unite_feu1                                                                                     ; afficheur       ; work         ;
@@ -315,7 +316,7 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:sub_par_add|             ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add        ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub     ; work         ;
 ;                   |add_sub_5vg:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_5vg:auto_generated ; add_sub_5vg     ; work         ;
-;    |max_value:fs2_value|                       ; 71 (64)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|max_value:fs2_value                                                                                                    ; max_value       ; work         ;
+;    |max_value:fs2_value|                       ; 77 (70)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|max_value:fs2_value                                                                                                    ; max_value       ; work         ;
 ;       |afficheur:fState|                       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|max_value:fs2_value|afficheur:fState                                                                                   ; afficheur       ; work         ;
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -379,10 +380,11 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; AffichageTemps:fs3_Temps|enable2                    ; GND                 ; yes                    ;
 ; max_value:fs2_value|maxV[0]                         ; GND                 ; yes                    ;
 ; max_value:fs2_value|maxV[1]                         ; GND                 ; yes                    ;
+; max_value:fs2_value|maxV[2]                         ; GND                 ; yes                    ;
 ; max_value:fs2_value|maxV[3]                         ; GND                 ; yes                    ;
 ; max_value:fs2_value|maxV[4]                         ; GND                 ; yes                    ;
 ; max_value:fs2_value|maxV[5]                         ; GND                 ; yes                    ;
-; Number of user-specified and inferred latches = 38  ;                     ;                        ;
+; Number of user-specified and inferred latches = 39  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -394,7 +396,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Total registers                              ; 180   ;
 ; Number of registers using Synchronous Clear  ; 51    ;
-; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Synchronous Load   ; 35    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
@@ -407,12 +409,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 29:1               ; 2 bits    ; 38 LEs        ; 32 LEs               ; 6 LEs                  ; Yes        ; |LED_ON|VGA:VGA_Sub|B_out[3]                            ;
+; 29:1               ; 2 bits    ; 38 LEs        ; 32 LEs               ; 6 LEs                  ; Yes        ; |LED_ON|VGA:VGA_Sub|R_out[1]                            ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |LED_ON|color                                           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |LED_ON|max_value:fs2_value|temp[2]                     ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |LED_ON|max_value:fs2_value|afficheur:fState|resultS[1] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |LED_ON|max_value:fs2_value|temp[1]                     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |LED_ON|max_value:fs2_value|afficheur:fState|resultS[4] ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |LED_ON|afficheur:fs3_affichage_unite_feu1|resultS[0]   ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |LED_ON|afficheur:fs3_affichage_dizaine_feu1|resultS[6] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |LED_ON|afficheur:fs3_affichage_dizaine_feu1|resultS[5] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
@@ -796,22 +798,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ff         ; 180                         ;
 ;     SCLR              ; 48                          ;
 ;     SCLR SLD          ; 3                           ;
-;     plain             ; 129                         ;
-; cycloneiii_lcell_comb ; 3819                        ;
+;     SLD               ; 32                          ;
+;     plain             ; 97                          ;
+; cycloneiii_lcell_comb ; 3797                        ;
 ;     arith             ; 1079                        ;
 ;         2 data inputs ; 237                         ;
 ;         3 data inputs ; 842                         ;
-;     normal            ; 2740                        ;
+;     normal            ; 2718                        ;
 ;         0 data inputs ; 76                          ;
 ;         1 data inputs ; 13                          ;
-;         2 data inputs ; 828                         ;
-;         3 data inputs ; 289                         ;
-;         4 data inputs ; 1534                        ;
+;         2 data inputs ; 800                         ;
+;         3 data inputs ; 282                         ;
+;         4 data inputs ; 1547                        ;
 ; cycloneiii_mac_mult   ; 5                           ;
 ; cycloneiii_mac_out    ; 5                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 125.50                      ;
-; Average LUT depth     ; 66.14                       ;
+; Average LUT depth     ; 66.25                       ;
 +-----------------------+-----------------------------+
 
 
@@ -820,7 +823,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:31     ;
+; Top            ; 00:00:40     ;
 +----------------+--------------+
 
 
@@ -830,7 +833,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 13 13:43:48 2021
+    Info: Processing started: Thu May 13 15:39:00 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LED_ON -c LED_ON
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file led_on.vhd
@@ -857,6 +860,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file afficha
 Info (12021): Found 2 design units, including 1 entities, in source file vga.vhd
     Info (12022): Found design unit 1: VGA-description File: Z:/VHDL/projet/LED ON/VGA.vhd Line: 33
     Info (12023): Found entity 1: VGA File: Z:/VHDL/projet/LED ON/VGA.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file registerled.vhd
+    Info (12022): Found design unit 1: registerLED-structural File: Z:/VHDL/projet/LED ON/RegisterLED.vhd Line: 10
+    Info (12023): Found entity 1: RegisterLED File: Z:/VHDL/projet/LED ON/RegisterLED.vhd Line: 6
 Info (12127): Elaborating entity "LED_ON" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at LED_ON.vhd(10): used implicit default value for signal "SER1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
 Warning (10541): VHDL Signal Declaration warning at LED_ON.vhd(10): used implicit default value for signal "SCLK1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
@@ -940,7 +946,7 @@ Info (10041): Inferred latch for "maxV[28]" at max_value.vhd(30) File: Z:/VHDL/p
 Info (10041): Inferred latch for "maxV[29]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
 Info (10041): Inferred latch for "maxV[30]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
 Info (10041): Inferred latch for "maxV[31]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (12129): Elaborating entity "afficheur" using architecture "A:structural" for hierarchy "max_value:fs2_value|afficheur:fState" File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 50
+Info (12129): Elaborating entity "afficheur" using architecture "A:structural" for hierarchy "max_value:fs2_value|afficheur:fState" File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 53
 Warning (10492): VHDL Process Statement warning at afficheur.vhd(16): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 16
 Warning (10631): VHDL Process Statement warning at afficheur.vhd(14): inferring latch(es) for signal or variable "resultS", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
 Info (10041): Inferred latch for "resultS[0]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
@@ -1074,15 +1080,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "boutton" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 11
-Info (21057): Implemented 3905 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3884 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 68 output pins
-    Info (21061): Implemented 3825 logic cells
+    Info (21061): Implemented 3804 logic cells
     Info (21062): Implemented 10 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 755 megabytes
-    Info: Processing ended: Thu May 13 13:44:54 2021
-    Info: Elapsed time: 00:01:06
-    Info: Total CPU time (on all processors): 00:01:41
+    Info: Peak virtual memory: 757 megabytes
+    Info: Processing ended: Thu May 13 15:40:38 2021
+    Info: Elapsed time: 00:01:38
+    Info: Total CPU time (on all processors): 00:02:38
 
 

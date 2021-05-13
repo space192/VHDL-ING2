@@ -1,5 +1,5 @@
 Flow report for LED_ON
-Thu May 13 13:46:21 2021
+Thu May 13 15:42:08 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 13 13:46:21 2021       ;
+; Flow Status                        ; Successful - Thu May 13 15:42:08 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LED_ON                                      ;
 ; Top-level Entity Name              ; LED_ON                                      ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 3,828 / 49,760 ( 8 % )                      ;
-;     Total combinational functions  ; 3,818 / 49,760 ( 8 % )                      ;
+; Total logic elements               ; 3,802 / 49,760 ( 8 % )                      ;
+;     Total combinational functions  ; 3,796 / 49,760 ( 8 % )                      ;
 ;     Dedicated logic registers      ; 180 / 49,760 ( < 1 % )                      ;
 ; Total registers                    ; 180                                         ;
 ; Total pins                         ; 70 / 360 ( 19 % )                           ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/13/2021 13:43:49 ;
+; Start date & time ; 05/13/2021 15:39:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LED_ON              ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 52234776526.162090622902308            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 52234776526.162091314402520            ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_RUN_TOOL_AUTOMATICALLY          ; Off                                    ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
@@ -99,12 +99,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:03     ; 1.0                     ; 755 MB              ; 00:01:37                           ;
-; Fitter               ; 00:00:53     ; 1.7                     ; 1866 MB             ; 00:02:08                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 550 MB              ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:12     ; 3.2                     ; 763 MB              ; 00:00:29                           ;
-; EDA Netlist Writer   ; 00:00:06     ; 1.0                     ; 549 MB              ; 00:00:06                           ;
-; Total                ; 00:02:21     ; --                      ; --                  ; 00:04:27                           ;
+; Analysis & Synthesis ; 00:01:33     ; 1.0                     ; 757 MB              ; 00:02:34                           ;
+; Fitter               ; 00:00:55     ; 1.7                     ; 1866 MB             ; 00:02:14                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 556 MB              ; 00:00:08                           ;
+; Timing Analyzer      ; 00:00:13     ; 3.2                     ; 758 MB              ; 00:00:30                           ;
+; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 550 MB              ; 00:00:06                           ;
+; Total                ; 00:02:54     ; --                      ; --                  ; 00:05:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

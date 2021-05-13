@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu May 13 13:44:54 2021
+Analysis & Synthesis Status : Successful - Thu May 13 15:40:37 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : LED_ON
 Top-level Entity Name : LED_ON
 Family : MAX 10
-Total logic elements : 3,820
-    Total combinational functions : 3,817
+Total logic elements : 3,799
+    Total combinational functions : 3,796
     Dedicated logic registers : 180
 Total registers : 180
 Total pins : 70

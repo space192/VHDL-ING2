@@ -45,6 +45,9 @@ begin
 			maxV <= 5;
 			temp <= "0100";
 			--LEDR1 <= '0'; LEDO1 <= '1'; LEDV1 <= '0'; LEDR2 <= '1'; LEDO2 <= '0'; LEDV2 <= '0';
+		elsif counter = 5 then
+			maxV <= 0;
+			temp <= "0101";
 		end if;
 	end process;
 	fState : entity afficheur(structural)
