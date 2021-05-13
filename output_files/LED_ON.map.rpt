@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LED_ON
-Wed May 12 21:52:48 2021
+Thu May 13 13:10:22 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,17 +13,26 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: clockM:fS1
- 12. Parameter Settings for Inferred Entity Instance: EtatFeu:fs2|lpm_divide:Mod0
- 13. Parameter Settings for Inferred Entity Instance: EtatFeu:fs2|lpm_divide:Div0
- 14. Port Connectivity Checks: "max_value:fs2_value|afficheur:fState2"
- 15. Port Connectivity Checks: "max_value:fs2_value|afficheur:fState"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: clockM:fS1
+ 13. Parameter Settings for Inferred Entity Instance: EtatFeu:fs2|lpm_divide:Mod0
+ 14. Parameter Settings for Inferred Entity Instance: EtatFeu:fs2|lpm_divide:Div0
+ 15. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult14
+ 16. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult5
+ 17. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult3
+ 18. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
+ 19. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult4
+ 20. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult7
+ 21. lpm_mult Parameter Settings by Entity Instance
+ 22. Port Connectivity Checks: "max_value:fs2_value|afficheur:fState2"
+ 23. Port Connectivity Checks: "max_value:fs2_value|afficheur:fState"
+ 24. Port Connectivity Checks: "VGA:VGA_Sub"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -49,19 +58,19 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 12 21:52:47 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 13 13:10:22 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LED_ON                                      ;
 ; Top-level Entity Name              ; LED_ON                                      ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 2,430                                       ;
-;     Total combinational functions  ; 2,430                                       ;
-;     Dedicated logic registers      ; 124                                         ;
-; Total registers                    ; 124                                         ;
-; Total pins                         ; 55                                          ;
+; Total logic elements               ; 3,831                                       ;
+;     Total combinational functions  ; 3,828                                       ;
+;     Dedicated logic registers      ; 180                                         ;
+; Total registers                    ; 180                                         ;
+; Total pins                         ; 69                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 10                                          ;
 ; Total PLLs                         ; 0                                           ;
 ; UFM blocks                         ; 0                                           ;
 ; ADC blocks                         ; 0                                           ;
@@ -160,51 +169,72 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; LED_ON.vhd                       ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/LED_ON.vhd                                           ;         ;
-; afficheur.vhd                    ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/afficheur.vhd                                        ;         ;
-; clock.vhd                        ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/clock.vhd                                            ;         ;
-; clock_afficheur.vhd              ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/clock_afficheur.vhd                                  ;         ;
-; EtatFeu.vhd                      ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/EtatFeu.vhd                                          ;         ;
-; max_value.vhd                    ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/max_value.vhd                                        ;         ;
-; AffichageTemps.vhd               ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/AffichageTemps.vhd                                   ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc      ;         ;
-; db/lpm_divide_25o.tdf            ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/lpm_divide_25o.tdf                                ;         ;
-; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/abs_divider_4dg.tdf                               ;         ;
-; db/alt_u_div_ske.tdf             ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/alt_u_div_ske.tdf                                 ;         ;
-; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/add_sub_t3c.tdf                                   ;         ;
-; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/add_sub_u3c.tdf                                   ;         ;
-; db/lpm_abs_8b9.tdf               ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/lpm_abs_8b9.tdf                                   ;         ;
-; db/lpm_divide_fbo.tdf            ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/lpm_divide_fbo.tdf                                ;         ;
-; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/abs_divider_kbg.tdf                               ;         ;
-; db/alt_u_div_she.tdf             ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/alt_u_div_she.tdf                                 ;         ;
-; db/lpm_abs_o99.tdf               ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/lpm_abs_o99.tdf                                   ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; LED_ON.vhd                       ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd                                 ;         ;
+; afficheur.vhd                    ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd                              ;         ;
+; clock.vhd                        ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/clock.vhd                                  ;         ;
+; clock_afficheur.vhd              ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/clock_afficheur.vhd                        ;         ;
+; EtatFeu.vhd                      ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd                                ;         ;
+; max_value.vhd                    ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd                              ;         ;
+; AffichageTemps.vhd               ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd                         ;         ;
+; VGA.vhd                          ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/VGA.vhd                                    ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
+; db/lpm_divide_25o.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_divide_25o.tdf                      ;         ;
+; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/abs_divider_4dg.tdf                     ;         ;
+; db/alt_u_div_ske.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/alt_u_div_ske.tdf                       ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_t3c.tdf                         ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_u3c.tdf                         ;         ;
+; db/lpm_abs_8b9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_abs_8b9.tdf                         ;         ;
+; db/lpm_divide_fbo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_divide_fbo.tdf                      ;         ;
+; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/abs_divider_kbg.tdf                     ;         ;
+; db/alt_u_div_she.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/alt_u_div_she.tdf                       ;         ;
+; db/lpm_abs_o99.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_abs_o99.tdf                         ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; db/mult_fgs.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/mult_fgs.tdf                            ;         ;
+; db/mult_bgs.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/mult_bgs.tdf                            ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf            ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/csa_add.inc             ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muleabz.inc             ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mul_lfrg.inc            ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mul_boothc.inc          ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_ded_mult.inc        ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc      ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/dffpipe.inc             ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf            ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_7kg.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_7kg.tdf                         ;         ;
+; db/add_sub_5vg.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_5vg.tdf                         ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.tdf            ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------+
@@ -212,60 +242,97 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 2,430                  ;
+; Estimated Total logic elements              ; 3,831                  ;
 ;                                             ;                        ;
-; Total combinational functions               ; 2430                   ;
+; Total combinational functions               ; 3828                   ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 676                    ;
-;     -- 3 input functions                    ; 793                    ;
-;     -- <=2 input functions                  ; 961                    ;
+;     -- 4 input functions                    ; 1532                   ;
+;     -- 3 input functions                    ; 1141                   ;
+;     -- <=2 input functions                  ; 1155                   ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 1640                   ;
-;     -- arithmetic mode                      ; 790                    ;
+;     -- normal mode                          ; 2749                   ;
+;     -- arithmetic mode                      ; 1079                   ;
 ;                                             ;                        ;
-; Total registers                             ; 124                    ;
-;     -- Dedicated logic registers            ; 124                    ;
+; Total registers                             ; 180                    ;
+;     -- Dedicated logic registers            ; 180                    ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
-; I/O pins                                    ; 55                     ;
+; I/O pins                                    ; 69                     ;
 ;                                             ;                        ;
-; Embedded Multiplier 9-bit elements          ; 0                      ;
+; Embedded Multiplier 9-bit elements          ; 10                     ;
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; EtatFeu:fs2|count2[31] ;
 ; Maximum fan-out                             ; 139                    ;
-; Total fan-out                               ; 7258                   ;
-; Average fan-out                             ; 2.72                   ;
+; Total fan-out                               ; 12298                  ;
+; Average fan-out                             ; 2.96                   ;
 +---------------------------------------------+------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                ;
-+-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                              ; Entity Name     ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |LED_ON                                   ; 2430 (0)            ; 124 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 55   ; 0            ; 0          ; |LED_ON                                                                                                          ; LED_ON          ; work         ;
-;    |AffichageTemps:fs3_Temps|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|AffichageTemps:fs3_Temps                                                                                 ; AffichageTemps  ; work         ;
-;    |EtatFeu:fs2|                          ; 2198 (167)          ; 65 (65)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2                                                                                              ; EtatFeu         ; work         ;
-;       |lpm_divide:Div0|                   ; 492 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0                                                                              ; lpm_divide      ; work         ;
-;          |lpm_divide_fbo:auto_generated|  ; 492 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0|lpm_divide_fbo:auto_generated                                                ; lpm_divide_fbo  ; work         ;
-;             |abs_divider_kbg:divider|     ; 492 (8)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg ; work         ;
-;                |alt_u_div_she:divider|    ; 449 (449)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider  ; alt_u_div_she   ; work         ;
-;                |lpm_abs_8b9:my_abs_num|   ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num ; lpm_abs_8b9     ; work         ;
-;       |lpm_divide:Mod0|                   ; 1539 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0                                                                              ; lpm_divide      ; work         ;
-;          |lpm_divide_25o:auto_generated|  ; 1539 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated                                                ; lpm_divide_25o  ; work         ;
-;             |abs_divider_4dg:divider|     ; 1539 (8)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg ; work         ;
-;                |alt_u_div_ske:divider|    ; 1510 (1510)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider|alt_u_div_ske:divider  ; alt_u_div_ske   ; work         ;
-;                |lpm_abs_8b9:my_abs_num|   ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider|lpm_abs_8b9:my_abs_num ; lpm_abs_8b9     ; work         ;
-;    |afficheur:fs3_affichage_dizaine_feu1| ; 29 (29)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_dizaine_feu1                                                                     ; afficheur       ; work         ;
-;    |afficheur:fs3_affichage_dizaine_feu2| ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_dizaine_feu2                                                                     ; afficheur       ; work         ;
-;    |afficheur:fs3_affichage_unite_feu1|   ; 31 (31)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_unite_feu1                                                                       ; afficheur       ; work         ;
-;    |afficheur:fs3_affichage_unite_feu2|   ; 23 (23)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_unite_feu2                                                                       ; afficheur       ; work         ;
-;    |clockM:fS1|                           ; 47 (47)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|clockM:fS1                                                                                               ; clockM          ; work         ;
-;    |max_value:fs2_value|                  ; 79 (72)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|max_value:fs2_value                                                                                      ; max_value       ; work         ;
-;       |afficheur:fState|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|max_value:fs2_value|afficheur:fState                                                                     ; afficheur       ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                   ;
++------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                            ; Entity Name     ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |LED_ON                                        ; 3828 (1244)         ; 180 (1)                   ; 0           ; 0          ; 10           ; 0       ; 5         ; 69   ; 0            ; 0          ; |LED_ON                                                                                                                        ; LED_ON          ; work         ;
+;    |AffichageTemps:fs3_Temps|                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|AffichageTemps:fs3_Temps                                                                                               ; AffichageTemps  ; work         ;
+;    |EtatFeu:fs2|                               ; 2197 (166)          ; 65 (65)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2                                                                                                            ; EtatFeu         ; work         ;
+;       |lpm_divide:Div0|                        ; 492 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0                                                                                            ; lpm_divide      ; work         ;
+;          |lpm_divide_fbo:auto_generated|       ; 492 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0|lpm_divide_fbo:auto_generated                                                              ; lpm_divide_fbo  ; work         ;
+;             |abs_divider_kbg:divider|          ; 492 (8)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                                      ; abs_divider_kbg ; work         ;
+;                |alt_u_div_she:divider|         ; 449 (449)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider                ; alt_u_div_she   ; work         ;
+;                |lpm_abs_8b9:my_abs_num|        ; 35 (35)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|lpm_abs_8b9:my_abs_num               ; lpm_abs_8b9     ; work         ;
+;       |lpm_divide:Mod0|                        ; 1539 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0                                                                                            ; lpm_divide      ; work         ;
+;          |lpm_divide_25o:auto_generated|       ; 1539 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated                                                              ; lpm_divide_25o  ; work         ;
+;             |abs_divider_4dg:divider|          ; 1539 (8)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider                                      ; abs_divider_4dg ; work         ;
+;                |alt_u_div_ske:divider|         ; 1510 (1510)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider|alt_u_div_ske:divider                ; alt_u_div_ske   ; work         ;
+;                |lpm_abs_8b9:my_abs_num|        ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider|lpm_abs_8b9:my_abs_num               ; lpm_abs_8b9     ; work         ;
+;    |VGA:VGA_Sub|                               ; 128 (128)           ; 55 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|VGA:VGA_Sub                                                                                                            ; VGA             ; work         ;
+;    |afficheur:fs3_affichage_dizaine_feu1|      ; 29 (29)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_dizaine_feu1                                                                                   ; afficheur       ; work         ;
+;    |afficheur:fs3_affichage_dizaine_feu2|      ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_dizaine_feu2                                                                                   ; afficheur       ; work         ;
+;    |afficheur:fs3_affichage_unite_feu1|        ; 31 (31)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_unite_feu1                                                                                     ; afficheur       ; work         ;
+;    |afficheur:fs3_affichage_unite_feu2|        ; 23 (23)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_unite_feu2                                                                                     ; afficheur       ; work         ;
+;    |clockM:fS1|                                ; 47 (47)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|clockM:fS1                                                                                                             ; clockM          ; work         ;
+;    |lpm_mult:Mult14|                           ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult14                                                                                                        ; lpm_mult        ; work         ;
+;       |mult_fgs:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult14|mult_fgs:auto_generated                                                                                ; mult_fgs        ; work         ;
+;    |lpm_mult:Mult1|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult1                                                                                                         ; lpm_mult        ; work         ;
+;       |mult_bgs:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult1|mult_bgs:auto_generated                                                                                 ; mult_bgs        ; work         ;
+;    |lpm_mult:Mult3|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult3                                                                                                         ; lpm_mult        ; work         ;
+;       |mult_bgs:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult3|mult_bgs:auto_generated                                                                                 ; mult_bgs        ; work         ;
+;    |lpm_mult:Mult4|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult4                                                                                                         ; lpm_mult        ; work         ;
+;       |mult_fgs:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult4|mult_fgs:auto_generated                                                                                 ; mult_fgs        ; work         ;
+;    |lpm_mult:Mult5|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult5                                                                                                         ; lpm_mult        ; work         ;
+;       |mult_bgs:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult5|mult_bgs:auto_generated                                                                                 ; mult_bgs        ; work         ;
+;    |lpm_mult:Mult7|                            ; 28 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7                                                                                                         ; lpm_mult        ; work         ;
+;       |multcore:mult_core|                     ; 28 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core                                                                                      ; multcore        ; work         ;
+;          |mpar_add:padder|                     ; 12 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add        ; work         ;
+;             |lpm_add_sub:adder[0]|             ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub     ; work         ;
+;                |add_sub_7kg:auto_generated|    ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_7kg:auto_generated                      ; add_sub_7kg     ; work         ;
+;             |mpar_add:sub_par_add|             ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add        ; work         ;
+;                |lpm_add_sub:adder[0]|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub     ; work         ;
+;                   |add_sub_5vg:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_5vg:auto_generated ; add_sub_5vg     ; work         ;
+;    |max_value:fs2_value|                       ; 78 (71)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|max_value:fs2_value                                                                                                    ; max_value       ; work         ;
+;       |afficheur:fState|                       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|max_value:fs2_value|afficheur:fState                                                                                   ; afficheur       ; work         ;
++------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 5           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 10          ;
+; Signed Embedded Multipliers           ; 5           ;
+; Unsigned Embedded Multipliers         ; 0           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -327,9 +394,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 124   ;
-; Number of registers using Synchronous Clear  ; 32    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 180   ;
+; Number of registers using Synchronous Clear  ; 51    ;
+; Number of registers using Synchronous Load   ; 3     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
@@ -342,9 +409,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; 29:1               ; 2 bits    ; 38 LEs        ; 32 LEs               ; 6 LEs                  ; Yes        ; |LED_ON|VGA:VGA_Sub|R_out[1]                            ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |LED_ON|max_value:fs2_value|temp[2]                     ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |LED_ON|max_value:fs2_value|afficheur:fState|resultS[1] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |LED_ON|afficheur:fs3_affichage_unite_feu1|resultS[6]   ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |LED_ON|color                                           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |LED_ON|max_value:fs2_value|afficheur:fState|resultS[4] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |LED_ON|afficheur:fs3_affichage_unite_feu1|resultS[0]   ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |LED_ON|afficheur:fs3_affichage_dizaine_feu1|resultS[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
@@ -405,6 +474,291 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult14                ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 11       ; Untyped             ;
+; LPM_WIDTHB                                     ; 11       ; Untyped             ;
+; LPM_WIDTHP                                     ; 22       ; Untyped             ;
+; LPM_WIDTHR                                     ; 22       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_fgs ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult5                 ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 10       ; Untyped             ;
+; LPM_WIDTHB                                     ; 10       ; Untyped             ;
+; LPM_WIDTHP                                     ; 20       ; Untyped             ;
+; LPM_WIDTHR                                     ; 20       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_bgs ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult3                 ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 10       ; Untyped             ;
+; LPM_WIDTHB                                     ; 10       ; Untyped             ;
+; LPM_WIDTHP                                     ; 20       ; Untyped             ;
+; LPM_WIDTHR                                     ; 20       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_bgs ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1                 ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 10       ; Untyped             ;
+; LPM_WIDTHB                                     ; 10       ; Untyped             ;
+; LPM_WIDTHP                                     ; 20       ; Untyped             ;
+; LPM_WIDTHR                                     ; 20       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_bgs ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult4                 ;
++------------------------------------------------+----------+---------------------+
+; Parameter Name                                 ; Value    ; Type                ;
++------------------------------------------------+----------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 11       ; Untyped             ;
+; LPM_WIDTHB                                     ; 11       ; Untyped             ;
+; LPM_WIDTHP                                     ; 22       ; Untyped             ;
+; LPM_WIDTHR                                     ; 22       ; Untyped             ;
+; LPM_WIDTHS                                     ; 1        ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED   ; Untyped             ;
+; LPM_PIPELINE                                   ; 0        ; Untyped             ;
+; LATENCY                                        ; 0        ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped             ;
+; USE_EAB                                        ; OFF      ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6        ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_fgs ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
++------------------------------------------------+----------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult7                ;
++------------------------------------------------+---------+---------------------+
+; Parameter Name                                 ; Value   ; Type                ;
++------------------------------------------------+---------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON      ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF     ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON      ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF     ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 10      ; Untyped             ;
+; LPM_WIDTHB                                     ; 7       ; Untyped             ;
+; LPM_WIDTHP                                     ; 17      ; Untyped             ;
+; LPM_WIDTHR                                     ; 17      ; Untyped             ;
+; LPM_WIDTHS                                     ; 1       ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED  ; Untyped             ;
+; LPM_PIPELINE                                   ; 0       ; Untyped             ;
+; LATENCY                                        ; 0       ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO      ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES     ; Untyped             ;
+; USE_EAB                                        ; OFF     ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6       ; Untyped             ;
+; DEVICE_FAMILY                                  ; MAX 10  ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL  ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT     ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO    ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0       ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx      ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx      ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF     ; Untyped             ;
++------------------------------------------------+---------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance          ;
++---------------------------------------+-----------------+
+; Name                                  ; Value           ;
++---------------------------------------+-----------------+
+; Number of entity instances            ; 6               ;
+; Entity Instance                       ; lpm_mult:Mult14 ;
+;     -- LPM_WIDTHA                     ; 11              ;
+;     -- LPM_WIDTHB                     ; 11              ;
+;     -- LPM_WIDTHP                     ; 22              ;
+;     -- LPM_REPRESENTATION             ; SIGNED          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO              ;
+;     -- USE_EAB                        ; OFF             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO            ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx              ;
+; Entity Instance                       ; lpm_mult:Mult5  ;
+;     -- LPM_WIDTHA                     ; 10              ;
+;     -- LPM_WIDTHB                     ; 10              ;
+;     -- LPM_WIDTHP                     ; 20              ;
+;     -- LPM_REPRESENTATION             ; SIGNED          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO              ;
+;     -- USE_EAB                        ; OFF             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO            ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx              ;
+; Entity Instance                       ; lpm_mult:Mult3  ;
+;     -- LPM_WIDTHA                     ; 10              ;
+;     -- LPM_WIDTHB                     ; 10              ;
+;     -- LPM_WIDTHP                     ; 20              ;
+;     -- LPM_REPRESENTATION             ; SIGNED          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO              ;
+;     -- USE_EAB                        ; OFF             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO            ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx              ;
+; Entity Instance                       ; lpm_mult:Mult1  ;
+;     -- LPM_WIDTHA                     ; 10              ;
+;     -- LPM_WIDTHB                     ; 10              ;
+;     -- LPM_WIDTHP                     ; 20              ;
+;     -- LPM_REPRESENTATION             ; SIGNED          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO              ;
+;     -- USE_EAB                        ; OFF             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO            ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx              ;
+; Entity Instance                       ; lpm_mult:Mult4  ;
+;     -- LPM_WIDTHA                     ; 11              ;
+;     -- LPM_WIDTHB                     ; 11              ;
+;     -- LPM_WIDTHP                     ; 22              ;
+;     -- LPM_REPRESENTATION             ; SIGNED          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO              ;
+;     -- USE_EAB                        ; OFF             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO            ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx              ;
+; Entity Instance                       ; lpm_mult:Mult7  ;
+;     -- LPM_WIDTHA                     ; 10              ;
+;     -- LPM_WIDTHB                     ; 7               ;
+;     -- LPM_WIDTHP                     ; 17              ;
+;     -- LPM_REPRESENTATION             ; SIGNED          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO              ;
+;     -- INPUT_B_IS_CONSTANT            ; YES             ;
+;     -- USE_EAB                        ; OFF             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO            ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx              ;
++---------------------------------------+-----------------+
+
+
 +-------------------------------------------------------------------+
 ; Port Connectivity Checks: "max_value:fs2_value|afficheur:fState2" ;
 +--------+-------+----------+---------------------------------------+
@@ -425,28 +779,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+-----------------------------------+
 
 
++----------------------------------------------+
+; Port Connectivity Checks: "VGA:VGA_Sub"      ;
++------------+-------+----------+--------------+
+; Port       ; Type  ; Severity ; Details      ;
++------------+-------+----------+--------------+
+; rgb_in[12] ; Input ; Info     ; Stuck at GND ;
+; pixel      ; Input ; Info     ; Stuck at GND ;
++------------+-------+----------+--------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 55                          ;
-; cycloneiii_ff         ; 124                         ;
-;     SCLR              ; 32                          ;
-;     plain             ; 92                          ;
-; cycloneiii_lcell_comb ; 2432                        ;
-;     arith             ; 790                         ;
-;         2 data inputs ; 127                         ;
-;         3 data inputs ; 663                         ;
-;     normal            ; 1642                        ;
-;         0 data inputs ; 61                          ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 770                         ;
-;         3 data inputs ; 130                         ;
-;         4 data inputs ; 676                         ;
+; boundary_port         ; 69                          ;
+; cycloneiii_ff         ; 180                         ;
+;     SCLR              ; 48                          ;
+;     SCLR SLD          ; 3                           ;
+;     plain             ; 129                         ;
+; cycloneiii_lcell_comb ; 3830                        ;
+;     arith             ; 1079                        ;
+;         2 data inputs ; 237                         ;
+;         3 data inputs ; 842                         ;
+;     normal            ; 2751                        ;
+;         0 data inputs ; 76                          ;
+;         1 data inputs ; 13                          ;
+;         2 data inputs ; 831                         ;
+;         3 data inputs ; 299                         ;
+;         4 data inputs ; 1532                        ;
+; cycloneiii_mac_mult   ; 5                           ;
+; cycloneiii_mac_out    ; 5                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 125.50                      ;
-; Average LUT depth     ; 96.48                       ;
+; Average LUT depth     ; 65.71                       ;
 +-----------------------+-----------------------------+
 
 
@@ -455,7 +822,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:21     ;
 +----------------+--------------+
 
 
@@ -465,171 +832,261 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 12 21:52:18 2021
+    Info: Processing started: Thu May 13 13:09:45 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LED_ON -c LED_ON
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file led_on.vhd
-    Info (12022): Found design unit 1: LED_ON-structural File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 14
-    Info (12023): Found entity 1: LED_ON File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 5
+    Info (12022): Found design unit 1: LED_ON-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 19
+    Info (12023): Found entity 1: LED_ON File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 5
 Warning (12019): Can't analyze file -- file output_files/7_SEG.vhd is missing
 Info (12021): Found 0 design units, including 0 entities, in source file output_files/seg.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file afficheur.vhd
-    Info (12022): Found design unit 1: afficheur-structural File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 12
-    Info (12023): Found entity 1: afficheur File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 5
+    Info (12022): Found design unit 1: afficheur-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 12
+    Info (12023): Found entity 1: afficheur File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clock.vhd
-    Info (12022): Found design unit 1: clockM-structural File: Z:/VHDL/projet/LED ON/clock.vhd Line: 15
-    Info (12023): Found entity 1: clockM File: Z:/VHDL/projet/LED ON/clock.vhd Line: 6
+    Info (12022): Found design unit 1: clockM-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/clock.vhd Line: 15
+    Info (12023): Found entity 1: clockM File: C:/Users/VHDLING2/Desktop/VHDL-ING2/clock.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file clock_afficheur.vhd
-    Info (12022): Found design unit 1: clock_afficheur-structural File: Z:/VHDL/projet/LED ON/clock_afficheur.vhd Line: 16
-    Info (12023): Found entity 1: clock_afficheur File: Z:/VHDL/projet/LED ON/clock_afficheur.vhd Line: 7
+    Info (12022): Found design unit 1: clock_afficheur-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/clock_afficheur.vhd Line: 16
+    Info (12023): Found entity 1: clock_afficheur File: C:/Users/VHDLING2/Desktop/VHDL-ING2/clock_afficheur.vhd Line: 7
 Warning (12019): Can't analyze file -- file EtatFey.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file etatfeu.vhd
-    Info (12022): Found design unit 1: EtatFeu-structural File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 15
-    Info (12023): Found entity 1: EtatFeu File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 6
+    Info (12022): Found design unit 1: EtatFeu-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 15
+    Info (12023): Found entity 1: EtatFeu File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file max_value.vhd
-    Info (12022): Found design unit 1: max_value-structural File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 17
-    Info (12023): Found entity 1: max_value File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 7
+    Info (12022): Found design unit 1: max_value-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 17
+    Info (12023): Found entity 1: max_value File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 7
 Warning (12019): Can't analyze file -- file clockDecompte.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file affichagetemps.vhd
-    Info (12022): Found design unit 1: AffichageTemps-structural File: Z:/VHDL/projet/LED ON/AffichageTemps.vhd Line: 13
-    Info (12023): Found entity 1: AffichageTemps File: Z:/VHDL/projet/LED ON/AffichageTemps.vhd Line: 6
+    Info (12022): Found design unit 1: AffichageTemps-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd Line: 13
+    Info (12023): Found entity 1: AffichageTemps File: C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file vga.vhd
+    Info (12022): Found design unit 1: VGA-description File: C:/Users/VHDLING2/Desktop/VHDL-ING2/VGA.vhd Line: 33
+    Info (12023): Found entity 1: VGA File: C:/Users/VHDLING2/Desktop/VHDL-ING2/VGA.vhd Line: 14
 Info (12127): Elaborating entity "LED_ON" for the top level hierarchy
-Info (12129): Elaborating entity "clockM" using architecture "A:structural" for hierarchy "clockM:fS1" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 22
-Info (12129): Elaborating entity "EtatFeu" using architecture "A:structural" for hierarchy "EtatFeu:fs2" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 29
-Warning (10492): VHDL Process Statement warning at EtatFeu.vhd(37): signal "count2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at EtatFeu.vhd(38): signal "count2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 38
-Info (12129): Elaborating entity "max_value" using architecture "A:structural" for hierarchy "max_value:fs2_value" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 32
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "maxV", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDR1", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDO1", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDV1", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDR2", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDO2", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDV2", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "LEDV2" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "LEDO2" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "LEDR2" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "LEDV1" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "LEDO1" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "LEDR1" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "temp[3]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "temp[2]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "temp[1]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "temp[0]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[0]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[1]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[2]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[3]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[4]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[5]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[6]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[7]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[8]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[9]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[10]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[11]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[12]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[13]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[14]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[15]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[16]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[17]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[18]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[19]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[20]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[21]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[22]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[23]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[24]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[25]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[26]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[27]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[28]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[29]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[30]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[31]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
-Info (12129): Elaborating entity "afficheur" using architecture "A:structural" for hierarchy "max_value:fs2_value|afficheur:fState" File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 50
-Warning (10492): VHDL Process Statement warning at afficheur.vhd(16): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 16
-Warning (10631): VHDL Process Statement warning at afficheur.vhd(14): inferring latch(es) for signal or variable "resultS", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[0]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[1]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[2]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[3]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[4]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[5]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[6]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[7]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
-Info (12129): Elaborating entity "AffichageTemps" using architecture "A:structural" for hierarchy "AffichageTemps:fs3_Temps" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 36
-Warning (10631): VHDL Process Statement warning at AffichageTemps.vhd(15): inferring latch(es) for signal or variable "enable1", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/AffichageTemps.vhd Line: 15
-Warning (10631): VHDL Process Statement warning at AffichageTemps.vhd(15): inferring latch(es) for signal or variable "enable2", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/AffichageTemps.vhd Line: 15
-Info (10041): Inferred latch for "enable2" at AffichageTemps.vhd(15) File: Z:/VHDL/projet/LED ON/AffichageTemps.vhd Line: 15
-Info (10041): Inferred latch for "enable1" at AffichageTemps.vhd(15) File: Z:/VHDL/projet/LED ON/AffichageTemps.vhd Line: 15
-Warning (14025): LATCH primitive "max_value:fs2_value|afficheur:fState2|resultS[6]" is permanently disabled File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "EtatFeu:fs2|Mod0" File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 38
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "EtatFeu:fs2|Div0" File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 37
-Info (12130): Elaborated megafunction instantiation "EtatFeu:fs2|lpm_divide:Mod0" File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 38
-Info (12133): Instantiated megafunction "EtatFeu:fs2|lpm_divide:Mod0" with the following parameter: File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(312): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 312
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(315): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 315
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(318): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 318
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(321): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 321
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(327): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 327
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(330): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 330
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(333): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 333
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(336): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 336
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(342): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 342
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(345): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 345
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(348): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 348
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(351): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 351
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(361): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 361
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(368): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 368
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(377): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 377
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(380): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 380
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(399): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 399
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(402): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 402
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(405): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 405
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(408): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 408
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(414): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 414
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(417): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 417
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(420): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 420
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(423): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 423
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(429): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 429
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(432): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 432
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(435): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 435
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(438): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 438
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(445): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 445
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(448): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 448
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(458): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 458
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(465): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 465
+Info (12128): Elaborating entity "VGA" for hierarchy "VGA:VGA_Sub" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 220
+Info (12129): Elaborating entity "clockM" using architecture "A:structural" for hierarchy "clockM:fS1" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 234
+Info (12129): Elaborating entity "EtatFeu" using architecture "A:structural" for hierarchy "EtatFeu:fs2" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 241
+Warning (10492): VHDL Process Statement warning at EtatFeu.vhd(37): signal "count2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at EtatFeu.vhd(38): signal "count2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 38
+Info (12129): Elaborating entity "max_value" using architecture "A:structural" for hierarchy "max_value:fs2_value" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 244
+Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "maxV", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDR1", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDO1", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDV1", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDR2", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDO2", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDV2", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "LEDV2" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "LEDO2" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "LEDR2" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "LEDV1" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "LEDO1" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "LEDR1" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "temp[3]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "temp[2]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "temp[1]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "temp[0]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[0]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[1]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[2]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[3]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[4]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[5]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[6]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[7]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[8]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[9]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[10]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[11]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[12]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[13]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[14]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[15]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[16]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[17]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[18]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[19]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[20]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[21]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[22]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[23]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[24]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[25]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[26]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[27]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[28]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[29]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[30]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[31]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
+Info (12129): Elaborating entity "afficheur" using architecture "A:structural" for hierarchy "max_value:fs2_value|afficheur:fState" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 50
+Warning (10492): VHDL Process Statement warning at afficheur.vhd(16): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 16
+Warning (10631): VHDL Process Statement warning at afficheur.vhd(14): inferring latch(es) for signal or variable "resultS", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[0]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[1]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[2]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[3]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[4]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[5]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[6]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[7]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
+Info (12129): Elaborating entity "AffichageTemps" using architecture "A:structural" for hierarchy "AffichageTemps:fs3_Temps" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 249
+Warning (10631): VHDL Process Statement warning at AffichageTemps.vhd(15): inferring latch(es) for signal or variable "enable1", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd Line: 15
+Warning (10631): VHDL Process Statement warning at AffichageTemps.vhd(15): inferring latch(es) for signal or variable "enable2", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd Line: 15
+Info (10041): Inferred latch for "enable2" at AffichageTemps.vhd(15) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd Line: 15
+Info (10041): Inferred latch for "enable1" at AffichageTemps.vhd(15) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd Line: 15
+Warning (14025): LATCH primitive "max_value:fs2_value|afficheur:fState2|resultS[6]" is permanently disabled File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
+Info (278001): Inferred 8 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "EtatFeu:fs2|Mod0" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "EtatFeu:fs2|Div0" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 37
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult14" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 427
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult5" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 340
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult3" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 325
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 310
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult4" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 340
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult7" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 365
+Info (12130): Elaborated megafunction instantiation "EtatFeu:fs2|lpm_divide:Mod0" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 38
+Info (12133): Instantiated megafunction "EtatFeu:fs2|lpm_divide:Mod0" with the following parameter: File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 38
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_25o.tdf
-    Info (12023): Found entity 1: lpm_divide_25o File: Z:/VHDL/projet/LED ON/db/lpm_divide_25o.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_25o File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_divide_25o.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
-    Info (12023): Found entity 1: abs_divider_4dg File: Z:/VHDL/projet/LED ON/db/abs_divider_4dg.tdf Line: 26
+    Info (12023): Found entity 1: abs_divider_4dg File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/abs_divider_4dg.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ske.tdf
-    Info (12023): Found entity 1: alt_u_div_ske File: Z:/VHDL/projet/LED ON/db/alt_u_div_ske.tdf Line: 26
+    Info (12023): Found entity 1: alt_u_div_ske File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/alt_u_div_ske.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: Z:/VHDL/projet/LED ON/db/add_sub_t3c.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_t3c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: Z:/VHDL/projet/LED ON/db/add_sub_u3c.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_u3c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_8b9.tdf
-    Info (12023): Found entity 1: lpm_abs_8b9 File: Z:/VHDL/projet/LED ON/db/lpm_abs_8b9.tdf Line: 24
-Info (12130): Elaborated megafunction instantiation "EtatFeu:fs2|lpm_divide:Div0" File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 37
-Info (12133): Instantiated megafunction "EtatFeu:fs2|lpm_divide:Div0" with the following parameter: File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 37
+    Info (12023): Found entity 1: lpm_abs_8b9 File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_abs_8b9.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "EtatFeu:fs2|lpm_divide:Div0" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 37
+Info (12133): Instantiated megafunction "EtatFeu:fs2|lpm_divide:Div0" with the following parameter: File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 37
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fbo.tdf
-    Info (12023): Found entity 1: lpm_divide_fbo File: Z:/VHDL/projet/LED ON/db/lpm_divide_fbo.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_fbo File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_divide_fbo.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
-    Info (12023): Found entity 1: abs_divider_kbg File: Z:/VHDL/projet/LED ON/db/abs_divider_kbg.tdf Line: 28
+    Info (12023): Found entity 1: abs_divider_kbg File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/abs_divider_kbg.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_she.tdf
-    Info (12023): Found entity 1: alt_u_div_she File: Z:/VHDL/projet/LED ON/db/alt_u_div_she.tdf Line: 26
+    Info (12023): Found entity 1: alt_u_div_she File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/alt_u_div_she.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_o99.tdf
-    Info (12023): Found entity 1: lpm_abs_o99 File: Z:/VHDL/projet/LED ON/db/lpm_abs_o99.tdf Line: 24
+    Info (12023): Found entity 1: lpm_abs_o99 File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_abs_o99.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult14" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 427
+Info (12133): Instantiated megafunction "lpm_mult:Mult14" with the following parameter: File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 427
+    Info (12134): Parameter "LPM_WIDTHA" = "11"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "22"
+    Info (12134): Parameter "LPM_WIDTHR" = "22"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_fgs.tdf
+    Info (12023): Found entity 1: mult_fgs File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/mult_fgs.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult5" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 340
+Info (12133): Instantiated megafunction "lpm_mult:Mult5" with the following parameter: File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 340
+    Info (12134): Parameter "LPM_WIDTHA" = "10"
+    Info (12134): Parameter "LPM_WIDTHB" = "10"
+    Info (12134): Parameter "LPM_WIDTHP" = "20"
+    Info (12134): Parameter "LPM_WIDTHR" = "20"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_bgs.tdf
+    Info (12023): Found entity 1: mult_bgs File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/mult_bgs.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult7" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 365
+Info (12133): Instantiated megafunction "lpm_mult:Mult7" with the following parameter: File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 365
+    Info (12134): Parameter "LPM_WIDTHA" = "10"
+    Info (12134): Parameter "LPM_WIDTHB" = "7"
+    Info (12134): Parameter "LPM_WIDTHP" = "17"
+    Info (12134): Parameter "LPM_WIDTHR" = "17"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult7|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult7" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult7|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult7" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult7" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7kg.tdf
+    Info (12023): Found entity 1: add_sub_7kg File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_7kg.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lpm_mult:Mult7" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult7" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_5vg.tdf
+    Info (12023): Found entity 1: add_sub_5vg File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_5vg.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult7|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult7" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
 Info (13014): Ignored 62 buffer(s)
     Info (13016): Ignored 62 CARRY_SUM buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "segment[7]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment2[7]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment3[7]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment4[7]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment5[7]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[0]" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[1]" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[2]" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[3]" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[4]" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[5]" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[6]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[7]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment[7]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment2[7]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment3[7]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment4[7]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment5[7]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[0]" is stuck at GND File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[1]" is stuck at GND File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[2]" is stuck at GND File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[3]" is stuck at GND File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[4]" is stuck at GND File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[5]" is stuck at GND File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[6]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[7]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2487 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3915 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 54 output pins
-    Info (21061): Implemented 2432 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 713 megabytes
-    Info: Processing ended: Wed May 12 21:52:48 2021
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:46
+    Info (21059): Implemented 68 output pins
+    Info (21061): Implemented 3836 logic cells
+    Info (21062): Implemented 10 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
+    Info: Peak virtual memory: 716 megabytes
+    Info: Processing ended: Thu May 13 13:10:22 2021
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:53
 
 
