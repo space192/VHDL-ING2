@@ -1,5 +1,5 @@
 Timing Analyzer report for LED_ON
-Thu May 13 15:42:01 2021
+Thu May 13 15:53:55 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -89,13 +89,13 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 3.21        ;
+; Average used               ; 3.23        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  31.8%      ;
-;     Processors 3-8         ;  31.6%      ;
+;     Processor 2            ;  32.1%      ;
+;     Processors 3-8         ;  31.8%      ;
 +----------------------------+-------------+
 
 
@@ -117,11 +117,11 @@ refer to the applicable agreement for further details.
 +------------+-----------------+---------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name          ; Note                                                          ;
 +------------+-----------------+---------------------+---------------------------------------------------------------+
-; 62.24 MHz  ; 62.24 MHz       ; VGA_clk             ;                                                               ;
-; 244.68 MHz ; 244.68 MHz      ; clockM:fS1|clockout ;                                                               ;
-; 271.74 MHz ; 250.0 MHz       ; clk                 ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 274.05 MHz ; 274.05 MHz      ; EtatFeu:fs2|clkOut  ;                                                               ;
-; 335.91 MHz ; 335.91 MHz      ; VGA:VGA_Sub|HS      ;                                                               ;
+; 58.94 MHz  ; 58.94 MHz       ; VGA_clk             ;                                                               ;
+; 234.96 MHz ; 234.96 MHz      ; clockM:fS1|clockout ;                                                               ;
+; 268.1 MHz  ; 268.1 MHz       ; EtatFeu:fs2|clkOut  ;                                                               ;
+; 268.89 MHz ; 250.0 MHz       ; clk                 ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 313.58 MHz ; 313.58 MHz      ; VGA:VGA_Sub|HS      ;                                                               ;
 +------------+-----------------+---------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -131,11 +131,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+---------+---------------+
 ; Clock               ; Slack   ; End Point TNS ;
 +---------------------+---------+---------------+
-; VGA_clk             ; -15.950 ; -247.599      ;
-; clockM:fS1|clockout ; -3.087  ; -185.403      ;
-; clk                 ; -2.680  ; -48.049       ;
-; EtatFeu:fs2|clkOut  ; -2.649  ; -56.061       ;
-; VGA:VGA_Sub|HS      ; -1.977  ; -32.165       ;
+; VGA_clk             ; -17.770 ; -256.626      ;
+; clockM:fS1|clockout ; -3.256  ; -191.557      ;
+; EtatFeu:fs2|clkOut  ; -2.730  ; -60.446       ;
+; clk                 ; -2.719  ; -47.727       ;
+; VGA:VGA_Sub|HS      ; -2.189  ; -35.078       ;
 +---------------------+---------+---------------+
 
 
@@ -144,11 +144,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; VGA:VGA_Sub|HS      ; 0.324 ; 0.000         ;
-; clk                 ; 0.629 ; 0.000         ;
-; EtatFeu:fs2|clkOut  ; 0.638 ; 0.000         ;
-; clockM:fS1|clockout ; 0.639 ; 0.000         ;
-; VGA_clk             ; 0.647 ; 0.000         ;
+; VGA:VGA_Sub|HS      ; 0.343 ; 0.000         ;
+; clk                 ; 0.636 ; 0.000         ;
+; clockM:fS1|clockout ; 0.638 ; 0.000         ;
+; EtatFeu:fs2|clkOut  ; 0.639 ; 0.000         ;
+; VGA_clk             ; 0.646 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -188,11 +188,11 @@ No synchronizer chains to report.
 +------------+-----------------+---------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name          ; Note                                                          ;
 +------------+-----------------+---------------------+---------------------------------------------------------------+
-; 67.45 MHz  ; 67.45 MHz       ; VGA_clk             ;                                                               ;
-; 264.76 MHz ; 264.76 MHz      ; clockM:fS1|clockout ;                                                               ;
-; 294.64 MHz ; 250.0 MHz       ; clk                 ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 305.06 MHz ; 305.06 MHz      ; EtatFeu:fs2|clkOut  ;                                                               ;
-; 364.17 MHz ; 364.17 MHz      ; VGA:VGA_Sub|HS      ;                                                               ;
+; 63.94 MHz  ; 63.94 MHz       ; VGA_clk             ;                                                               ;
+; 255.3 MHz  ; 255.3 MHz       ; clockM:fS1|clockout ;                                                               ;
+; 292.65 MHz ; 250.0 MHz       ; clk                 ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 299.31 MHz ; 299.31 MHz      ; EtatFeu:fs2|clkOut  ;                                                               ;
+; 338.07 MHz ; 338.07 MHz      ; VGA:VGA_Sub|HS      ;                                                               ;
 +------------+-----------------+---------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -202,11 +202,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+---------+---------------+
 ; Clock               ; Slack   ; End Point TNS ;
 +---------------------+---------+---------------+
-; VGA_clk             ; -14.613 ; -224.659      ;
-; clockM:fS1|clockout ; -2.777  ; -166.260      ;
-; clk                 ; -2.394  ; -41.156       ;
-; EtatFeu:fs2|clkOut  ; -2.278  ; -47.282       ;
-; VGA:VGA_Sub|HS      ; -1.746  ; -27.915       ;
+; VGA_clk             ; -16.316 ; -234.029      ;
+; clockM:fS1|clockout ; -2.917  ; -172.025      ;
+; clk                 ; -2.417  ; -41.009       ;
+; EtatFeu:fs2|clkOut  ; -2.341  ; -51.351       ;
+; VGA:VGA_Sub|HS      ; -1.958  ; -30.724       ;
 +---------------------+---------+---------------+
 
 
@@ -215,11 +215,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; VGA:VGA_Sub|HS      ; 0.292 ; 0.000         ;
-; clk                 ; 0.582 ; 0.000         ;
+; VGA:VGA_Sub|HS      ; 0.309 ; 0.000         ;
+; clk                 ; 0.588 ; 0.000         ;
 ; EtatFeu:fs2|clkOut  ; 0.591 ; 0.000         ;
 ; clockM:fS1|clockout ; 0.591 ; 0.000         ;
-; VGA_clk             ; 0.599 ; 0.000         ;
+; VGA_clk             ; 0.603 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -259,11 +259,11 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; VGA_clk             ; -6.223 ; -87.978       ;
-; clockM:fS1|clockout ; -0.744 ; -40.552       ;
-; clk                 ; -0.620 ; -5.844        ;
-; EtatFeu:fs2|clkOut  ; -0.456 ; -5.287        ;
-; VGA:VGA_Sub|HS      ; -0.288 ; -2.703        ;
+; VGA_clk             ; -7.095 ; -93.067       ;
+; clockM:fS1|clockout ; -0.791 ; -43.431       ;
+; clk                 ; -0.595 ; -5.376        ;
+; EtatFeu:fs2|clkOut  ; -0.487 ; -6.177        ;
+; VGA:VGA_Sub|HS      ; -0.315 ; -3.189        ;
 +---------------------+--------+---------------+
 
 
@@ -272,10 +272,10 @@ No synchronizer chains to report.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; VGA:VGA_Sub|HS      ; 0.142 ; 0.000         ;
-; clk                 ; 0.243 ; 0.000         ;
+; VGA:VGA_Sub|HS      ; 0.150 ; 0.000         ;
+; EtatFeu:fs2|clkOut  ; 0.246 ; 0.000         ;
+; clk                 ; 0.246 ; 0.000         ;
 ; clockM:fS1|clockout ; 0.246 ; 0.000         ;
-; EtatFeu:fs2|clkOut  ; 0.247 ; 0.000         ;
 ; VGA_clk             ; 0.251 ; 0.000         ;
 +---------------------+-------+---------------+
 
@@ -297,7 +297,7 @@ No paths to report.
 +---------------------+--------+-------------------+
 ; Clock               ; Slack  ; End Point TNS     ;
 +---------------------+--------+-------------------+
-; clk                 ; -3.000 ; -32.293           ;
+; clk                 ; -3.000 ; -32.268           ;
 ; clockM:fS1|clockout ; -1.000 ; -65.000           ;
 ; VGA_clk             ; -1.000 ; -34.000           ;
 ; EtatFeu:fs2|clkOut  ; -1.000 ; -32.000           ;
@@ -316,18 +316,18 @@ No synchronizer chains to report.
 +----------------------+----------+-------+----------+---------+---------------------+
 ; Clock                ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack     ; -15.950  ; 0.142 ; N/A      ; N/A     ; -3.000              ;
-;  EtatFeu:fs2|clkOut  ; -2.649   ; 0.247 ; N/A      ; N/A     ; -1.403              ;
-;  VGA:VGA_Sub|HS      ; -1.977   ; 0.142 ; N/A      ; N/A     ; -1.403              ;
-;  VGA_clk             ; -15.950  ; 0.251 ; N/A      ; N/A     ; -1.403              ;
-;  clk                 ; -2.680   ; 0.243 ; N/A      ; N/A     ; -3.000              ;
-;  clockM:fS1|clockout ; -3.087   ; 0.246 ; N/A      ; N/A     ; -1.403              ;
-; Design-wide TNS      ; -569.277 ; 0.0   ; 0.0      ; 0.0     ; -255.54             ;
-;  EtatFeu:fs2|clkOut  ; -56.061  ; 0.000 ; N/A      ; N/A     ; -44.896             ;
-;  VGA:VGA_Sub|HS      ; -32.165  ; 0.000 ; N/A      ; N/A     ; -29.463             ;
-;  VGA_clk             ; -247.599 ; 0.000 ; N/A      ; N/A     ; -47.702             ;
-;  clk                 ; -48.049  ; 0.000 ; N/A      ; N/A     ; -42.284             ;
-;  clockM:fS1|clockout ; -185.403 ; 0.000 ; N/A      ; N/A     ; -91.195             ;
+; Worst-case Slack     ; -17.770  ; 0.150 ; N/A      ; N/A     ; -3.000              ;
+;  EtatFeu:fs2|clkOut  ; -2.730   ; 0.246 ; N/A      ; N/A     ; -1.403              ;
+;  VGA:VGA_Sub|HS      ; -2.189   ; 0.150 ; N/A      ; N/A     ; -1.403              ;
+;  VGA_clk             ; -17.770  ; 0.251 ; N/A      ; N/A     ; -1.403              ;
+;  clk                 ; -2.719   ; 0.246 ; N/A      ; N/A     ; -3.000              ;
+;  clockM:fS1|clockout ; -3.256   ; 0.246 ; N/A      ; N/A     ; -1.403              ;
+; Design-wide TNS      ; -591.434 ; 0.0   ; 0.0      ; 0.0     ; -255.54             ;
+;  EtatFeu:fs2|clkOut  ; -60.446  ; 0.000 ; N/A      ; N/A     ; -44.896             ;
+;  VGA:VGA_Sub|HS      ; -35.078  ; 0.000 ; N/A      ; N/A     ; -29.463             ;
+;  VGA_clk             ; -256.626 ; 0.000 ; N/A      ; N/A     ; -47.702             ;
+;  clk                 ; -47.727  ; 0.000 ; N/A      ; N/A     ; -42.284             ;
+;  clockM:fS1|clockout ; -191.557 ; 0.000 ; N/A      ; N/A     ; -91.195             ;
 +----------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -664,10 +664,10 @@ No synchronizer chains to report.
 ; clk                 ; clk                 ; 689      ; 0        ; 0        ; 0        ;
 ; VGA_clk             ; clk                 ; 1        ; 1        ; 0        ; 0        ;
 ; clockM:fS1|clockout ; clockM:fS1|clockout ; 3136     ; 0        ; 0        ; 0        ;
-; EtatFeu:fs2|clkOut  ; EtatFeu:fs2|clkOut  ; 560      ; 0        ; 0        ; 0        ;
+; EtatFeu:fs2|clkOut  ; EtatFeu:fs2|clkOut  ; 592      ; 0        ; 0        ; 0        ;
 ; VGA:VGA_Sub|HS      ; VGA:VGA_Sub|HS      ; 281      ; 0        ; 0        ; 0        ;
-; VGA:VGA_Sub|HS      ; VGA_clk             ; 6154574  ; 1        ; 0        ; 0        ;
-; VGA_clk             ; VGA_clk             ; 4947784  ; 0        ; 0        ; 0        ;
+; VGA:VGA_Sub|HS      ; VGA_clk             ; 7878693  ; 1        ; 0        ; 0        ;
+; VGA_clk             ; VGA_clk             ; 7804687  ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -680,10 +680,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; clk                 ; clk                 ; 689      ; 0        ; 0        ; 0        ;
 ; VGA_clk             ; clk                 ; 1        ; 1        ; 0        ; 0        ;
 ; clockM:fS1|clockout ; clockM:fS1|clockout ; 3136     ; 0        ; 0        ; 0        ;
-; EtatFeu:fs2|clkOut  ; EtatFeu:fs2|clkOut  ; 560      ; 0        ; 0        ; 0        ;
+; EtatFeu:fs2|clkOut  ; EtatFeu:fs2|clkOut  ; 592      ; 0        ; 0        ; 0        ;
 ; VGA:VGA_Sub|HS      ; VGA:VGA_Sub|HS      ; 281      ; 0        ; 0        ; 0        ;
-; VGA:VGA_Sub|HS      ; VGA_clk             ; 6154574  ; 1        ; 0        ; 0        ;
-; VGA_clk             ; VGA_clk             ; 4947784  ; 0        ; 0        ; 0        ;
+; VGA:VGA_Sub|HS      ; VGA_clk             ; 7878693  ; 1        ; 0        ; 0        ;
+; VGA_clk             ; VGA_clk             ; 7804687  ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -847,7 +847,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 13 15:41:48 2021
+    Info: Processing started: Thu May 13 15:53:42 2021
 Info: Command: quartus_sta LED_ON -c LED_ON
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -858,8 +858,8 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'LED
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name VGA_clk VGA_clk
-    Info (332105): create_clock -period 1.000 -name VGA:VGA_Sub|HS VGA:VGA_Sub|HS
     Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name VGA:VGA_Sub|HS VGA:VGA_Sub|HS
     Info (332105): create_clock -period 1.000 -name EtatFeu:fs2|clkOut EtatFeu:fs2|clkOut
     Info (332105): create_clock -period 1.000 -name clockM:fS1|clockout clockM:fS1|clockout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -868,22 +868,22 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -15.950
+Info (332146): Worst-case setup slack is -17.770
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -15.950            -247.599 VGA_clk 
-    Info (332119):    -3.087            -185.403 clockM:fS1|clockout 
-    Info (332119):    -2.680             -48.049 clk 
-    Info (332119):    -2.649             -56.061 EtatFeu:fs2|clkOut 
-    Info (332119):    -1.977             -32.165 VGA:VGA_Sub|HS 
-Info (332146): Worst-case hold slack is 0.324
+    Info (332119):   -17.770            -256.626 VGA_clk 
+    Info (332119):    -3.256            -191.557 clockM:fS1|clockout 
+    Info (332119):    -2.730             -60.446 EtatFeu:fs2|clkOut 
+    Info (332119):    -2.719             -47.727 clk 
+    Info (332119):    -2.189             -35.078 VGA:VGA_Sub|HS 
+Info (332146): Worst-case hold slack is 0.343
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.324               0.000 VGA:VGA_Sub|HS 
-    Info (332119):     0.629               0.000 clk 
-    Info (332119):     0.638               0.000 EtatFeu:fs2|clkOut 
-    Info (332119):     0.639               0.000 clockM:fS1|clockout 
-    Info (332119):     0.647               0.000 VGA_clk 
+    Info (332119):     0.343               0.000 VGA:VGA_Sub|HS 
+    Info (332119):     0.636               0.000 clk 
+    Info (332119):     0.638               0.000 clockM:fS1|clockout 
+    Info (332119):     0.639               0.000 EtatFeu:fs2|clkOut 
+    Info (332119):     0.646               0.000 VGA_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -899,22 +899,22 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -14.613
+Info (332146): Worst-case setup slack is -16.316
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.613            -224.659 VGA_clk 
-    Info (332119):    -2.777            -166.260 clockM:fS1|clockout 
-    Info (332119):    -2.394             -41.156 clk 
-    Info (332119):    -2.278             -47.282 EtatFeu:fs2|clkOut 
-    Info (332119):    -1.746             -27.915 VGA:VGA_Sub|HS 
-Info (332146): Worst-case hold slack is 0.292
+    Info (332119):   -16.316            -234.029 VGA_clk 
+    Info (332119):    -2.917            -172.025 clockM:fS1|clockout 
+    Info (332119):    -2.417             -41.009 clk 
+    Info (332119):    -2.341             -51.351 EtatFeu:fs2|clkOut 
+    Info (332119):    -1.958             -30.724 VGA:VGA_Sub|HS 
+Info (332146): Worst-case hold slack is 0.309
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.292               0.000 VGA:VGA_Sub|HS 
-    Info (332119):     0.582               0.000 clk 
+    Info (332119):     0.309               0.000 VGA:VGA_Sub|HS 
+    Info (332119):     0.588               0.000 clk 
     Info (332119):     0.591               0.000 EtatFeu:fs2|clkOut 
     Info (332119):     0.591               0.000 clockM:fS1|clockout 
-    Info (332119):     0.599               0.000 VGA_clk 
+    Info (332119):     0.603               0.000 VGA_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -928,28 +928,28 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -6.223
+Info (332146): Worst-case setup slack is -7.095
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.223             -87.978 VGA_clk 
-    Info (332119):    -0.744             -40.552 clockM:fS1|clockout 
-    Info (332119):    -0.620              -5.844 clk 
-    Info (332119):    -0.456              -5.287 EtatFeu:fs2|clkOut 
-    Info (332119):    -0.288              -2.703 VGA:VGA_Sub|HS 
-Info (332146): Worst-case hold slack is 0.142
+    Info (332119):    -7.095             -93.067 VGA_clk 
+    Info (332119):    -0.791             -43.431 clockM:fS1|clockout 
+    Info (332119):    -0.595              -5.376 clk 
+    Info (332119):    -0.487              -6.177 EtatFeu:fs2|clkOut 
+    Info (332119):    -0.315              -3.189 VGA:VGA_Sub|HS 
+Info (332146): Worst-case hold slack is 0.150
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.142               0.000 VGA:VGA_Sub|HS 
-    Info (332119):     0.243               0.000 clk 
+    Info (332119):     0.150               0.000 VGA:VGA_Sub|HS 
+    Info (332119):     0.246               0.000 EtatFeu:fs2|clkOut 
+    Info (332119):     0.246               0.000 clk 
     Info (332119):     0.246               0.000 clockM:fS1|clockout 
-    Info (332119):     0.247               0.000 EtatFeu:fs2|clkOut 
     Info (332119):     0.251               0.000 VGA_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -32.293 clk 
+    Info (332119):    -3.000             -32.268 clk 
     Info (332119):    -1.000             -65.000 clockM:fS1|clockout 
     Info (332119):    -1.000             -34.000 VGA_clk 
     Info (332119):    -1.000             -32.000 EtatFeu:fs2|clkOut 
@@ -957,9 +957,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 758 megabytes
-    Info: Processing ended: Thu May 13 15:42:01 2021
+    Info: Peak virtual memory: 759 megabytes
+    Info: Processing ended: Thu May 13 15:53:55 2021
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Total CPU time (on all processors): 00:00:33
 
 
