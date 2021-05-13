@@ -73,7 +73,7 @@ begin
 				
 					if (sample = "0000000000") then --Active Low Pulse Out
 						if (flag = '0') then
-							debounce <= '1';
+							debounce <= '4';
 							count := '4';
 							flag := '1';
 						else
@@ -89,7 +89,10 @@ begin
 					if (sample = "0000000000") then --Active Low Constant Out
 						debounce <= '1';
 					elsif (sample = "1111111111") then
-						debounce <= '0';
+						if(debounce = '4') then
+							debounce <= '0';
+						else
+						end if;
 					end if;
 					
 				end if;
@@ -100,7 +103,7 @@ begin
 				
 					if (sample = "1111111111") then --Active High Pulse Out
 						if (flag = '0') then
-							debounce <= '1';
+							debounce <= '4';
 							count := '0';
 							flag := '1';
 						else
@@ -114,7 +117,7 @@ begin
 				else
 				
 					if (sample = "1111111111") then --Active High Constant Out
-						debounce <= '1';
+						debounce <= '4';
 					elsif (sample = "0000000000") then
 						debounce <= '0';
 					end if;
