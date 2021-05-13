@@ -289,6 +289,10 @@ begin
 		if (VGA_x <= 280) and (VGA_x >= 170) and (VGA_y >= 250) and (VGA_y <= 350) then 
             color <= lPaletColor;
 		end if ;
+		if (((VGA_x -225)*(VGA_x -225) + (VGA_y -350)*(VGA_y -350) )<= 2500) then
+				color <= lPaletColor;
+		end if;
+		
 		
 		if (VGA_x <= 375) and (VGA_x >= 365) and (VGA_y >= 150) and (VGA_y <= 200) then -- Structure FEU2
             color <= lPaletColor;
@@ -302,6 +306,9 @@ begin
 		if (VGA_x <= 570) and (VGA_x >= 460) and (VGA_y >= 250) and (VGA_y <= 350) then 
             color <= lPaletColor;
 		end if ;
+		if (((VGA_x -515)*(VGA_x -515) + (VGA_y -350)*(VGA_y -350) )<= 2500) then
+				color <= lPaletColor;
+		end if;
 		
 		
 		if (VGA_x <= 130) and (VGA_x >= 30) and (VGA_y >= 200) and (VGA_y <= 500) then -- FEU1
@@ -322,6 +329,9 @@ begin
 				elsif (segment5 = "10011001" )
 					then
 					color <= ballColor;
+				elsif (segment5 = "10010010" )
+					then
+					color <= ballColor;
 				end if;
 		elsif (((VGA_x -80)*(VGA_x -80) + (VGA_y -330)*(VGA_y -330) )<= 900)-- ROND2
         then
@@ -337,6 +347,9 @@ begin
 				elsif (segment5 = "10011001" )
 					then
 					color <= orange;
+				elsif (segment5 = "10010010" )
+					then
+					color <= orange;
 				end if;
 		elsif (((VGA_x -80)*(VGA_x -80) + (VGA_y -410)*(VGA_y -410) )<= 900)-- ROND3
         then
@@ -350,6 +363,9 @@ begin
 					then
 					color <= vert;
 				elsif (segment5 = "10011001" )
+					then
+					color <= ballColor;
+				elsif (segment5 = "10010010" )
 					then
 					color <= ballColor;
 				end if;
@@ -409,6 +425,9 @@ begin
 				elsif (segment5 = "10011001" )
 					then
 					color <= rouge;
+				elsif (segment5 = "10010010" )
+					then
+					color <= ballColor;
 				end if;
 		elsif (((VGA_x -370)*(VGA_x -370) + (VGA_y -330)*(VGA_y -330) )<= 900)-- ROND2
         then
@@ -424,6 +443,9 @@ begin
 				elsif (segment5 = "10011001" )
 					then
 					color <= ballColor;
+				elsif (segment5 = "10010010" )
+					then
+					color <= orange;
 				end if;
 		elsif (((VGA_x -370)*(VGA_x -370) + (VGA_y -410)*(VGA_y -410) )<= 900)-- ROND3
         then
@@ -437,6 +459,9 @@ begin
 					then
 					color <= ballColor;
 				elsif (segment5 = "10011001" )
+					then
+					color <= ballColor;
+				elsif (segment5 = "10010010" )
 					then
 					color <= ballColor;
 				end if;
