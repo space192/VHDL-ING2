@@ -3,31 +3,27 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'VGA_clk'
-Slack : -16.016
-TNS   : -244.752
+Slack : -16.315
+TNS   : -242.239
 
 Type  : Slow 1200mV 85C Model Setup 'clockM:fS1|clockout'
-Slack : -3.261
-TNS   : -187.457
+Slack : -3.514
+TNS   : -191.037
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -2.680
-TNS   : -49.555
+Slack : -2.698
+TNS   : -48.858
 
 Type  : Slow 1200mV 85C Model Setup 'EtatFeu:fs2|clkOut'
-Slack : -2.622
-TNS   : -55.081
+Slack : -2.667
+TNS   : -56.031
 
 Type  : Slow 1200mV 85C Model Setup 'VGA:VGA_Sub|HS'
-Slack : -2.243
-TNS   : -34.540
+Slack : -2.024
+TNS   : -32.440
 
 Type  : Slow 1200mV 85C Model Hold 'VGA:VGA_Sub|HS'
-Slack : 0.343
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.636
+Slack : 0.342
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clockM:fS1|clockout'
@@ -35,11 +31,15 @@ Slack : 0.638
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'EtatFeu:fs2|clkOut'
-Slack : 0.645
+Slack : 0.639
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.640
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'VGA_clk'
-Slack : 0.646
+Slack : 0.650
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -63,39 +63,39 @@ Slack : -1.403
 TNS   : -29.463
 
 Type  : Slow 1200mV 0C Model Setup 'VGA_clk'
-Slack : -14.625
-TNS   : -222.545
+Slack : -14.982
+TNS   : -220.616
 
 Type  : Slow 1200mV 0C Model Setup 'clockM:fS1|clockout'
-Slack : -2.898
-TNS   : -166.890
+Slack : -3.102
+TNS   : -170.112
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -2.396
-TNS   : -42.618
+Slack : -2.408
+TNS   : -41.871
 
 Type  : Slow 1200mV 0C Model Setup 'EtatFeu:fs2|clkOut'
-Slack : -2.238
-TNS   : -46.287
+Slack : -2.272
+TNS   : -47.016
 
 Type  : Slow 1200mV 0C Model Setup 'VGA:VGA_Sub|HS'
-Slack : -1.958
-TNS   : -29.655
+Slack : -1.758
+TNS   : -27.790
 
 Type  : Slow 1200mV 0C Model Hold 'VGA:VGA_Sub|HS'
 Slack : 0.308
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Hold 'EtatFeu:fs2|clkOut'
+Slack : 0.591
+TNS   : 0.000
+
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.590
+Slack : 0.591
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clockM:fS1|clockout'
-Slack : 0.590
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'EtatFeu:fs2|clkOut'
-Slack : 0.596
+Slack : 0.591
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'VGA_clk'
@@ -123,48 +123,48 @@ Slack : -1.403
 TNS   : -29.463
 
 Type  : Fast 1200mV 0C Model Setup 'VGA_clk'
-Slack : -6.289
-TNS   : -88.216
+Slack : -6.422
+TNS   : -86.623
 
 Type  : Fast 1200mV 0C Model Setup 'clockM:fS1|clockout'
-Slack : -0.792
-TNS   : -39.594
+Slack : -0.821
+TNS   : -40.368
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.600
-TNS   : -6.438
+Slack : -0.584
+TNS   : -5.841
 
 Type  : Fast 1200mV 0C Model Setup 'EtatFeu:fs2|clkOut'
-Slack : -0.447
-TNS   : -5.068
+Slack : -0.462
+TNS   : -5.190
 
 Type  : Fast 1200mV 0C Model Setup 'VGA:VGA_Sub|HS'
-Slack : -0.397
-TNS   : -3.601
+Slack : -0.310
+TNS   : -2.732
 
 Type  : Fast 1200mV 0C Model Hold 'VGA:VGA_Sub|HS'
-Slack : 0.150
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.244
+Slack : 0.149
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clockM:fS1|clockout'
-Slack : 0.244
+Slack : 0.246
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'EtatFeu:fs2|clkOut'
-Slack : 0.250
+Slack : 0.247
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.249
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'VGA_clk'
-Slack : 0.251
+Slack : 0.254
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -32.080
+TNS   : -32.130
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockM:fS1|clockout'
 Slack : -1.000

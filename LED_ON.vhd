@@ -7,7 +7,8 @@ entity LED_ON is
 	clk : in std_logic; -- clock de 50Mhz
 	segment, segment2, segment3, segment4, segment5, segment6 : buffer std_logic_vector(7 downto 0);
 -- HEX 0     HEX 1      HEX 2      HEX 3    HEX 4      HEX 5
-	ledR, ledO, ledV, ledR2, ledo2, ledV2: out std_logic;
+	SER1, SCLK1, SRCLK1, SER2, SCLK2, SRCLK2: out std_logic;
+	boutton : in std_logic;
 	VGA_HS : buffer std_logic;
    VGA_VS : buffer std_logic;
    VGA_R : buffer integer range 0 to 15;
@@ -242,8 +243,8 @@ begin
 	port map(clkS => clockUsable, clkOut => temp, maxV => max, dizaine => dizaine, unite => unite);
 	
 	fs2_value : entity max_value(structural) --gere le passage dans les differents mode du feux
-	port map(clock => temp, maxV => max, result => segment5, result2 => segment6, counter => count ,
-	LEDR1 => ledR, LEDO1=> ledO, LEDV1 => ledv, LEDR2 => ledR2, LEDO2 => ledo2, LEDV2 => ledv2);
+	port map(clock => temp, maxV => max, result => segment5, result2 => segment6, counter => count);
+	--LEDR1 => ledR, LEDO1=> ledO, LEDV1 => ledv, LEDR2 => ledR2, LEDO2 => ledo2, LEDV2 => ledv2);
 	
 	
 	fs3_Temps : entity AffichageTemps(structural)

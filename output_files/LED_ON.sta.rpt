@@ -1,5 +1,5 @@
 Timing Analyzer report for LED_ON
-Thu May 13 13:11:18 2021
+Thu May 13 13:46:14 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -86,16 +86,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.78        ;
-; Maximum used               ; 4           ;
+; Average used               ; 3.25        ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  26.2%      ;
-;     Processors 3-4         ;  25.8%      ;
+;     Processor 2            ;  32.3%      ;
+;     Processors 3-8         ;  32.1%      ;
 +----------------------------+-------------+
 
 
@@ -117,11 +117,11 @@ refer to the applicable agreement for further details.
 +------------+-----------------+---------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name          ; Note                                                          ;
 +------------+-----------------+---------------------+---------------------------------------------------------------+
-; 62.13 MHz  ; 62.13 MHz       ; VGA_clk             ;                                                               ;
-; 234.69 MHz ; 234.69 MHz      ; clockM:fS1|clockout ;                                                               ;
-; 271.74 MHz ; 250.0 MHz       ; clk                 ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 276.09 MHz ; 276.09 MHz      ; EtatFeu:fs2|clkOut  ;                                                               ;
-; 308.36 MHz ; 308.36 MHz      ; VGA:VGA_Sub|HS      ;                                                               ;
+; 63.5 MHz   ; 63.5 MHz        ; VGA_clk             ;                                                               ;
+; 221.53 MHz ; 221.53 MHz      ; clockM:fS1|clockout ;                                                               ;
+; 270.42 MHz ; 250.0 MHz       ; clk                 ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 272.7 MHz  ; 272.7 MHz       ; EtatFeu:fs2|clkOut  ;                                                               ;
+; 330.69 MHz ; 330.69 MHz      ; VGA:VGA_Sub|HS      ;                                                               ;
 +------------+-----------------+---------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -131,11 +131,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+---------+---------------+
 ; Clock               ; Slack   ; End Point TNS ;
 +---------------------+---------+---------------+
-; VGA_clk             ; -16.016 ; -244.752      ;
-; clockM:fS1|clockout ; -3.261  ; -187.457      ;
-; clk                 ; -2.680  ; -49.555       ;
-; EtatFeu:fs2|clkOut  ; -2.622  ; -55.081       ;
-; VGA:VGA_Sub|HS      ; -2.243  ; -34.540       ;
+; VGA_clk             ; -16.315 ; -242.239      ;
+; clockM:fS1|clockout ; -3.514  ; -191.037      ;
+; clk                 ; -2.698  ; -48.858       ;
+; EtatFeu:fs2|clkOut  ; -2.667  ; -56.031       ;
+; VGA:VGA_Sub|HS      ; -2.024  ; -32.440       ;
 +---------------------+---------+---------------+
 
 
@@ -144,11 +144,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; VGA:VGA_Sub|HS      ; 0.343 ; 0.000         ;
-; clk                 ; 0.636 ; 0.000         ;
+; VGA:VGA_Sub|HS      ; 0.342 ; 0.000         ;
 ; clockM:fS1|clockout ; 0.638 ; 0.000         ;
-; EtatFeu:fs2|clkOut  ; 0.645 ; 0.000         ;
-; VGA_clk             ; 0.646 ; 0.000         ;
+; EtatFeu:fs2|clkOut  ; 0.639 ; 0.000         ;
+; clk                 ; 0.640 ; 0.000         ;
+; VGA_clk             ; 0.650 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -188,11 +188,11 @@ No synchronizer chains to report.
 +------------+-----------------+---------------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name          ; Note                                                          ;
 +------------+-----------------+---------------------+---------------------------------------------------------------+
-; 67.17 MHz  ; 67.17 MHz       ; VGA_clk             ;                                                               ;
-; 256.54 MHz ; 256.54 MHz      ; clockM:fS1|clockout ;                                                               ;
-; 294.46 MHz ; 250.0 MHz       ; clk                 ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 308.83 MHz ; 308.83 MHz      ; EtatFeu:fs2|clkOut  ;                                                               ;
-; 338.07 MHz ; 338.07 MHz      ; VGA:VGA_Sub|HS      ;                                                               ;
+; 68.9 MHz   ; 68.9 MHz        ; VGA_clk             ;                                                               ;
+; 243.78 MHz ; 243.78 MHz      ; clockM:fS1|clockout ;                                                               ;
+; 293.43 MHz ; 250.0 MHz       ; clk                 ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 305.62 MHz ; 305.62 MHz      ; EtatFeu:fs2|clkOut  ;                                                               ;
+; 362.58 MHz ; 362.58 MHz      ; VGA:VGA_Sub|HS      ;                                                               ;
 +------------+-----------------+---------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -202,11 +202,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+---------+---------------+
 ; Clock               ; Slack   ; End Point TNS ;
 +---------------------+---------+---------------+
-; VGA_clk             ; -14.625 ; -222.545      ;
-; clockM:fS1|clockout ; -2.898  ; -166.890      ;
-; clk                 ; -2.396  ; -42.618       ;
-; EtatFeu:fs2|clkOut  ; -2.238  ; -46.287       ;
-; VGA:VGA_Sub|HS      ; -1.958  ; -29.655       ;
+; VGA_clk             ; -14.982 ; -220.616      ;
+; clockM:fS1|clockout ; -3.102  ; -170.112      ;
+; clk                 ; -2.408  ; -41.871       ;
+; EtatFeu:fs2|clkOut  ; -2.272  ; -47.016       ;
+; VGA:VGA_Sub|HS      ; -1.758  ; -27.790       ;
 +---------------------+---------+---------------+
 
 
@@ -216,9 +216,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
 ; VGA:VGA_Sub|HS      ; 0.308 ; 0.000         ;
-; clk                 ; 0.590 ; 0.000         ;
-; clockM:fS1|clockout ; 0.590 ; 0.000         ;
-; EtatFeu:fs2|clkOut  ; 0.596 ; 0.000         ;
+; EtatFeu:fs2|clkOut  ; 0.591 ; 0.000         ;
+; clk                 ; 0.591 ; 0.000         ;
+; clockM:fS1|clockout ; 0.591 ; 0.000         ;
 ; VGA_clk             ; 0.602 ; 0.000         ;
 +---------------------+-------+---------------+
 
@@ -259,11 +259,11 @@ No synchronizer chains to report.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; VGA_clk             ; -6.289 ; -88.216       ;
-; clockM:fS1|clockout ; -0.792 ; -39.594       ;
-; clk                 ; -0.600 ; -6.438        ;
-; EtatFeu:fs2|clkOut  ; -0.447 ; -5.068        ;
-; VGA:VGA_Sub|HS      ; -0.397 ; -3.601        ;
+; VGA_clk             ; -6.422 ; -86.623       ;
+; clockM:fS1|clockout ; -0.821 ; -40.368       ;
+; clk                 ; -0.584 ; -5.841        ;
+; EtatFeu:fs2|clkOut  ; -0.462 ; -5.190        ;
+; VGA:VGA_Sub|HS      ; -0.310 ; -2.732        ;
 +---------------------+--------+---------------+
 
 
@@ -272,11 +272,11 @@ No synchronizer chains to report.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; VGA:VGA_Sub|HS      ; 0.150 ; 0.000         ;
-; clk                 ; 0.244 ; 0.000         ;
-; clockM:fS1|clockout ; 0.244 ; 0.000         ;
-; EtatFeu:fs2|clkOut  ; 0.250 ; 0.000         ;
-; VGA_clk             ; 0.251 ; 0.000         ;
+; VGA:VGA_Sub|HS      ; 0.149 ; 0.000         ;
+; clockM:fS1|clockout ; 0.246 ; 0.000         ;
+; EtatFeu:fs2|clkOut  ; 0.247 ; 0.000         ;
+; clk                 ; 0.249 ; 0.000         ;
+; VGA_clk             ; 0.254 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -297,7 +297,7 @@ No paths to report.
 +---------------------+--------+-------------------+
 ; Clock               ; Slack  ; End Point TNS     ;
 +---------------------+--------+-------------------+
-; clk                 ; -3.000 ; -32.080           ;
+; clk                 ; -3.000 ; -32.130           ;
 ; clockM:fS1|clockout ; -1.000 ; -65.000           ;
 ; VGA_clk             ; -1.000 ; -34.000           ;
 ; EtatFeu:fs2|clkOut  ; -1.000 ; -32.000           ;
@@ -316,18 +316,18 @@ No synchronizer chains to report.
 +----------------------+----------+-------+----------+---------+---------------------+
 ; Clock                ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack     ; -16.016  ; 0.150 ; N/A      ; N/A     ; -3.000              ;
-;  EtatFeu:fs2|clkOut  ; -2.622   ; 0.250 ; N/A      ; N/A     ; -1.403              ;
-;  VGA:VGA_Sub|HS      ; -2.243   ; 0.150 ; N/A      ; N/A     ; -1.403              ;
-;  VGA_clk             ; -16.016  ; 0.251 ; N/A      ; N/A     ; -1.403              ;
-;  clk                 ; -2.680   ; 0.244 ; N/A      ; N/A     ; -3.000              ;
-;  clockM:fS1|clockout ; -3.261   ; 0.244 ; N/A      ; N/A     ; -1.403              ;
-; Design-wide TNS      ; -571.385 ; 0.0   ; 0.0      ; 0.0     ; -255.54             ;
-;  EtatFeu:fs2|clkOut  ; -55.081  ; 0.000 ; N/A      ; N/A     ; -44.896             ;
-;  VGA:VGA_Sub|HS      ; -34.540  ; 0.000 ; N/A      ; N/A     ; -29.463             ;
-;  VGA_clk             ; -244.752 ; 0.000 ; N/A      ; N/A     ; -47.702             ;
-;  clk                 ; -49.555  ; 0.000 ; N/A      ; N/A     ; -42.284             ;
-;  clockM:fS1|clockout ; -187.457 ; 0.000 ; N/A      ; N/A     ; -91.195             ;
+; Worst-case Slack     ; -16.315  ; 0.149 ; N/A      ; N/A     ; -3.000              ;
+;  EtatFeu:fs2|clkOut  ; -2.667   ; 0.247 ; N/A      ; N/A     ; -1.403              ;
+;  VGA:VGA_Sub|HS      ; -2.024   ; 0.149 ; N/A      ; N/A     ; -1.403              ;
+;  VGA_clk             ; -16.315  ; 0.254 ; N/A      ; N/A     ; -1.403              ;
+;  clk                 ; -2.698   ; 0.249 ; N/A      ; N/A     ; -3.000              ;
+;  clockM:fS1|clockout ; -3.514   ; 0.246 ; N/A      ; N/A     ; -1.403              ;
+; Design-wide TNS      ; -570.605 ; 0.0   ; 0.0      ; 0.0     ; -255.54             ;
+;  EtatFeu:fs2|clkOut  ; -56.031  ; 0.000 ; N/A      ; N/A     ; -44.896             ;
+;  VGA:VGA_Sub|HS      ; -32.440  ; 0.000 ; N/A      ; N/A     ; -29.463             ;
+;  VGA_clk             ; -242.239 ; 0.000 ; N/A      ; N/A     ; -47.702             ;
+;  clk                 ; -48.858  ; 0.000 ; N/A      ; N/A     ; -42.284             ;
+;  clockM:fS1|clockout ; -191.037 ; 0.000 ; N/A      ; N/A     ; -91.195             ;
 +----------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -384,12 +384,12 @@ No synchronizer chains to report.
 ; segment6[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; segment6[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; segment6[7]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; ledR         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; ledO         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; ledV         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; ledR2        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; ledo2        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; ledV2        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SER1         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SCLK1        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SRCLK1       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SER2         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SCLK2        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; SRCLK2       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; VGA_HS       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; VGA_VS       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; VGA_R[0]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -413,6 +413,7 @@ No synchronizer chains to report.
 +---------------------+-----------------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
+; boutton             ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; clk                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -477,12 +478,12 @@ No synchronizer chains to report.
 ; segment6[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; segment6[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; segment6[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; ledR         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; ledO         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; ledV         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; ledR2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; ledo2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; ledV2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; SER1         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; SCLK1        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; SRCLK1       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; SER2         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; SCLK2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; SRCLK2       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0773 V           ; 0.156 V                              ; 0.166 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0773 V          ; 0.156 V                             ; 0.166 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; VGA_HS       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; VGA_VS       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; VGA_R[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
@@ -554,12 +555,12 @@ No synchronizer chains to report.
 ; segment6[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; segment6[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; segment6[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
-; ledR         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; ledO         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
-; ledV         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
-; ledR2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; ledo2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
-; ledV2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; SER1         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; SCLK1        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
+; SRCLK1       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; SER2         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
+; SCLK2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
+; SRCLK2       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0449 V           ; 0.201 V                              ; 0.093 V                              ; 4.89e-10 s                  ; 5.81e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0449 V          ; 0.201 V                             ; 0.093 V                             ; 4.89e-10 s                 ; 5.81e-10 s                 ; Yes                       ; No                        ;
 ; VGA_HS       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; VGA_VS       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; VGA_R[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
@@ -631,12 +632,12 @@ No synchronizer chains to report.
 ; segment6[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; segment6[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; segment6[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; ledR         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; ledO         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; ledV         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; ledR2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; ledo2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; ledV2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; SER1         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; SCLK1        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
+; SRCLK1       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; SER2         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
+; SCLK2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
+; SRCLK2       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.77 V              ; -0.0486 V           ; 0.285 V                              ; 0.06 V                               ; 2.8e-10 s                   ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.77 V             ; -0.0486 V          ; 0.285 V                             ; 0.06 V                              ; 2.8e-10 s                  ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; VGA_HS       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; VGA_VS       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; VGA_R[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
@@ -665,8 +666,8 @@ No synchronizer chains to report.
 ; clockM:fS1|clockout ; clockM:fS1|clockout ; 3104     ; 0        ; 0        ; 0        ;
 ; EtatFeu:fs2|clkOut  ; EtatFeu:fs2|clkOut  ; 560      ; 0        ; 0        ; 0        ;
 ; VGA:VGA_Sub|HS      ; VGA:VGA_Sub|HS      ; 281      ; 0        ; 0        ; 0        ;
-; VGA:VGA_Sub|HS      ; VGA_clk             ; 5120216  ; 1        ; 0        ; 0        ;
-; VGA_clk             ; VGA_clk             ; 4242908  ; 0        ; 0        ; 0        ;
+; VGA:VGA_Sub|HS      ; VGA_clk             ; 6006205  ; 1        ; 0        ; 0        ;
+; VGA_clk             ; VGA_clk             ; 4853612  ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -681,8 +682,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; clockM:fS1|clockout ; clockM:fS1|clockout ; 3104     ; 0        ; 0        ; 0        ;
 ; EtatFeu:fs2|clkOut  ; EtatFeu:fs2|clkOut  ; 560      ; 0        ; 0        ; 0        ;
 ; VGA:VGA_Sub|HS      ; VGA:VGA_Sub|HS      ; 281      ; 0        ; 0        ; 0        ;
-; VGA:VGA_Sub|HS      ; VGA_clk             ; 5120216  ; 1        ; 0        ; 0        ;
-; VGA_clk             ; VGA_clk             ; 4242908  ; 0        ; 0        ; 0        ;
+; VGA:VGA_Sub|HS      ; VGA_clk             ; 6006205  ; 1        ; 0        ; 0        ;
+; VGA_clk             ; VGA_clk             ; 4853612  ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -708,8 +709,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 55    ; 55   ;
-; Unconstrained Output Port Paths ; 69    ; 69   ;
+; Unconstrained Output Ports      ; 49    ; 49   ;
+; Unconstrained Output Port Paths ; 63    ; 63   ;
 +---------------------------------+-------+------+
 
 
@@ -745,12 +746,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; VGA_R[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_R[3]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_VS      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledO        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledR        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledR2       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledV        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledV2       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledo2       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; segment2[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; segment2[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; segment2[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -808,12 +803,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; VGA_R[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_R[3]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_VS      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledO        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledR        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledR2       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledV        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledV2       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledo2       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; segment2[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; segment2[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; segment2[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -858,19 +847,19 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 13 13:11:11 2021
+    Info: Processing started: Thu May 13 13:46:02 2021
 Info: Command: quartus_sta LED_ON -c LED_ON
 Info: qsta_default_script.tcl version: #1
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 44 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 38 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'LED_ON.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name VGA_clk VGA_clk
-    Info (332105): create_clock -period 1.000 -name clk clk
     Info (332105): create_clock -period 1.000 -name VGA:VGA_Sub|HS VGA:VGA_Sub|HS
+    Info (332105): create_clock -period 1.000 -name clk clk
     Info (332105): create_clock -period 1.000 -name EtatFeu:fs2|clkOut EtatFeu:fs2|clkOut
     Info (332105): create_clock -period 1.000 -name clockM:fS1|clockout clockM:fS1|clockout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -879,22 +868,22 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -16.016
+Info (332146): Worst-case setup slack is -16.315
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -16.016            -244.752 VGA_clk 
-    Info (332119):    -3.261            -187.457 clockM:fS1|clockout 
-    Info (332119):    -2.680             -49.555 clk 
-    Info (332119):    -2.622             -55.081 EtatFeu:fs2|clkOut 
-    Info (332119):    -2.243             -34.540 VGA:VGA_Sub|HS 
-Info (332146): Worst-case hold slack is 0.343
+    Info (332119):   -16.315            -242.239 VGA_clk 
+    Info (332119):    -3.514            -191.037 clockM:fS1|clockout 
+    Info (332119):    -2.698             -48.858 clk 
+    Info (332119):    -2.667             -56.031 EtatFeu:fs2|clkOut 
+    Info (332119):    -2.024             -32.440 VGA:VGA_Sub|HS 
+Info (332146): Worst-case hold slack is 0.342
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.343               0.000 VGA:VGA_Sub|HS 
-    Info (332119):     0.636               0.000 clk 
+    Info (332119):     0.342               0.000 VGA:VGA_Sub|HS 
     Info (332119):     0.638               0.000 clockM:fS1|clockout 
-    Info (332119):     0.645               0.000 EtatFeu:fs2|clkOut 
-    Info (332119):     0.646               0.000 VGA_clk 
+    Info (332119):     0.639               0.000 EtatFeu:fs2|clkOut 
+    Info (332119):     0.640               0.000 clk 
+    Info (332119):     0.650               0.000 VGA_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -910,21 +899,21 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -14.625
+Info (332146): Worst-case setup slack is -14.982
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -14.625            -222.545 VGA_clk 
-    Info (332119):    -2.898            -166.890 clockM:fS1|clockout 
-    Info (332119):    -2.396             -42.618 clk 
-    Info (332119):    -2.238             -46.287 EtatFeu:fs2|clkOut 
-    Info (332119):    -1.958             -29.655 VGA:VGA_Sub|HS 
+    Info (332119):   -14.982            -220.616 VGA_clk 
+    Info (332119):    -3.102            -170.112 clockM:fS1|clockout 
+    Info (332119):    -2.408             -41.871 clk 
+    Info (332119):    -2.272             -47.016 EtatFeu:fs2|clkOut 
+    Info (332119):    -1.758             -27.790 VGA:VGA_Sub|HS 
 Info (332146): Worst-case hold slack is 0.308
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.308               0.000 VGA:VGA_Sub|HS 
-    Info (332119):     0.590               0.000 clk 
-    Info (332119):     0.590               0.000 clockM:fS1|clockout 
-    Info (332119):     0.596               0.000 EtatFeu:fs2|clkOut 
+    Info (332119):     0.591               0.000 EtatFeu:fs2|clkOut 
+    Info (332119):     0.591               0.000 clk 
+    Info (332119):     0.591               0.000 clockM:fS1|clockout 
     Info (332119):     0.602               0.000 VGA_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
@@ -939,28 +928,28 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -6.289
+Info (332146): Worst-case setup slack is -6.422
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.289             -88.216 VGA_clk 
-    Info (332119):    -0.792             -39.594 clockM:fS1|clockout 
-    Info (332119):    -0.600              -6.438 clk 
-    Info (332119):    -0.447              -5.068 EtatFeu:fs2|clkOut 
-    Info (332119):    -0.397              -3.601 VGA:VGA_Sub|HS 
-Info (332146): Worst-case hold slack is 0.150
+    Info (332119):    -6.422             -86.623 VGA_clk 
+    Info (332119):    -0.821             -40.368 clockM:fS1|clockout 
+    Info (332119):    -0.584              -5.841 clk 
+    Info (332119):    -0.462              -5.190 EtatFeu:fs2|clkOut 
+    Info (332119):    -0.310              -2.732 VGA:VGA_Sub|HS 
+Info (332146): Worst-case hold slack is 0.149
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.150               0.000 VGA:VGA_Sub|HS 
-    Info (332119):     0.244               0.000 clk 
-    Info (332119):     0.244               0.000 clockM:fS1|clockout 
-    Info (332119):     0.250               0.000 EtatFeu:fs2|clkOut 
-    Info (332119):     0.251               0.000 VGA_clk 
+    Info (332119):     0.149               0.000 VGA:VGA_Sub|HS 
+    Info (332119):     0.246               0.000 clockM:fS1|clockout 
+    Info (332119):     0.247               0.000 EtatFeu:fs2|clkOut 
+    Info (332119):     0.249               0.000 clk 
+    Info (332119):     0.254               0.000 VGA_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -32.080 clk 
+    Info (332119):    -3.000             -32.130 clk 
     Info (332119):    -1.000             -65.000 clockM:fS1|clockout 
     Info (332119):    -1.000             -34.000 VGA_clk 
     Info (332119):    -1.000             -32.000 EtatFeu:fs2|clkOut 
@@ -968,9 +957,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 710 megabytes
-    Info: Processing ended: Thu May 13 13:11:18 2021
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 763 megabytes
+    Info: Processing ended: Thu May 13 13:46:14 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:29
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LED_ON
-Thu May 13 13:10:22 2021
+Thu May 13 13:44:54 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -58,16 +58,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 13 13:10:22 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 13 13:44:54 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LED_ON                                      ;
 ; Top-level Entity Name              ; LED_ON                                      ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 3,831                                       ;
-;     Total combinational functions  ; 3,828                                       ;
+; Total logic elements               ; 3,820                                       ;
+;     Total combinational functions  ; 3,817                                       ;
 ;     Dedicated logic registers      ; 180                                         ;
 ; Total registers                    ; 180                                         ;
-; Total pins                         ; 69                                          ;
+; Total pins                         ; 70                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 10                                          ;
@@ -169,17 +169,21 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -188,35 +192,35 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; LED_ON.vhd                       ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd                                 ;         ;
-; afficheur.vhd                    ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd                              ;         ;
-; clock.vhd                        ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/clock.vhd                                  ;         ;
-; clock_afficheur.vhd              ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/clock_afficheur.vhd                        ;         ;
-; EtatFeu.vhd                      ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd                                ;         ;
-; max_value.vhd                    ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd                              ;         ;
-; AffichageTemps.vhd               ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd                         ;         ;
-; VGA.vhd                          ; yes             ; User VHDL File               ; C:/Users/VHDLING2/Desktop/VHDL-ING2/VGA.vhd                                    ;         ;
+; LED_ON.vhd                       ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/LED_ON.vhd                                               ;         ;
+; afficheur.vhd                    ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/afficheur.vhd                                            ;         ;
+; clock.vhd                        ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/clock.vhd                                                ;         ;
+; clock_afficheur.vhd              ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/clock_afficheur.vhd                                      ;         ;
+; EtatFeu.vhd                      ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/EtatFeu.vhd                                              ;         ;
+; max_value.vhd                    ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/max_value.vhd                                            ;         ;
+; AffichageTemps.vhd               ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/AffichageTemps.vhd                                       ;         ;
+; VGA.vhd                          ; yes             ; User VHDL File               ; Z:/VHDL/projet/LED ON/VGA.vhd                                                  ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
 ; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
-; db/lpm_divide_25o.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_divide_25o.tdf                      ;         ;
-; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/abs_divider_4dg.tdf                     ;         ;
-; db/alt_u_div_ske.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/alt_u_div_ske.tdf                       ;         ;
-; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_t3c.tdf                         ;         ;
-; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_u3c.tdf                         ;         ;
-; db/lpm_abs_8b9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_abs_8b9.tdf                         ;         ;
-; db/lpm_divide_fbo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_divide_fbo.tdf                      ;         ;
-; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/abs_divider_kbg.tdf                     ;         ;
-; db/alt_u_div_she.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/alt_u_div_she.tdf                       ;         ;
-; db/lpm_abs_o99.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_abs_o99.tdf                         ;         ;
+; db/lpm_divide_25o.tdf            ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/lpm_divide_25o.tdf                                    ;         ;
+; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/abs_divider_4dg.tdf                                   ;         ;
+; db/alt_u_div_ske.tdf             ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/alt_u_div_ske.tdf                                     ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/add_sub_t3c.tdf                                       ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/add_sub_u3c.tdf                                       ;         ;
+; db/lpm_abs_8b9.tdf               ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/lpm_abs_8b9.tdf                                       ;         ;
+; db/lpm_divide_fbo.tdf            ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/lpm_divide_fbo.tdf                                    ;         ;
+; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/abs_divider_kbg.tdf                                   ;         ;
+; db/alt_u_div_she.tdf             ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/alt_u_div_she.tdf                                     ;         ;
+; db/lpm_abs_o99.tdf               ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/lpm_abs_o99.tdf                                       ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc            ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; db/mult_fgs.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/mult_fgs.tdf                            ;         ;
-; db/mult_bgs.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/mult_bgs.tdf                            ;         ;
+; db/mult_fgs.tdf                  ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/mult_fgs.tdf                                          ;         ;
+; db/mult_bgs.tdf                  ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/mult_bgs.tdf                                          ;         ;
 ; multcore.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf            ;         ;
 ; csa_add.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/csa_add.inc             ;         ;
 ; mpar_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
@@ -231,8 +235,8 @@ refer to the applicable agreement for further details.
 ; addcore.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/addcore.inc             ;         ;
 ; look_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/look_add.inc            ;         ;
 ; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
-; db/add_sub_7kg.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_7kg.tdf                         ;         ;
-; db/add_sub_5vg.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_5vg.tdf                         ;         ;
+; db/add_sub_7kg.tdf               ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/add_sub_7kg.tdf                                       ;         ;
+; db/add_sub_5vg.tdf               ; yes             ; Auto-Generated Megafunction  ; Z:/VHDL/projet/LED ON/db/add_sub_5vg.tdf                                       ;         ;
 ; altshift.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.tdf            ;         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 
@@ -242,29 +246,29 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 3,831                  ;
+; Estimated Total logic elements              ; 3,820                  ;
 ;                                             ;                        ;
-; Total combinational functions               ; 3828                   ;
+; Total combinational functions               ; 3817                   ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 1532                   ;
-;     -- 3 input functions                    ; 1141                   ;
-;     -- <=2 input functions                  ; 1155                   ;
+;     -- 4 input functions                    ; 1534                   ;
+;     -- 3 input functions                    ; 1131                   ;
+;     -- <=2 input functions                  ; 1152                   ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 2749                   ;
+;     -- normal mode                          ; 2738                   ;
 ;     -- arithmetic mode                      ; 1079                   ;
 ;                                             ;                        ;
 ; Total registers                             ; 180                    ;
 ;     -- Dedicated logic registers            ; 180                    ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
-; I/O pins                                    ; 69                     ;
+; I/O pins                                    ; 70                     ;
 ;                                             ;                        ;
 ; Embedded Multiplier 9-bit elements          ; 10                     ;
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; EtatFeu:fs2|count2[31] ;
 ; Maximum fan-out                             ; 139                    ;
-; Total fan-out                               ; 12298                  ;
+; Total fan-out                               ; 12265                  ;
 ; Average fan-out                             ; 2.96                   ;
 +---------------------------------------------+------------------------+
 
@@ -274,7 +278,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                            ; Entity Name     ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |LED_ON                                        ; 3828 (1244)         ; 180 (1)                   ; 0           ; 0          ; 10           ; 0       ; 5         ; 69   ; 0            ; 0          ; |LED_ON                                                                                                                        ; LED_ON          ; work         ;
+; |LED_ON                                        ; 3817 (1236)         ; 180 (1)                   ; 0           ; 0          ; 10           ; 0       ; 5         ; 70   ; 0            ; 0          ; |LED_ON                                                                                                                        ; LED_ON          ; work         ;
 ;    |AffichageTemps:fs3_Temps|                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|AffichageTemps:fs3_Temps                                                                                               ; AffichageTemps  ; work         ;
 ;    |EtatFeu:fs2|                               ; 2197 (166)          ; 65 (65)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2                                                                                                            ; EtatFeu         ; work         ;
 ;       |lpm_divide:Div0|                        ; 492 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Div0                                                                                            ; lpm_divide      ; work         ;
@@ -287,7 +291,7 @@ refer to the applicable agreement for further details.
 ;             |abs_divider_4dg:divider|          ; 1539 (8)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider                                      ; abs_divider_4dg ; work         ;
 ;                |alt_u_div_ske:divider|         ; 1510 (1510)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider|alt_u_div_ske:divider                ; alt_u_div_ske   ; work         ;
 ;                |lpm_abs_8b9:my_abs_num|        ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|EtatFeu:fs2|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider|lpm_abs_8b9:my_abs_num               ; lpm_abs_8b9     ; work         ;
-;    |VGA:VGA_Sub|                               ; 128 (128)           ; 55 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|VGA:VGA_Sub                                                                                                            ; VGA             ; work         ;
+;    |VGA:VGA_Sub|                               ; 132 (132)           ; 55 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|VGA:VGA_Sub                                                                                                            ; VGA             ; work         ;
 ;    |afficheur:fs3_affichage_dizaine_feu1|      ; 29 (29)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_dizaine_feu1                                                                                   ; afficheur       ; work         ;
 ;    |afficheur:fs3_affichage_dizaine_feu2|      ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_dizaine_feu2                                                                                   ; afficheur       ; work         ;
 ;    |afficheur:fs3_affichage_unite_feu1|        ; 31 (31)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|afficheur:fs3_affichage_unite_feu1                                                                                     ; afficheur       ; work         ;
@@ -311,7 +315,7 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:sub_par_add|             ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add        ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub     ; work         ;
 ;                   |add_sub_5vg:auto_generated| ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_5vg:auto_generated ; add_sub_5vg     ; work         ;
-;    |max_value:fs2_value|                       ; 78 (71)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|max_value:fs2_value                                                                                                    ; max_value       ; work         ;
+;    |max_value:fs2_value|                       ; 71 (64)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|max_value:fs2_value                                                                                                    ; max_value       ; work         ;
 ;       |afficheur:fState|                       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LED_ON|max_value:fs2_value|afficheur:fState                                                                                   ; afficheur       ; work         ;
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -371,12 +375,6 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; max_value:fs2_value|temp[2]                         ; GND                 ; yes                    ;
 ; max_value:fs2_value|temp[3]                         ; GND                 ; yes                    ;
 ; max_value:fs2_value|temp[1]                         ; GND                 ; yes                    ;
-; max_value:fs2_value|LEDR1                           ; GND                 ; yes                    ;
-; max_value:fs2_value|LEDO1                           ; GND                 ; yes                    ;
-; max_value:fs2_value|LEDV1                           ; GND                 ; yes                    ;
-; max_value:fs2_value|LEDR2                           ; GND                 ; yes                    ;
-; max_value:fs2_value|LEDO2                           ; GND                 ; yes                    ;
-; max_value:fs2_value|LEDV2                           ; GND                 ; yes                    ;
 ; AffichageTemps:fs3_Temps|enable1                    ; GND                 ; yes                    ;
 ; AffichageTemps:fs3_Temps|enable2                    ; GND                 ; yes                    ;
 ; max_value:fs2_value|maxV[0]                         ; GND                 ; yes                    ;
@@ -384,7 +382,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; max_value:fs2_value|maxV[3]                         ; GND                 ; yes                    ;
 ; max_value:fs2_value|maxV[4]                         ; GND                 ; yes                    ;
 ; max_value:fs2_value|maxV[5]                         ; GND                 ; yes                    ;
-; Number of user-specified and inferred latches = 44  ;                     ;                        ;
+; Number of user-specified and inferred latches = 38  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -409,12 +407,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 29:1               ; 2 bits    ; 38 LEs        ; 32 LEs               ; 6 LEs                  ; Yes        ; |LED_ON|VGA:VGA_Sub|R_out[1]                            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |LED_ON|max_value:fs2_value|temp[2]                     ;
+; 29:1               ; 2 bits    ; 38 LEs        ; 32 LEs               ; 6 LEs                  ; Yes        ; |LED_ON|VGA:VGA_Sub|B_out[3]                            ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |LED_ON|color                                           ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |LED_ON|max_value:fs2_value|afficheur:fState|resultS[4] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |LED_ON|max_value:fs2_value|temp[2]                     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |LED_ON|max_value:fs2_value|afficheur:fState|resultS[1] ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |LED_ON|afficheur:fs3_affichage_unite_feu1|resultS[0]   ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |LED_ON|afficheur:fs3_affichage_dizaine_feu1|resultS[0] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |LED_ON|afficheur:fs3_affichage_dizaine_feu1|resultS[6] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
@@ -794,26 +792,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 69                          ;
+; boundary_port         ; 70                          ;
 ; cycloneiii_ff         ; 180                         ;
 ;     SCLR              ; 48                          ;
 ;     SCLR SLD          ; 3                           ;
 ;     plain             ; 129                         ;
-; cycloneiii_lcell_comb ; 3830                        ;
+; cycloneiii_lcell_comb ; 3819                        ;
 ;     arith             ; 1079                        ;
 ;         2 data inputs ; 237                         ;
 ;         3 data inputs ; 842                         ;
-;     normal            ; 2751                        ;
+;     normal            ; 2740                        ;
 ;         0 data inputs ; 76                          ;
 ;         1 data inputs ; 13                          ;
-;         2 data inputs ; 831                         ;
-;         3 data inputs ; 299                         ;
-;         4 data inputs ; 1532                        ;
+;         2 data inputs ; 828                         ;
+;         3 data inputs ; 289                         ;
+;         4 data inputs ; 1534                        ;
 ; cycloneiii_mac_mult   ; 5                           ;
 ; cycloneiii_mac_out    ; 5                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 125.50                      ;
-; Average LUT depth     ; 65.71                       ;
+; Average LUT depth     ; 66.14                       ;
 +-----------------------+-----------------------------+
 
 
@@ -822,7 +820,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:21     ;
+; Top            ; 00:00:31     ;
 +----------------+--------------+
 
 
@@ -832,188 +830,178 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 13 13:09:45 2021
+    Info: Processing started: Thu May 13 13:43:48 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LED_ON -c LED_ON
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file led_on.vhd
-    Info (12022): Found design unit 1: LED_ON-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 19
-    Info (12023): Found entity 1: LED_ON File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 5
-Warning (12019): Can't analyze file -- file output_files/7_SEG.vhd is missing
-Info (12021): Found 0 design units, including 0 entities, in source file output_files/seg.vhd
+    Info (12022): Found design unit 1: LED_ON-structural File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 20
+    Info (12023): Found entity 1: LED_ON File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file afficheur.vhd
-    Info (12022): Found design unit 1: afficheur-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 12
-    Info (12023): Found entity 1: afficheur File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 5
+    Info (12022): Found design unit 1: afficheur-structural File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 12
+    Info (12023): Found entity 1: afficheur File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clock.vhd
-    Info (12022): Found design unit 1: clockM-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/clock.vhd Line: 15
-    Info (12023): Found entity 1: clockM File: C:/Users/VHDLING2/Desktop/VHDL-ING2/clock.vhd Line: 6
+    Info (12022): Found design unit 1: clockM-structural File: Z:/VHDL/projet/LED ON/clock.vhd Line: 15
+    Info (12023): Found entity 1: clockM File: Z:/VHDL/projet/LED ON/clock.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file clock_afficheur.vhd
-    Info (12022): Found design unit 1: clock_afficheur-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/clock_afficheur.vhd Line: 16
-    Info (12023): Found entity 1: clock_afficheur File: C:/Users/VHDLING2/Desktop/VHDL-ING2/clock_afficheur.vhd Line: 7
-Warning (12019): Can't analyze file -- file EtatFey.vhd is missing
+    Info (12022): Found design unit 1: clock_afficheur-structural File: Z:/VHDL/projet/LED ON/clock_afficheur.vhd Line: 16
+    Info (12023): Found entity 1: clock_afficheur File: Z:/VHDL/projet/LED ON/clock_afficheur.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file etatfeu.vhd
-    Info (12022): Found design unit 1: EtatFeu-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 15
-    Info (12023): Found entity 1: EtatFeu File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 6
+    Info (12022): Found design unit 1: EtatFeu-structural File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 15
+    Info (12023): Found entity 1: EtatFeu File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file max_value.vhd
-    Info (12022): Found design unit 1: max_value-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 17
-    Info (12023): Found entity 1: max_value File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 7
-Warning (12019): Can't analyze file -- file clockDecompte.vhd is missing
+    Info (12022): Found design unit 1: max_value-structural File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 17
+    Info (12023): Found entity 1: max_value File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file affichagetemps.vhd
-    Info (12022): Found design unit 1: AffichageTemps-structural File: C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd Line: 13
-    Info (12023): Found entity 1: AffichageTemps File: C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd Line: 6
+    Info (12022): Found design unit 1: AffichageTemps-structural File: Z:/VHDL/projet/LED ON/AffichageTemps.vhd Line: 13
+    Info (12023): Found entity 1: AffichageTemps File: Z:/VHDL/projet/LED ON/AffichageTemps.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file vga.vhd
-    Info (12022): Found design unit 1: VGA-description File: C:/Users/VHDLING2/Desktop/VHDL-ING2/VGA.vhd Line: 33
-    Info (12023): Found entity 1: VGA File: C:/Users/VHDLING2/Desktop/VHDL-ING2/VGA.vhd Line: 14
+    Info (12022): Found design unit 1: VGA-description File: Z:/VHDL/projet/LED ON/VGA.vhd Line: 33
+    Info (12023): Found entity 1: VGA File: Z:/VHDL/projet/LED ON/VGA.vhd Line: 14
 Info (12127): Elaborating entity "LED_ON" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(312): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 312
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(315): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 315
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(318): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 318
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(321): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 321
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(327): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 327
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(330): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 330
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(333): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 333
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(336): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 336
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(342): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 342
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(345): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 345
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(348): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 348
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(351): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 351
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(361): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 361
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(368): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 368
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(377): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 377
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(380): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 380
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(399): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 399
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(402): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 402
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(405): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 405
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(408): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 408
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(414): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 414
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(417): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 417
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(420): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 420
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(423): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 423
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(429): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 429
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(432): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 432
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(435): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 435
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(438): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 438
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(445): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 445
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(448): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 448
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(458): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 458
-Warning (10492): VHDL Process Statement warning at LED_ON.vhd(465): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 465
-Info (12128): Elaborating entity "VGA" for hierarchy "VGA:VGA_Sub" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 220
-Info (12129): Elaborating entity "clockM" using architecture "A:structural" for hierarchy "clockM:fS1" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 234
-Info (12129): Elaborating entity "EtatFeu" using architecture "A:structural" for hierarchy "EtatFeu:fs2" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 241
-Warning (10492): VHDL Process Statement warning at EtatFeu.vhd(37): signal "count2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at EtatFeu.vhd(38): signal "count2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 38
-Info (12129): Elaborating entity "max_value" using architecture "A:structural" for hierarchy "max_value:fs2_value" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 244
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "maxV", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDR1", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDO1", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDV1", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDR2", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDO2", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "LEDV2", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "LEDV2" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "LEDO2" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "LEDR2" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "LEDV1" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "LEDO1" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "LEDR1" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "temp[3]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "temp[2]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "temp[1]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "temp[0]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[0]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[1]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[2]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[3]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[4]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[5]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[6]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[7]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[8]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[9]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[10]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[11]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[12]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[13]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[14]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[15]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[16]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[17]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[18]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[19]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[20]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[21]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[22]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[23]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[24]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[25]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[26]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[27]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[28]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[29]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[30]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (10041): Inferred latch for "maxV[31]" at max_value.vhd(30) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 30
-Info (12129): Elaborating entity "afficheur" using architecture "A:structural" for hierarchy "max_value:fs2_value|afficheur:fState" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/max_value.vhd Line: 50
-Warning (10492): VHDL Process Statement warning at afficheur.vhd(16): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 16
-Warning (10631): VHDL Process Statement warning at afficheur.vhd(14): inferring latch(es) for signal or variable "resultS", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[0]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[1]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[2]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[3]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[4]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[5]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[6]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
-Info (10041): Inferred latch for "resultS[7]" at afficheur.vhd(14) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
-Info (12129): Elaborating entity "AffichageTemps" using architecture "A:structural" for hierarchy "AffichageTemps:fs3_Temps" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 249
-Warning (10631): VHDL Process Statement warning at AffichageTemps.vhd(15): inferring latch(es) for signal or variable "enable1", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd Line: 15
-Warning (10631): VHDL Process Statement warning at AffichageTemps.vhd(15): inferring latch(es) for signal or variable "enable2", which holds its previous value in one or more paths through the process File: C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd Line: 15
-Info (10041): Inferred latch for "enable2" at AffichageTemps.vhd(15) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd Line: 15
-Info (10041): Inferred latch for "enable1" at AffichageTemps.vhd(15) File: C:/Users/VHDLING2/Desktop/VHDL-ING2/AffichageTemps.vhd Line: 15
-Warning (14025): LATCH primitive "max_value:fs2_value|afficheur:fState2|resultS[6]" is permanently disabled File: C:/Users/VHDLING2/Desktop/VHDL-ING2/afficheur.vhd Line: 14
+Warning (10541): VHDL Signal Declaration warning at LED_ON.vhd(10): used implicit default value for signal "SER1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
+Warning (10541): VHDL Signal Declaration warning at LED_ON.vhd(10): used implicit default value for signal "SCLK1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
+Warning (10541): VHDL Signal Declaration warning at LED_ON.vhd(10): used implicit default value for signal "SRCLK1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
+Warning (10541): VHDL Signal Declaration warning at LED_ON.vhd(10): used implicit default value for signal "SER2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
+Warning (10541): VHDL Signal Declaration warning at LED_ON.vhd(10): used implicit default value for signal "SCLK2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
+Warning (10541): VHDL Signal Declaration warning at LED_ON.vhd(10): used implicit default value for signal "SRCLK2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(313): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 313
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(316): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 316
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(319): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 319
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(322): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 322
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(328): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 328
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(331): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 331
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(334): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 334
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(337): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 337
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(343): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 343
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(346): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 346
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(349): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 349
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(352): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 352
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(362): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 362
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(369): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 369
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(378): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 378
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(381): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 381
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(400): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 400
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(403): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 403
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(406): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 406
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(409): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 409
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(415): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 415
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(418): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 418
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(421): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 421
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(424): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 424
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(430): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 430
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(433): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 433
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(436): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 436
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(439): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 439
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(446): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 446
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(449): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 449
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(459): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 459
+Warning (10492): VHDL Process Statement warning at LED_ON.vhd(466): signal "segment5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 466
+Info (12128): Elaborating entity "VGA" for hierarchy "VGA:VGA_Sub" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 221
+Info (12129): Elaborating entity "clockM" using architecture "A:structural" for hierarchy "clockM:fS1" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 235
+Info (12129): Elaborating entity "EtatFeu" using architecture "A:structural" for hierarchy "EtatFeu:fs2" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 242
+Warning (10492): VHDL Process Statement warning at EtatFeu.vhd(37): signal "count2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at EtatFeu.vhd(38): signal "count2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 38
+Info (12129): Elaborating entity "max_value" using architecture "A:structural" for hierarchy "max_value:fs2_value" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 245
+Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "maxV", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at max_value.vhd(30): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "temp[3]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "temp[2]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "temp[1]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "temp[0]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[0]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[1]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[2]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[3]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[4]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[5]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[6]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[7]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[8]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[9]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[10]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[11]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[12]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[13]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[14]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[15]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[16]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[17]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[18]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[19]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[20]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[21]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[22]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[23]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[24]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[25]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[26]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[27]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[28]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[29]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[30]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (10041): Inferred latch for "maxV[31]" at max_value.vhd(30) File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 30
+Info (12129): Elaborating entity "afficheur" using architecture "A:structural" for hierarchy "max_value:fs2_value|afficheur:fState" File: Z:/VHDL/projet/LED ON/max_value.vhd Line: 50
+Warning (10492): VHDL Process Statement warning at afficheur.vhd(16): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 16
+Warning (10631): VHDL Process Statement warning at afficheur.vhd(14): inferring latch(es) for signal or variable "resultS", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[0]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[1]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[2]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[3]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[4]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[5]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[6]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
+Info (10041): Inferred latch for "resultS[7]" at afficheur.vhd(14) File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
+Info (12129): Elaborating entity "AffichageTemps" using architecture "A:structural" for hierarchy "AffichageTemps:fs3_Temps" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 250
+Warning (10631): VHDL Process Statement warning at AffichageTemps.vhd(15): inferring latch(es) for signal or variable "enable1", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/AffichageTemps.vhd Line: 15
+Warning (10631): VHDL Process Statement warning at AffichageTemps.vhd(15): inferring latch(es) for signal or variable "enable2", which holds its previous value in one or more paths through the process File: Z:/VHDL/projet/LED ON/AffichageTemps.vhd Line: 15
+Info (10041): Inferred latch for "enable2" at AffichageTemps.vhd(15) File: Z:/VHDL/projet/LED ON/AffichageTemps.vhd Line: 15
+Info (10041): Inferred latch for "enable1" at AffichageTemps.vhd(15) File: Z:/VHDL/projet/LED ON/AffichageTemps.vhd Line: 15
+Warning (14025): LATCH primitive "max_value:fs2_value|afficheur:fState2|resultS[6]" is permanently disabled File: Z:/VHDL/projet/LED ON/afficheur.vhd Line: 14
 Info (278001): Inferred 8 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "EtatFeu:fs2|Mod0" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 38
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "EtatFeu:fs2|Div0" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 37
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult14" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 427
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult5" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 340
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult3" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 325
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 310
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult4" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 340
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult7" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 365
-Info (12130): Elaborated megafunction instantiation "EtatFeu:fs2|lpm_divide:Mod0" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 38
-Info (12133): Instantiated megafunction "EtatFeu:fs2|lpm_divide:Mod0" with the following parameter: File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "EtatFeu:fs2|Mod0" File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "EtatFeu:fs2|Div0" File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 37
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult14" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 428
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult5" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 341
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult3" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 326
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 311
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult4" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 341
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult7" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 366
+Info (12130): Elaborated megafunction instantiation "EtatFeu:fs2|lpm_divide:Mod0" File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 38
+Info (12133): Instantiated megafunction "EtatFeu:fs2|lpm_divide:Mod0" with the following parameter: File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 38
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_25o.tdf
-    Info (12023): Found entity 1: lpm_divide_25o File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_divide_25o.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_25o File: Z:/VHDL/projet/LED ON/db/lpm_divide_25o.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
-    Info (12023): Found entity 1: abs_divider_4dg File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/abs_divider_4dg.tdf Line: 26
+    Info (12023): Found entity 1: abs_divider_4dg File: Z:/VHDL/projet/LED ON/db/abs_divider_4dg.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ske.tdf
-    Info (12023): Found entity 1: alt_u_div_ske File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/alt_u_div_ske.tdf Line: 26
+    Info (12023): Found entity 1: alt_u_div_ske File: Z:/VHDL/projet/LED ON/db/alt_u_div_ske.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_t3c.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_t3c File: Z:/VHDL/projet/LED ON/db/add_sub_t3c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_u3c.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_u3c File: Z:/VHDL/projet/LED ON/db/add_sub_u3c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_8b9.tdf
-    Info (12023): Found entity 1: lpm_abs_8b9 File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_abs_8b9.tdf Line: 24
-Info (12130): Elaborated megafunction instantiation "EtatFeu:fs2|lpm_divide:Div0" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 37
-Info (12133): Instantiated megafunction "EtatFeu:fs2|lpm_divide:Div0" with the following parameter: File: C:/Users/VHDLING2/Desktop/VHDL-ING2/EtatFeu.vhd Line: 37
+    Info (12023): Found entity 1: lpm_abs_8b9 File: Z:/VHDL/projet/LED ON/db/lpm_abs_8b9.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "EtatFeu:fs2|lpm_divide:Div0" File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 37
+Info (12133): Instantiated megafunction "EtatFeu:fs2|lpm_divide:Div0" with the following parameter: File: Z:/VHDL/projet/LED ON/EtatFeu.vhd Line: 37
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fbo.tdf
-    Info (12023): Found entity 1: lpm_divide_fbo File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_divide_fbo.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_fbo File: Z:/VHDL/projet/LED ON/db/lpm_divide_fbo.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
-    Info (12023): Found entity 1: abs_divider_kbg File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/abs_divider_kbg.tdf Line: 28
+    Info (12023): Found entity 1: abs_divider_kbg File: Z:/VHDL/projet/LED ON/db/abs_divider_kbg.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_she.tdf
-    Info (12023): Found entity 1: alt_u_div_she File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/alt_u_div_she.tdf Line: 26
+    Info (12023): Found entity 1: alt_u_div_she File: Z:/VHDL/projet/LED ON/db/alt_u_div_she.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_o99.tdf
-    Info (12023): Found entity 1: lpm_abs_o99 File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/lpm_abs_o99.tdf Line: 24
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult14" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 427
-Info (12133): Instantiated megafunction "lpm_mult:Mult14" with the following parameter: File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 427
+    Info (12023): Found entity 1: lpm_abs_o99 File: Z:/VHDL/projet/LED ON/db/lpm_abs_o99.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult14" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 428
+Info (12133): Instantiated megafunction "lpm_mult:Mult14" with the following parameter: File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 428
     Info (12134): Parameter "LPM_WIDTHA" = "11"
     Info (12134): Parameter "LPM_WIDTHB" = "11"
     Info (12134): Parameter "LPM_WIDTHP" = "22"
@@ -1024,9 +1012,9 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult14" with the following par
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_fgs.tdf
-    Info (12023): Found entity 1: mult_fgs File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/mult_fgs.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult5" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 340
-Info (12133): Instantiated megafunction "lpm_mult:Mult5" with the following parameter: File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 340
+    Info (12023): Found entity 1: mult_fgs File: Z:/VHDL/projet/LED ON/db/mult_fgs.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult5" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 341
+Info (12133): Instantiated megafunction "lpm_mult:Mult5" with the following parameter: File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 341
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "20"
@@ -1037,9 +1025,9 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult5" with the following para
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_bgs.tdf
-    Info (12023): Found entity 1: mult_bgs File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/mult_bgs.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult7" File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 365
-Info (12133): Instantiated megafunction "lpm_mult:Mult7" with the following parameter: File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 365
+    Info (12023): Found entity 1: mult_bgs File: Z:/VHDL/projet/LED ON/db/mult_bgs.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult7" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 366
+Info (12133): Instantiated megafunction "lpm_mult:Mult7" with the following parameter: File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 366
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "7"
     Info (12134): Parameter "LPM_WIDTHP" = "17"
@@ -1053,40 +1041,48 @@ Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult7|multcore:mul
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult7|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult7" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult7" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7kg.tdf
-    Info (12023): Found entity 1: add_sub_7kg File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_7kg.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_7kg File: Z:/VHDL/projet/LED ON/db/add_sub_7kg.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "lpm_mult:Mult7" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "lpm_mult:Mult7" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_5vg.tdf
-    Info (12023): Found entity 1: add_sub_5vg File: C:/Users/VHDLING2/Desktop/VHDL-ING2/db/add_sub_5vg.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_5vg File: Z:/VHDL/projet/LED ON/db/add_sub_5vg.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "lpm_mult:Mult7|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult7" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
 Info (13014): Ignored 62 buffer(s)
     Info (13016): Ignored 62 CARRY_SUM buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "segment[7]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment2[7]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment3[7]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment4[7]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment5[7]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[0]" is stuck at GND File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[1]" is stuck at GND File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[2]" is stuck at GND File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[3]" is stuck at GND File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[4]" is stuck at GND File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[5]" is stuck at GND File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[6]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
-    Warning (13410): Pin "segment6[7]" is stuck at VCC File: C:/Users/VHDLING2/Desktop/VHDL-ING2/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment[7]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment2[7]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment3[7]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment4[7]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment5[7]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[0]" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[1]" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[2]" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[3]" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[4]" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[5]" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[6]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "segment6[7]" is stuck at VCC File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 8
+    Warning (13410): Pin "SER1" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
+    Warning (13410): Pin "SCLK1" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
+    Warning (13410): Pin "SRCLK1" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
+    Warning (13410): Pin "SER2" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
+    Warning (13410): Pin "SCLK2" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
+    Warning (13410): Pin "SRCLK2" is stuck at GND File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 10
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3915 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "boutton" File: Z:/VHDL/projet/LED ON/LED_ON.vhd Line: 11
+Info (21057): Implemented 3905 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
     Info (21059): Implemented 68 output pins
-    Info (21061): Implemented 3836 logic cells
+    Info (21061): Implemented 3825 logic cells
     Info (21062): Implemented 10 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
-    Info: Peak virtual memory: 716 megabytes
-    Info: Processing ended: Thu May 13 13:10:22 2021
-    Info: Elapsed time: 00:00:37
-    Info: Total CPU time (on all processors): 00:00:53
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
+    Info: Peak virtual memory: 755 megabytes
+    Info: Processing ended: Thu May 13 13:44:54 2021
+    Info: Elapsed time: 00:01:06
+    Info: Total CPU time (on all processors): 00:01:41
 
 
