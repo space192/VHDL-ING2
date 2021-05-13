@@ -22,7 +22,7 @@ begin
 		if clock'event and clock = '1' then
 			if counter = 3 then
 				counter <= 0;
-			else
+			elsif not(counter = 4) then
 				counter <= counter + 1;
 			end if;
 		end if;
@@ -45,6 +45,9 @@ begin
 			maxV <= 5;
 			temp <= "0100";
 			--LEDR1 <= '0'; LEDO1 <= '1'; LEDV1 <= '0'; LEDR2 <= '1'; LEDO2 <= '0'; LEDV2 <= '0';
+		elsif counter = 4 then
+			maxV <= 0;
+			temp <= "0101";
 		end if;
 	end process;
 	fState : entity afficheur(structural)

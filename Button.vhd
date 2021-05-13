@@ -13,7 +13,7 @@ generic(
 port(
 	clk: in std_logic;
 	reset: in std_logic; --Active Low
-	--input: in std_logic;
+	input: in std_logic;
 	debounce: out std_logic
 );
 end entity;

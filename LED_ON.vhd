@@ -22,7 +22,7 @@ signal clockUsable, clockSec : std_logic; --differente clock du systeme
 signal dizaine, unite : std_logic_vector(0 to 3) := "0000"; --dizaine contient le chiffre des dizaines en 4 bit et idem pour unite
 signal temp : std_logic; --temp est la clock pour les differents état du systeme il ne contient rien
 signal max : integer :=30; --valeur maximum du compteur pour le comptage et le decomptage peu utile
-signal count : integer := 0; -- count permet de connaitre l'état actuel du systeme utile pour toi pour faire ton affichage visuel
+signal count : integer := 4; -- count permet de connaitre l'état actuel du systeme utile pour toi pour faire ton affichage visuel
 signal enable1, enable2 : std_logic;
 
 constant lPaletColor : integer := 16#222#; -- Couleur de la raquette gauche
