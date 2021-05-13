@@ -1,5 +1,5 @@
 Fitter report for LED_ON
-Thu May 13 15:53:28 2021
+Thu May 13 17:27:39 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu May 13 15:53:28 2021       ;
+; Fitter Status                      ; Successful - Thu May 13 17:27:39 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LED_ON                                      ;
 ; Top-level Entity Name              ; LED_ON                                      ;
@@ -156,18 +156,18 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.69        ;
+; Average used               ; 1.52        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  11.0%      ;
-;     Processor 3            ;  10.1%      ;
-;     Processor 4            ;   9.8%      ;
-;     Processor 5            ;   9.7%      ;
-;     Processor 6            ;   9.6%      ;
-;     Processor 7            ;   9.5%      ;
-;     Processor 8            ;   9.5%      ;
+;     Processor 2            ;   8.6%      ;
+;     Processor 3            ;   7.7%      ;
+;     Processor 4            ;   7.4%      ;
+;     Processor 5            ;   7.2%      ;
+;     Processor 6            ;   7.1%      ;
+;     Processor 7            ;   7.1%      ;
+;     Processor 8            ;   7.0%      ;
 +----------------------------+-------------+
 
 
@@ -1675,31 +1675,31 @@ Info (176353): Automatically promoted node VGA:VGA_Sub|HS  File: Z:/VHDL/projet/
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:06
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:22
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:11
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 9% of the available device resources in the region that extends from location X33_Y22 to location X44_Y32
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:06
-Info (11888): Total time spent on timing analysis during the Fitter is 4.28 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
+Info (11888): Total time spent on timing analysis during the Fitter is 2.58 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:08
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:04
 Info (144001): Generated suppressed messages file Z:/VHDL/projet/LED ON/output_files/LED_ON.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1869 megabytes
-    Info: Processing ended: Thu May 13 15:53:31 2021
-    Info: Elapsed time: 00:00:59
-    Info: Total CPU time (on all processors): 00:02:21
+    Info: Peak virtual memory: 1775 megabytes
+    Info: Processing ended: Thu May 13 17:27:41 2021
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:01:09
 
 
 +----------------------------+
