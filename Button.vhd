@@ -47,11 +47,11 @@ process(clk) --Sampling Process
 begin
 	if (clk'event and clk = '1') then
 		if (reset = '0') then
-			sample <= (others => input);
+			sample <= (others => button);
 		else
 			if (sample_pulse = '1') then
 				sample(9 downto 1) <= sample(8 downto 0); -- Left Shift
-				sample(0) <= input;
+				sample(0) <= button;
 			end if;
 		end if;
 	end if;
