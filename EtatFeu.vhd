@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 
 entity EtatFeu is 
 	port(
-	clkS : in std_logic;
+	clkS, stdby : in std_logic;
 	clkOut : out std_logic;
 	maxV : in integer;
 	signal dizaine, unite : out std_logic_vector(0 to 3));
@@ -20,18 +20,23 @@ begin
 	process(clkS)
 	begin
 		if clkS'event and clkS = '1' then
-			if count = maxV then
-				count <= 0;
-				clkOut <= '1';
-			else
-				count <= count +1;
-				clkOut <= '0';
-			end if;
+			if stdby = '0' then
+				if count = maxV then
+					count <= 0;
+					clkOut <= '1';
+				else
+					count <= count +1;
+					clkOut <= '0';
+				end if;
 			
-			if count2 = 0 then
-				count2 <= maxV;
-			else
-				count2 <= count2 -1;
+				if count2 = 0 then
+					count2 <= maxV;
+				else
+					count2 <= count2 -1;
+				end if;
+			elsif stdby ='1' then
+				temp <= 0;
+				temp2 <= 0;
 			end if;
 		end if;
 		temp <= count2 /10;

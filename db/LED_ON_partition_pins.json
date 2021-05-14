@@ -144,6 +144,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "LED",
+					"strict" : false
+				},
+				{
 					"name" : "VGA_HS",
 					"strict" : false
 				},
@@ -197,6 +201,10 @@
 				},
 				{
 					"name" : "VGA_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "boutton",
 					"strict" : false
 				},
 				{

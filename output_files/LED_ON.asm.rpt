@@ -1,5 +1,5 @@
 Assembler report for LED_ON
-Thu May 13 15:53:40 2021
+Thu May 13 22:14:18 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: Z:/VHDL/projet/LED ON/output_files/LED_ON.sof
+  5. Assembler Device Options: C:/Users/VHDLING2/Desktop/VHDL-ING2/output_files/LED_ON.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu May 13 15:53:40 2021 ;
+; Assembler Status      ; Successful - Thu May 13 22:14:18 2021 ;
 ; Revision Name         ; LED_ON                                ;
 ; Top-level Entity Name ; LED_ON                                ;
 ; Family                ; MAX 10                                ;
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------+
-; Assembler Generated Files                     ;
-+-----------------------------------------------+
-; File Name                                     ;
-+-----------------------------------------------+
-; Z:/VHDL/projet/LED ON/output_files/LED_ON.sof ;
-+-----------------------------------------------+
++-------------------------------------------------------------+
+; Assembler Generated Files                                   ;
++-------------------------------------------------------------+
+; File Name                                                   ;
++-------------------------------------------------------------+
+; C:/Users/VHDLING2/Desktop/VHDL-ING2/output_files/LED_ON.sof ;
++-------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Assembler Device Options: Z:/VHDL/projet/LED ON/output_files/LED_ON.sof ;
-+----------------+--------------------------------------------------------+
-; Option         ; Setting                                                ;
-+----------------+--------------------------------------------------------+
-; JTAG usercode  ; 0x0047798B                                             ;
-; Checksum       ; 0x0047798B                                             ;
-+----------------+--------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/VHDLING2/Desktop/VHDL-ING2/output_files/LED_ON.sof ;
++----------------+----------------------------------------------------------------------+
+; Option         ; Setting                                                              ;
++----------------+----------------------------------------------------------------------+
+; JTAG usercode  ; 0x0047C823                                                           ;
+; Checksum       ; 0x0047C823                                                           ;
++----------------+----------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,14 +77,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 13 15:53:33 2021
+    Info: Processing started: Thu May 13 22:14:07 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off LED_ON -c LED_ON
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 553 megabytes
-    Info: Processing ended: Thu May 13 15:53:40 2021
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 551 megabytes
+    Info: Processing ended: Thu May 13 22:14:18 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:11
 
 

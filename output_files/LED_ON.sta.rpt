@@ -1,5 +1,5 @@
 Timing Analyzer report for LED_ON
-Thu May 13 15:53:55 2021
+Thu May 13 22:14:36 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,9 +42,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  34. Report RSKM
  35. Unconstrained Paths Summary
  36. Clock Status Summary
- 37. Unconstrained Output Ports
+ 37. Unconstrained Input Ports
  38. Unconstrained Output Ports
- 39. Timing Analyzer Messages
+ 39. Unconstrained Input Ports
+ 40. Unconstrained Output Ports
+ 41. Timing Analyzer Messages
 
 
 
@@ -86,70 +88,75 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 3.23        ;
-; Maximum used               ; 8           ;
+; Average used               ; 1.94        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  32.1%      ;
-;     Processors 3-8         ;  31.8%      ;
+;     Processor 2            ;  32.0%      ;
+;     Processor 3            ;  31.3%      ;
+;     Processor 4            ;  31.1%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                   ;
-+---------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
-; Clock Name          ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                 ;
-+---------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
-; clk                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                 ;
-; clockM:fS1|clockout ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clockM:fS1|clockout } ;
-; EtatFeu:fs2|clkOut  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { EtatFeu:fs2|clkOut }  ;
-; VGA:VGA_Sub|HS      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA:VGA_Sub|HS }      ;
-; VGA_clk             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_clk }             ;
-+---------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                         ;
++--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
+; Clock Name                     ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                            ;
++--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
+; clk                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                            ;
+; clockM:fS1|clockout            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clockM:fS1|clockout }            ;
+; debounce:fs3_debounce|count[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { debounce:fs3_debounce|count[0] } ;
+; EtatFeu:fs2|clkOut             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { EtatFeu:fs2|clkOut }             ;
+; VGA:VGA_Sub|HS                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA:VGA_Sub|HS }                 ;
+; VGA_clk                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_clk }                        ;
++--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                                 ;
-+------------+-----------------+---------------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name          ; Note                                                          ;
-+------------+-----------------+---------------------+---------------------------------------------------------------+
-; 58.94 MHz  ; 58.94 MHz       ; VGA_clk             ;                                                               ;
-; 234.96 MHz ; 234.96 MHz      ; clockM:fS1|clockout ;                                                               ;
-; 268.1 MHz  ; 268.1 MHz       ; EtatFeu:fs2|clkOut  ;                                                               ;
-; 268.89 MHz ; 250.0 MHz       ; clk                 ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 313.58 MHz ; 313.58 MHz      ; VGA:VGA_Sub|HS      ;                                                               ;
-+------------+-----------------+---------------------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                            ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                     ; Note                                                          ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
+; 62.9 MHz   ; 62.9 MHz        ; VGA_clk                        ;                                                               ;
+; 131.79 MHz ; 131.79 MHz      ; debounce:fs3_debounce|count[0] ;                                                               ;
+; 182.62 MHz ; 182.62 MHz      ; EtatFeu:fs2|clkOut             ;                                                               ;
+; 213.95 MHz ; 213.95 MHz      ; clockM:fS1|clockout            ;                                                               ;
+; 259.13 MHz ; 250.0 MHz       ; clk                            ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 324.57 MHz ; 324.57 MHz      ; VGA:VGA_Sub|HS                 ;                                                               ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-----------------------------------------------+
-; Slow 1200mV 85C Model Setup Summary           ;
-+---------------------+---------+---------------+
-; Clock               ; Slack   ; End Point TNS ;
-+---------------------+---------+---------------+
-; VGA_clk             ; -17.770 ; -256.626      ;
-; clockM:fS1|clockout ; -3.256  ; -191.557      ;
-; EtatFeu:fs2|clkOut  ; -2.730  ; -60.446       ;
-; clk                 ; -2.719  ; -47.727       ;
-; VGA:VGA_Sub|HS      ; -2.189  ; -35.078       ;
-+---------------------+---------+---------------+
++----------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                      ;
++--------------------------------+---------+---------------+
+; Clock                          ; Slack   ; End Point TNS ;
++--------------------------------+---------+---------------+
+; VGA_clk                        ; -15.892 ; -241.830      ;
+; debounce:fs3_debounce|count[0] ; -5.293  ; -29.174       ;
+; EtatFeu:fs2|clkOut             ; -4.476  ; -134.787      ;
+; clockM:fS1|clockout            ; -4.209  ; -233.406      ;
+; clk                            ; -2.859  ; -51.283       ;
+; VGA:VGA_Sub|HS                 ; -2.081  ; -33.322       ;
++--------------------------------+---------+---------------+
 
 
-+---------------------------------------------+
-; Slow 1200mV 85C Model Hold Summary          ;
-+---------------------+-------+---------------+
-; Clock               ; Slack ; End Point TNS ;
-+---------------------+-------+---------------+
-; VGA:VGA_Sub|HS      ; 0.343 ; 0.000         ;
-; clk                 ; 0.636 ; 0.000         ;
-; clockM:fS1|clockout ; 0.638 ; 0.000         ;
-; EtatFeu:fs2|clkOut  ; 0.639 ; 0.000         ;
-; VGA_clk             ; 0.646 ; 0.000         ;
-+---------------------+-------+---------------+
++--------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                     ;
++--------------------------------+-------+---------------+
+; Clock                          ; Slack ; End Point TNS ;
++--------------------------------+-------+---------------+
+; VGA:VGA_Sub|HS                 ; 0.325 ; 0.000         ;
+; EtatFeu:fs2|clkOut             ; 0.378 ; 0.000         ;
+; clk                            ; 0.629 ; 0.000         ;
+; clockM:fS1|clockout            ; 0.641 ; 0.000         ;
+; VGA_clk                        ; 0.645 ; 0.000         ;
+; debounce:fs3_debounce|count[0] ; 1.297 ; 0.000         ;
++--------------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -164,17 +171,18 @@ No paths to report.
 No paths to report.
 
 
-+---------------------------------------------------+
-; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
-+---------------------+--------+--------------------+
-; Clock               ; Slack  ; End Point TNS      ;
-+---------------------+--------+--------------------+
-; clk                 ; -3.000 ; -42.284            ;
-; clockM:fS1|clockout ; -1.403 ; -91.195            ;
-; VGA_clk             ; -1.403 ; -47.702            ;
-; EtatFeu:fs2|clkOut  ; -1.403 ; -44.896            ;
-; VGA:VGA_Sub|HS      ; -1.403 ; -29.463            ;
-+---------------------+--------+--------------------+
++---------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary       ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; clk                            ; -3.000 ; -45.090       ;
+; clockM:fS1|clockout            ; -1.403 ; -91.195       ;
+; VGA_clk                        ; -1.403 ; -47.702       ;
+; EtatFeu:fs2|clkOut             ; -1.403 ; -44.896       ;
+; VGA:VGA_Sub|HS                 ; -1.403 ; -29.463       ;
+; debounce:fs3_debounce|count[0] ; 0.405  ; 0.000         ;
++--------------------------------+--------+---------------+
 
 
 -----------------------------------------------
@@ -183,44 +191,47 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                                  ;
-+------------+-----------------+---------------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name          ; Note                                                          ;
-+------------+-----------------+---------------------+---------------------------------------------------------------+
-; 63.94 MHz  ; 63.94 MHz       ; VGA_clk             ;                                                               ;
-; 255.3 MHz  ; 255.3 MHz       ; clockM:fS1|clockout ;                                                               ;
-; 292.65 MHz ; 250.0 MHz       ; clk                 ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 299.31 MHz ; 299.31 MHz      ; EtatFeu:fs2|clkOut  ;                                                               ;
-; 338.07 MHz ; 338.07 MHz      ; VGA:VGA_Sub|HS      ;                                                               ;
-+------------+-----------------+---------------------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                             ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                     ; Note                                                          ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
+; 67.98 MHz  ; 67.98 MHz       ; VGA_clk                        ;                                                               ;
+; 133.55 MHz ; 133.55 MHz      ; debounce:fs3_debounce|count[0] ;                                                               ;
+; 198.1 MHz  ; 198.1 MHz       ; EtatFeu:fs2|clkOut             ;                                                               ;
+; 235.46 MHz ; 235.46 MHz      ; clockM:fS1|clockout            ;                                                               ;
+; 281.06 MHz ; 250.0 MHz       ; clk                            ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 353.23 MHz ; 353.23 MHz      ; VGA:VGA_Sub|HS                 ;                                                               ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-----------------------------------------------+
-; Slow 1200mV 0C Model Setup Summary            ;
-+---------------------+---------+---------------+
-; Clock               ; Slack   ; End Point TNS ;
-+---------------------+---------+---------------+
-; VGA_clk             ; -16.316 ; -234.029      ;
-; clockM:fS1|clockout ; -2.917  ; -172.025      ;
-; clk                 ; -2.417  ; -41.009       ;
-; EtatFeu:fs2|clkOut  ; -2.341  ; -51.351       ;
-; VGA:VGA_Sub|HS      ; -1.958  ; -30.724       ;
-+---------------------+---------+---------------+
++----------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                       ;
++--------------------------------+---------+---------------+
+; Clock                          ; Slack   ; End Point TNS ;
++--------------------------------+---------+---------------+
+; VGA_clk                        ; -14.560 ; -219.204      ;
+; debounce:fs3_debounce|count[0] ; -4.982  ; -27.625       ;
+; EtatFeu:fs2|clkOut             ; -4.048  ; -121.305      ;
+; clockM:fS1|clockout            ; -3.751  ; -207.269      ;
+; clk                            ; -2.558  ; -43.747       ;
+; VGA:VGA_Sub|HS                 ; -1.831  ; -28.692       ;
++--------------------------------+---------+---------------+
 
 
-+---------------------------------------------+
-; Slow 1200mV 0C Model Hold Summary           ;
-+---------------------+-------+---------------+
-; Clock               ; Slack ; End Point TNS ;
-+---------------------+-------+---------------+
-; VGA:VGA_Sub|HS      ; 0.309 ; 0.000         ;
-; clk                 ; 0.588 ; 0.000         ;
-; EtatFeu:fs2|clkOut  ; 0.591 ; 0.000         ;
-; clockM:fS1|clockout ; 0.591 ; 0.000         ;
-; VGA_clk             ; 0.603 ; 0.000         ;
-+---------------------+-------+---------------+
++--------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                      ;
++--------------------------------+-------+---------------+
+; Clock                          ; Slack ; End Point TNS ;
++--------------------------------+-------+---------------+
+; VGA:VGA_Sub|HS                 ; 0.292 ; 0.000         ;
+; EtatFeu:fs2|clkOut             ; 0.339 ; 0.000         ;
+; clk                            ; 0.582 ; 0.000         ;
+; clockM:fS1|clockout            ; 0.592 ; 0.000         ;
+; VGA_clk                        ; 0.601 ; 0.000         ;
+; debounce:fs3_debounce|count[0] ; 1.189 ; 0.000         ;
++--------------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -235,17 +246,18 @@ No paths to report.
 No paths to report.
 
 
-+--------------------------------------------------+
-; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
-+---------------------+--------+-------------------+
-; Clock               ; Slack  ; End Point TNS     ;
-+---------------------+--------+-------------------+
-; clk                 ; -3.000 ; -42.284           ;
-; clockM:fS1|clockout ; -1.403 ; -91.195           ;
-; VGA_clk             ; -1.403 ; -47.702           ;
-; EtatFeu:fs2|clkOut  ; -1.403 ; -44.896           ;
-; VGA:VGA_Sub|HS      ; -1.403 ; -29.463           ;
-+---------------------+--------+-------------------+
++---------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary        ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; clk                            ; -3.000 ; -45.090       ;
+; clockM:fS1|clockout            ; -1.403 ; -91.195       ;
+; VGA_clk                        ; -1.403 ; -47.702       ;
+; EtatFeu:fs2|clkOut             ; -1.403 ; -44.896       ;
+; VGA:VGA_Sub|HS                 ; -1.403 ; -29.463       ;
+; debounce:fs3_debounce|count[0] ; 0.360  ; 0.000         ;
++--------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -254,30 +266,32 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------+
-; Fast 1200mV 0C Model Setup Summary           ;
-+---------------------+--------+---------------+
-; Clock               ; Slack  ; End Point TNS ;
-+---------------------+--------+---------------+
-; VGA_clk             ; -7.095 ; -93.067       ;
-; clockM:fS1|clockout ; -0.791 ; -43.431       ;
-; clk                 ; -0.595 ; -5.376        ;
-; EtatFeu:fs2|clkOut  ; -0.487 ; -6.177        ;
-; VGA:VGA_Sub|HS      ; -0.315 ; -3.189        ;
-+---------------------+--------+---------------+
++---------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                      ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; VGA_clk                        ; -6.311 ; -86.289       ;
+; debounce:fs3_debounce|count[0] ; -1.769 ; -8.039        ;
+; clockM:fS1|clockout            ; -1.437 ; -68.070       ;
+; EtatFeu:fs2|clkOut             ; -1.271 ; -37.016       ;
+; clk                            ; -0.716 ; -7.643        ;
+; VGA:VGA_Sub|HS                 ; -0.340 ; -3.045        ;
++--------------------------------+--------+---------------+
 
 
-+---------------------------------------------+
-; Fast 1200mV 0C Model Hold Summary           ;
-+---------------------+-------+---------------+
-; Clock               ; Slack ; End Point TNS ;
-+---------------------+-------+---------------+
-; VGA:VGA_Sub|HS      ; 0.150 ; 0.000         ;
-; EtatFeu:fs2|clkOut  ; 0.246 ; 0.000         ;
-; clk                 ; 0.246 ; 0.000         ;
-; clockM:fS1|clockout ; 0.246 ; 0.000         ;
-; VGA_clk             ; 0.251 ; 0.000         ;
-+---------------------+-------+---------------+
++--------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                      ;
++--------------------------------+-------+---------------+
+; Clock                          ; Slack ; End Point TNS ;
++--------------------------------+-------+---------------+
+; VGA:VGA_Sub|HS                 ; 0.142 ; 0.000         ;
+; EtatFeu:fs2|clkOut             ; 0.166 ; 0.000         ;
+; clk                            ; 0.243 ; 0.000         ;
+; clockM:fS1|clockout            ; 0.247 ; 0.000         ;
+; VGA_clk                        ; 0.249 ; 0.000         ;
+; debounce:fs3_debounce|count[0] ; 0.401 ; 0.000         ;
++--------------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -292,17 +306,18 @@ No paths to report.
 No paths to report.
 
 
-+--------------------------------------------------+
-; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
-+---------------------+--------+-------------------+
-; Clock               ; Slack  ; End Point TNS     ;
-+---------------------+--------+-------------------+
-; clk                 ; -3.000 ; -32.268           ;
-; clockM:fS1|clockout ; -1.000 ; -65.000           ;
-; VGA_clk             ; -1.000 ; -34.000           ;
-; EtatFeu:fs2|clkOut  ; -1.000 ; -32.000           ;
-; VGA:VGA_Sub|HS      ; -1.000 ; -21.000           ;
-+---------------------+--------+-------------------+
++---------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary        ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; clk                            ; -3.000 ; -34.411       ;
+; clockM:fS1|clockout            ; -1.000 ; -65.000       ;
+; VGA_clk                        ; -1.000 ; -34.000       ;
+; EtatFeu:fs2|clkOut             ; -1.000 ; -32.000       ;
+; VGA:VGA_Sub|HS                 ; -1.000 ; -21.000       ;
+; debounce:fs3_debounce|count[0] ; 0.335  ; 0.000         ;
++--------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -311,24 +326,26 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                ;
-+----------------------+----------+-------+----------+---------+---------------------+
-; Clock                ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+----------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack     ; -17.770  ; 0.150 ; N/A      ; N/A     ; -3.000              ;
-;  EtatFeu:fs2|clkOut  ; -2.730   ; 0.246 ; N/A      ; N/A     ; -1.403              ;
-;  VGA:VGA_Sub|HS      ; -2.189   ; 0.150 ; N/A      ; N/A     ; -1.403              ;
-;  VGA_clk             ; -17.770  ; 0.251 ; N/A      ; N/A     ; -1.403              ;
-;  clk                 ; -2.719   ; 0.246 ; N/A      ; N/A     ; -3.000              ;
-;  clockM:fS1|clockout ; -3.256   ; 0.246 ; N/A      ; N/A     ; -1.403              ;
-; Design-wide TNS      ; -591.434 ; 0.0   ; 0.0      ; 0.0     ; -255.54             ;
-;  EtatFeu:fs2|clkOut  ; -60.446  ; 0.000 ; N/A      ; N/A     ; -44.896             ;
-;  VGA:VGA_Sub|HS      ; -35.078  ; 0.000 ; N/A      ; N/A     ; -29.463             ;
-;  VGA_clk             ; -256.626 ; 0.000 ; N/A      ; N/A     ; -47.702             ;
-;  clk                 ; -47.727  ; 0.000 ; N/A      ; N/A     ; -42.284             ;
-;  clockM:fS1|clockout ; -191.557 ; 0.000 ; N/A      ; N/A     ; -91.195             ;
-+----------------------+----------+-------+----------+---------+---------------------+
++-----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                           ;
++---------------------------------+----------+-------+----------+---------+---------------------+
+; Clock                           ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack                ; -15.892  ; 0.142 ; N/A      ; N/A     ; -3.000              ;
+;  EtatFeu:fs2|clkOut             ; -4.476   ; 0.166 ; N/A      ; N/A     ; -1.403              ;
+;  VGA:VGA_Sub|HS                 ; -2.081   ; 0.142 ; N/A      ; N/A     ; -1.403              ;
+;  VGA_clk                        ; -15.892  ; 0.249 ; N/A      ; N/A     ; -1.403              ;
+;  clk                            ; -2.859   ; 0.243 ; N/A      ; N/A     ; -3.000              ;
+;  clockM:fS1|clockout            ; -4.209   ; 0.247 ; N/A      ; N/A     ; -1.403              ;
+;  debounce:fs3_debounce|count[0] ; -5.293   ; 0.401 ; N/A      ; N/A     ; 0.335               ;
+; Design-wide TNS                 ; -723.802 ; 0.0   ; 0.0      ; 0.0     ; -258.346            ;
+;  EtatFeu:fs2|clkOut             ; -134.787 ; 0.000 ; N/A      ; N/A     ; -44.896             ;
+;  VGA:VGA_Sub|HS                 ; -33.322  ; 0.000 ; N/A      ; N/A     ; -29.463             ;
+;  VGA_clk                        ; -241.830 ; 0.000 ; N/A      ; N/A     ; -47.702             ;
+;  clk                            ; -51.283  ; 0.000 ; N/A      ; N/A     ; -45.090             ;
+;  clockM:fS1|clockout            ; -233.406 ; 0.000 ; N/A      ; N/A     ; -91.195             ;
+;  debounce:fs3_debounce|count[0] ; -29.174  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++---------------------------------+----------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -390,6 +407,7 @@ No synchronizer chains to report.
 ; SER2         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; SCLK2        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; SRCLK2       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; VGA_HS       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; VGA_VS       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; VGA_R[0]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -484,6 +502,7 @@ No synchronizer chains to report.
 ; SER2         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; SCLK2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; SRCLK2       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0773 V           ; 0.156 V                              ; 0.166 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0773 V          ; 0.156 V                             ; 0.166 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; LED          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; VGA_HS       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; VGA_VS       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; VGA_R[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
@@ -561,6 +580,7 @@ No synchronizer chains to report.
 ; SER2         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
 ; SCLK2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
 ; SRCLK2       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0449 V           ; 0.201 V                              ; 0.093 V                              ; 4.89e-10 s                  ; 5.81e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0449 V          ; 0.201 V                             ; 0.093 V                             ; 4.89e-10 s                 ; 5.81e-10 s                 ; Yes                       ; No                        ;
+; LED          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; VGA_HS       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; VGA_VS       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; VGA_R[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
@@ -638,6 +658,7 @@ No synchronizer chains to report.
 ; SER2         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; SCLK2        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; SRCLK2       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.77 V              ; -0.0486 V           ; 0.285 V                              ; 0.06 V                               ; 2.8e-10 s                   ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.77 V             ; -0.0486 V          ; 0.285 V                             ; 0.06 V                              ; 2.8e-10 s                  ; 3.04e-10 s                 ; No                        ; Yes                       ;
+; LED          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; VGA_HS       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; VGA_VS       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; VGA_R[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
@@ -656,35 +677,53 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Setup Transfers                                                                       ;
-+---------------------+---------------------+----------+----------+----------+----------+
-; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+---------------------+---------------------+----------+----------+----------+----------+
-; clk                 ; clk                 ; 689      ; 0        ; 0        ; 0        ;
-; VGA_clk             ; clk                 ; 1        ; 1        ; 0        ; 0        ;
-; clockM:fS1|clockout ; clockM:fS1|clockout ; 3136     ; 0        ; 0        ; 0        ;
-; EtatFeu:fs2|clkOut  ; EtatFeu:fs2|clkOut  ; 592      ; 0        ; 0        ; 0        ;
-; VGA:VGA_Sub|HS      ; VGA:VGA_Sub|HS      ; 281      ; 0        ; 0        ; 0        ;
-; VGA:VGA_Sub|HS      ; VGA_clk             ; 7878693  ; 1        ; 0        ; 0        ;
-; VGA_clk             ; VGA_clk             ; 7804687  ; 0        ; 0        ; 0        ;
-+---------------------+---------------------+----------+----------+----------+----------+
++-------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                             ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; clk                            ; clk                            ; 689      ; 0        ; 0        ; 0        ;
+; debounce:fs3_debounce|count[0] ; clk                            ; 1        ; 1        ; 0        ; 0        ;
+; VGA_clk                        ; clk                            ; 1        ; 1        ; 0        ; 0        ;
+; clk                            ; clockM:fS1|clockout            ; 65       ; 0        ; 0        ; 0        ;
+; clockM:fS1|clockout            ; clockM:fS1|clockout            ; 3137     ; 0        ; 0        ; 0        ;
+; debounce:fs3_debounce|count[0] ; clockM:fS1|clockout            ; 202      ; 65       ; 0        ; 0        ;
+; clk                            ; debounce:fs3_debounce|count[0] ; 0        ; 0        ; 3        ; 0        ;
+; debounce:fs3_debounce|count[0] ; debounce:fs3_debounce|count[0] ; 0        ; 0        ; 3        ; 3        ;
+; EtatFeu:fs2|clkOut             ; debounce:fs3_debounce|count[0] ; 127      ; 0        ; 222      ; 0        ;
+; clk                            ; EtatFeu:fs2|clkOut             ; 32       ; 0        ; 0        ; 0        ;
+; debounce:fs3_debounce|count[0] ; EtatFeu:fs2|clkOut             ; 32       ; 32       ; 0        ; 0        ;
+; EtatFeu:fs2|clkOut             ; EtatFeu:fs2|clkOut             ; 2619     ; 0        ; 0        ; 0        ;
+; VGA:VGA_Sub|HS                 ; VGA:VGA_Sub|HS                 ; 281      ; 0        ; 0        ; 0        ;
+; debounce:fs3_debounce|count[0] ; VGA_clk                        ; 0        ; 5503     ; 0        ; 0        ;
+; VGA:VGA_Sub|HS                 ; VGA_clk                        ; 6589746  ; 1        ; 0        ; 0        ;
+; VGA_clk                        ; VGA_clk                        ; 5164869  ; 0        ; 0        ; 0        ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+---------------------------------------------------------------------------------------+
-; Hold Transfers                                                                        ;
-+---------------------+---------------------+----------+----------+----------+----------+
-; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+---------------------+---------------------+----------+----------+----------+----------+
-; clk                 ; clk                 ; 689      ; 0        ; 0        ; 0        ;
-; VGA_clk             ; clk                 ; 1        ; 1        ; 0        ; 0        ;
-; clockM:fS1|clockout ; clockM:fS1|clockout ; 3136     ; 0        ; 0        ; 0        ;
-; EtatFeu:fs2|clkOut  ; EtatFeu:fs2|clkOut  ; 592      ; 0        ; 0        ; 0        ;
-; VGA:VGA_Sub|HS      ; VGA:VGA_Sub|HS      ; 281      ; 0        ; 0        ; 0        ;
-; VGA:VGA_Sub|HS      ; VGA_clk             ; 7878693  ; 1        ; 0        ; 0        ;
-; VGA_clk             ; VGA_clk             ; 7804687  ; 0        ; 0        ; 0        ;
-+---------------------+---------------------+----------+----------+----------+----------+
++-------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                              ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; clk                            ; clk                            ; 689      ; 0        ; 0        ; 0        ;
+; debounce:fs3_debounce|count[0] ; clk                            ; 1        ; 1        ; 0        ; 0        ;
+; VGA_clk                        ; clk                            ; 1        ; 1        ; 0        ; 0        ;
+; clk                            ; clockM:fS1|clockout            ; 65       ; 0        ; 0        ; 0        ;
+; clockM:fS1|clockout            ; clockM:fS1|clockout            ; 3137     ; 0        ; 0        ; 0        ;
+; debounce:fs3_debounce|count[0] ; clockM:fS1|clockout            ; 202      ; 65       ; 0        ; 0        ;
+; clk                            ; debounce:fs3_debounce|count[0] ; 0        ; 0        ; 3        ; 0        ;
+; debounce:fs3_debounce|count[0] ; debounce:fs3_debounce|count[0] ; 0        ; 0        ; 3        ; 3        ;
+; EtatFeu:fs2|clkOut             ; debounce:fs3_debounce|count[0] ; 127      ; 0        ; 222      ; 0        ;
+; clk                            ; EtatFeu:fs2|clkOut             ; 32       ; 0        ; 0        ; 0        ;
+; debounce:fs3_debounce|count[0] ; EtatFeu:fs2|clkOut             ; 32       ; 32       ; 0        ; 0        ;
+; EtatFeu:fs2|clkOut             ; EtatFeu:fs2|clkOut             ; 2619     ; 0        ; 0        ; 0        ;
+; VGA:VGA_Sub|HS                 ; VGA:VGA_Sub|HS                 ; 281      ; 0        ; 0        ; 0        ;
+; debounce:fs3_debounce|count[0] ; VGA_clk                        ; 0        ; 5503     ; 0        ; 0        ;
+; VGA:VGA_Sub|HS                 ; VGA_clk                        ; 6589746  ; 1        ; 0        ; 0        ;
+; VGA_clk                        ; VGA_clk                        ; 5164869  ; 0        ; 0        ; 0        ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -707,24 +746,34 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 49    ; 49   ;
-; Unconstrained Output Port Paths ; 63    ; 63   ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 2     ; 2    ;
+; Unconstrained Output Ports      ; 50    ; 50   ;
+; Unconstrained Output Port Paths ; 65    ; 65   ;
 +---------------------------------+-------+------+
 
 
-+----------------------------------------------------------------+
-; Clock Status Summary                                           ;
-+---------------------+---------------------+------+-------------+
-; Target              ; Clock               ; Type ; Status      ;
-+---------------------+---------------------+------+-------------+
-; EtatFeu:fs2|clkOut  ; EtatFeu:fs2|clkOut  ; Base ; Constrained ;
-; VGA:VGA_Sub|HS      ; VGA:VGA_Sub|HS      ; Base ; Constrained ;
-; VGA_clk             ; VGA_clk             ; Base ; Constrained ;
-; clk                 ; clk                 ; Base ; Constrained ;
-; clockM:fS1|clockout ; clockM:fS1|clockout ; Base ; Constrained ;
-+---------------------+---------------------+------+-------------+
++--------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                 ;
++--------------------------------+--------------------------------+------+-------------+
+; Target                         ; Clock                          ; Type ; Status      ;
++--------------------------------+--------------------------------+------+-------------+
+; EtatFeu:fs2|clkOut             ; EtatFeu:fs2|clkOut             ; Base ; Constrained ;
+; VGA:VGA_Sub|HS                 ; VGA:VGA_Sub|HS                 ; Base ; Constrained ;
+; VGA_clk                        ; VGA_clk                        ; Base ; Constrained ;
+; clk                            ; clk                            ; Base ; Constrained ;
+; clockM:fS1|clockout            ; clockM:fS1|clockout            ; Base ; Constrained ;
+; debounce:fs3_debounce|count[0] ; debounce:fs3_debounce|count[0] ; Base ; Constrained ;
++--------------------------------+--------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; boutton    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -732,6 +781,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; LED         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_B[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_B[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_B[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -784,11 +834,21 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; boutton    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------+
 ; Unconstrained Output Ports                                                                          ;
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; LED         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_B[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_B[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_B[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -847,19 +907,20 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 13 15:53:42 2021
+    Info: Processing started: Thu May 13 22:14:20 2021
 Info: Command: quartus_sta LED_ON -c LED_ON
 Info: qsta_default_script.tcl version: #1
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 39 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 37 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'LED_ON.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name VGA_clk VGA_clk
     Info (332105): create_clock -period 1.000 -name clk clk
     Info (332105): create_clock -period 1.000 -name VGA:VGA_Sub|HS VGA:VGA_Sub|HS
+    Info (332105): create_clock -period 1.000 -name debounce:fs3_debounce|count[0] debounce:fs3_debounce|count[0]
     Info (332105): create_clock -period 1.000 -name EtatFeu:fs2|clkOut EtatFeu:fs2|clkOut
     Info (332105): create_clock -period 1.000 -name clockM:fS1|clockout clockM:fS1|clockout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -868,98 +929,107 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -17.770
+Info (332146): Worst-case setup slack is -15.892
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -17.770            -256.626 VGA_clk 
-    Info (332119):    -3.256            -191.557 clockM:fS1|clockout 
-    Info (332119):    -2.730             -60.446 EtatFeu:fs2|clkOut 
-    Info (332119):    -2.719             -47.727 clk 
-    Info (332119):    -2.189             -35.078 VGA:VGA_Sub|HS 
-Info (332146): Worst-case hold slack is 0.343
+    Info (332119):   -15.892            -241.830 VGA_clk 
+    Info (332119):    -5.293             -29.174 debounce:fs3_debounce|count[0] 
+    Info (332119):    -4.476            -134.787 EtatFeu:fs2|clkOut 
+    Info (332119):    -4.209            -233.406 clockM:fS1|clockout 
+    Info (332119):    -2.859             -51.283 clk 
+    Info (332119):    -2.081             -33.322 VGA:VGA_Sub|HS 
+Info (332146): Worst-case hold slack is 0.325
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.343               0.000 VGA:VGA_Sub|HS 
-    Info (332119):     0.636               0.000 clk 
-    Info (332119):     0.638               0.000 clockM:fS1|clockout 
-    Info (332119):     0.639               0.000 EtatFeu:fs2|clkOut 
-    Info (332119):     0.646               0.000 VGA_clk 
+    Info (332119):     0.325               0.000 VGA:VGA_Sub|HS 
+    Info (332119):     0.378               0.000 EtatFeu:fs2|clkOut 
+    Info (332119):     0.629               0.000 clk 
+    Info (332119):     0.641               0.000 clockM:fS1|clockout 
+    Info (332119):     0.645               0.000 VGA_clk 
+    Info (332119):     1.297               0.000 debounce:fs3_debounce|count[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -42.284 clk 
+    Info (332119):    -3.000             -45.090 clk 
     Info (332119):    -1.403             -91.195 clockM:fS1|clockout 
     Info (332119):    -1.403             -47.702 VGA_clk 
     Info (332119):    -1.403             -44.896 EtatFeu:fs2|clkOut 
     Info (332119):    -1.403             -29.463 VGA:VGA_Sub|HS 
+    Info (332119):     0.405               0.000 debounce:fs3_debounce|count[0] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -16.316
+Info (332146): Worst-case setup slack is -14.560
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -16.316            -234.029 VGA_clk 
-    Info (332119):    -2.917            -172.025 clockM:fS1|clockout 
-    Info (332119):    -2.417             -41.009 clk 
-    Info (332119):    -2.341             -51.351 EtatFeu:fs2|clkOut 
-    Info (332119):    -1.958             -30.724 VGA:VGA_Sub|HS 
-Info (332146): Worst-case hold slack is 0.309
+    Info (332119):   -14.560            -219.204 VGA_clk 
+    Info (332119):    -4.982             -27.625 debounce:fs3_debounce|count[0] 
+    Info (332119):    -4.048            -121.305 EtatFeu:fs2|clkOut 
+    Info (332119):    -3.751            -207.269 clockM:fS1|clockout 
+    Info (332119):    -2.558             -43.747 clk 
+    Info (332119):    -1.831             -28.692 VGA:VGA_Sub|HS 
+Info (332146): Worst-case hold slack is 0.292
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.309               0.000 VGA:VGA_Sub|HS 
-    Info (332119):     0.588               0.000 clk 
-    Info (332119):     0.591               0.000 EtatFeu:fs2|clkOut 
-    Info (332119):     0.591               0.000 clockM:fS1|clockout 
-    Info (332119):     0.603               0.000 VGA_clk 
+    Info (332119):     0.292               0.000 VGA:VGA_Sub|HS 
+    Info (332119):     0.339               0.000 EtatFeu:fs2|clkOut 
+    Info (332119):     0.582               0.000 clk 
+    Info (332119):     0.592               0.000 clockM:fS1|clockout 
+    Info (332119):     0.601               0.000 VGA_clk 
+    Info (332119):     1.189               0.000 debounce:fs3_debounce|count[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -42.284 clk 
+    Info (332119):    -3.000             -45.090 clk 
     Info (332119):    -1.403             -91.195 clockM:fS1|clockout 
     Info (332119):    -1.403             -47.702 VGA_clk 
     Info (332119):    -1.403             -44.896 EtatFeu:fs2|clkOut 
     Info (332119):    -1.403             -29.463 VGA:VGA_Sub|HS 
+    Info (332119):     0.360               0.000 debounce:fs3_debounce|count[0] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -7.095
+Info (332146): Worst-case setup slack is -6.311
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.095             -93.067 VGA_clk 
-    Info (332119):    -0.791             -43.431 clockM:fS1|clockout 
-    Info (332119):    -0.595              -5.376 clk 
-    Info (332119):    -0.487              -6.177 EtatFeu:fs2|clkOut 
-    Info (332119):    -0.315              -3.189 VGA:VGA_Sub|HS 
-Info (332146): Worst-case hold slack is 0.150
+    Info (332119):    -6.311             -86.289 VGA_clk 
+    Info (332119):    -1.769              -8.039 debounce:fs3_debounce|count[0] 
+    Info (332119):    -1.437             -68.070 clockM:fS1|clockout 
+    Info (332119):    -1.271             -37.016 EtatFeu:fs2|clkOut 
+    Info (332119):    -0.716              -7.643 clk 
+    Info (332119):    -0.340              -3.045 VGA:VGA_Sub|HS 
+Info (332146): Worst-case hold slack is 0.142
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.150               0.000 VGA:VGA_Sub|HS 
-    Info (332119):     0.246               0.000 EtatFeu:fs2|clkOut 
-    Info (332119):     0.246               0.000 clk 
-    Info (332119):     0.246               0.000 clockM:fS1|clockout 
-    Info (332119):     0.251               0.000 VGA_clk 
+    Info (332119):     0.142               0.000 VGA:VGA_Sub|HS 
+    Info (332119):     0.166               0.000 EtatFeu:fs2|clkOut 
+    Info (332119):     0.243               0.000 clk 
+    Info (332119):     0.247               0.000 clockM:fS1|clockout 
+    Info (332119):     0.249               0.000 VGA_clk 
+    Info (332119):     0.401               0.000 debounce:fs3_debounce|count[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -32.268 clk 
+    Info (332119):    -3.000             -34.411 clk 
     Info (332119):    -1.000             -65.000 clockM:fS1|clockout 
     Info (332119):    -1.000             -34.000 VGA_clk 
     Info (332119):    -1.000             -32.000 EtatFeu:fs2|clkOut 
     Info (332119):    -1.000             -21.000 VGA:VGA_Sub|HS 
+    Info (332119):     0.335               0.000 debounce:fs3_debounce|count[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 759 megabytes
-    Info: Processing ended: Thu May 13 15:53:55 2021
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 715 megabytes
+    Info: Processing ended: Thu May 13 22:14:36 2021
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:28
 
 
