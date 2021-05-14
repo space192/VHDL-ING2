@@ -14,7 +14,7 @@ end RegisterLED;
 
 
 architecture structural of registerLED is
-signal counter : integer := 0;
+signal counter : integer := 7;
 begin
 	process(valeur)
 	begin
@@ -23,14 +23,14 @@ begin
 	begin
 		if clk'event and clk ='1' then
 			if SRCLK = '1' then
-				if counter = 7 then
-					counter <= 0;
+				if counter = 0 then
+					counter <= 7;
 					SCLK <= '1';
-				elsif counter = 0 then
+				elsif counter = 7 then
 					SCLK <= '0';
-					counter <= counter +1;
+					counter <= counter -1;
 				else
-					counter <= counter +1;
+					counter <= counter -1;
 				end if;
 				SRCLK <= '0';
 			else
