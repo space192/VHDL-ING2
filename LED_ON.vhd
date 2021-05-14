@@ -338,6 +338,183 @@ begin
             color <= lPaletColor;
 		end if ;
 		
+<<<<<<< HEAD
+		if (VGA_x <= 220) and (VGA_x >= 195) and (VGA_y >= 355) and (VGA_y <= 360) then --segment 0 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(0) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment4(0) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+					
+		end if ;
+		if (VGA_x <= 220) and (VGA_x >= 195) and (VGA_y >= 380) and (VGA_y <= 390) then --segment 6 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(6) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment4(6) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 220) and (VGA_x >= 195) and (VGA_y >= 410) and (VGA_y <= 415) then --segment 3 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(3) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment4(3) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		
+		if (VGA_x <= 200) and (VGA_x >= 195) and (VGA_y >= 355) and (VGA_y <= 390) then --segment 5 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(5) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment4(5) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 200) and (VGA_x >= 195) and (VGA_y >= 390) and (VGA_y <= 415) then --segment 4 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(4) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment4(4) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 220) and (VGA_x >= 215) and (VGA_y >= 355) and (VGA_y <= 390) then --segment 1 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(1) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment4(1) = '0')then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 220) and (VGA_x >= 215) and (VGA_y >= 390) and (VGA_y <= 415) then --segment 2 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(2) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment4(2) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		
+		if (VGA_x <= 255) and (VGA_x >= 235) and (VGA_y >= 355) and (VGA_y <= 360) then --segment 0 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(0) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment3(0) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 255) and (VGA_x >= 230) and (VGA_y >= 380) and (VGA_y <= 390) then --segment 6 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(6) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment3(6) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 255) and (VGA_x >= 230) and (VGA_y >= 410) and (VGA_y <= 415) then --segment 3 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(3) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment3(3) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		
+		if (VGA_x <= 235) and (VGA_x >= 230) and (VGA_y >= 355) and (VGA_y <= 390) then --segment 5 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(5) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment3(5) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 235) and (VGA_x >= 230) and (VGA_y >= 390) and (VGA_y <= 415) then --segment 4 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(4) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment3(4) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 255) and (VGA_x >= 250) and (VGA_y >= 355) and (VGA_y <= 390) then --segment 1 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(1) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment3(1) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 255) and (VGA_x >= 250) and (VGA_y >= 390) and (VGA_y <= 415) then --segment 2 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(2) = '0') then
+					color <= vert;
+					end if;
+				else
+					if (segment3(2) = '0') then
+					color <= rouge;
+					end if;
+				end if;
+		end if ;
+		
+		
+		
+=======
 		if (VGA_x <= 220) and (VGA_x >= 195) and (VGA_y >= 390) and (VGA_y <= 380) then --segment 1 feu 1
             color <= ballColor;
 		end if ;
@@ -359,10 +536,188 @@ begin
 		end if ;
 		
 		
+>>>>>>> 2af2406740b8b28f23dca05720c40452d5a906e6
 		if (VGA_x <= 550) and (VGA_x >= 480) and (VGA_y >= 350) and (VGA_y <= 420) then --exterieur affichage segment feu 2
             color <= lPaletColor;
 		end if ;
 		
+<<<<<<< HEAD
+		if (VGA_x <= 510) and (VGA_x >= 485) and (VGA_y >= 355) and (VGA_y <= 360) then --segment 0 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(0) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment4(0) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 510) and (VGA_x >= 485) and (VGA_y >= 380) and (VGA_y <= 390) then --segment 6 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(6) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment4(6) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 510) and (VGA_x >= 485) and (VGA_y >= 410) and (VGA_y <= 415) then --segment 3 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(3) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment4(3) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		
+		if (VGA_x <= 490) and (VGA_x >= 485) and (VGA_y >= 355) and (VGA_y <= 390) then --segment 5 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(5) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment4(5) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 490) and (VGA_x >= 485) and (VGA_y >= 390) and (VGA_y <= 415) then --segment 4 feu 1
+           if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(4) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment4(4) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 510) and (VGA_x >= 505) and (VGA_y >= 355) and (VGA_y <= 390) then --segment 1 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(1) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment4(1) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 510) and (VGA_x >= 505) and (VGA_y >= 390) and (VGA_y <= 415) then --segment 2 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment2(2) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment4(2) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		
+		if (VGA_x <= 545) and (VGA_x >= 525) and (VGA_y >= 355) and (VGA_y <= 360) then --segment 0 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(0) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment3(0) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 545) and (VGA_x >= 520) and (VGA_y >= 380) and (VGA_y <= 390) then --segment 6 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(6) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment3(6) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 545) and (VGA_x >= 520) and (VGA_y >= 410) and (VGA_y <= 415) then --segment 3 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(3) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment3(3) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		
+		if (VGA_x <= 525) and (VGA_x >= 520) and (VGA_y >= 355) and (VGA_y <= 390) then --segment 5 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(5) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment3(5) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 525) and (VGA_x >= 520) and (VGA_y >= 390) and (VGA_y <= 415) then --segment 4 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(4) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment3(4) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 545) and (VGA_x >= 540) and (VGA_y >= 355) and (VGA_y <= 390) then --segment 1 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(1) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment3(1) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		if (VGA_x <= 545) and (VGA_x >= 540) and (VGA_y >= 390) and (VGA_y <= 415) then --segment 2 feu 1
+            if (segment5 = "11111001" ) or (segment5 = "10100100" )
+					then
+					if (segment(2) = '0') then
+					color <= rouge;
+					end if;
+				else
+					if (segment3(2) = '0') then
+					color <= vert;
+					end if;
+				end if;
+		end if ;
+		
+		
+		
+=======
+>>>>>>> 2af2406740b8b28f23dca05720c40452d5a906e6
 		
 		
 		
