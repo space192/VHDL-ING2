@@ -338,7 +338,6 @@ begin
             color <= lPaletColor;
 		end if ;
 		
-<<<<<<< HEAD
 		if (VGA_x <= 220) and (VGA_x >= 195) and (VGA_y >= 355) and (VGA_y <= 360) then --segment 0 feu 1
             if (segment5 = "11111001" ) or (segment5 = "10100100" )
 					then
@@ -511,37 +510,10 @@ begin
 					end if;
 				end if;
 		end if ;
-		
-		
-		
-=======
-		if (VGA_x <= 220) and (VGA_x >= 195) and (VGA_y >= 390) and (VGA_y <= 380) then --segment 1 feu 1
-            color <= ballColor;
-		end if ;
-		if (VGA_x <= 220) and (VGA_x >= 195) and (VGA_y >= 415) and (VGA_y <= 410) then --segment 1 feu 1
-            color <= ballColor;
-		end if ;
-		
-		if (VGA_x <= 200) and (VGA_x >= 195) and (VGA_y >= 355) and (VGA_y <= 390) then --segment 1 feu 1
-            color <= ballColor;
-		end if ;
-		if (VGA_x <= 200) and (VGA_x >= 195) and (VGA_y >= 355) and (VGA_y <= 390) then --segment 1 feu 1
-            color <= ballColor;
-		end if ;
-		if (VGA_x <= 220) and (VGA_x >= 215) and (VGA_y >= 390) and (VGA_y <= 415) then --segment 1 feu 1
-            color <= ballColor;
-		end if ;
-		if (VGA_x <= 220) and (VGA_x >= 215) and (VGA_y >= 390) and (VGA_y <= 415) then --segment 1 feu 1
-            color <= ballColor;
-		end if ;
-		
-		
->>>>>>> 2af2406740b8b28f23dca05720c40452d5a906e6
 		if (VGA_x <= 550) and (VGA_x >= 480) and (VGA_y >= 350) and (VGA_y <= 420) then --exterieur affichage segment feu 2
             color <= lPaletColor;
 		end if ;
 		
-<<<<<<< HEAD
 		if (VGA_x <= 510) and (VGA_x >= 485) and (VGA_y >= 355) and (VGA_y <= 360) then --segment 0 feu 1
             if (segment5 = "11111001" ) or (segment5 = "10100100" )
 					then
@@ -713,14 +685,6 @@ begin
 					end if;
 				end if;
 		end if ;
-		
-		
-		
-=======
->>>>>>> 2af2406740b8b28f23dca05720c40452d5a906e6
-		
-		
-		
 		if (VGA_x <= 130) and (VGA_x >= 30) and (VGA_y >= 200) and (VGA_y <= 500) then -- FEU1
             color <= lPaletColor;
 		end if ;
