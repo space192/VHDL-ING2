@@ -11,6 +11,7 @@ entity max_value is
 		--LEDR1, LEDO1, LEDV1, LEDR2, LEDO2, LEDV2 : out std_logic;
 		TAB_LED1, TAB_LED2 : out std_logic_vector(0 to 7);
 		result, result2 : out std_logic_vector(7 downto 0);
+		selecBuzzer : out std_logic_vector(0 to 1);
 		signal counter : inout integer := 0);
 end max_value;
 
@@ -39,24 +40,28 @@ begin
 				--LEDR1 <= '1'; LEDO1 <= '0'; LEDV1 <= '0'; LEDR2 <= '0'; LEDO2 <= '0'; LEDV2 <= '1';
 				TAB_LED1 <= "10010000";
 				TAB_LED2 <= "00101000";
+				selecBuzzer <= "11";
 			elsif counter = 1 then -- feu 1 au rouge et feu 2 au orange
 				maxV <= 5;
 				temp <= "0010";
 				--LEDR1 <= '1'; LEDO1 <= '0'; LEDV1 <= '0'; LEDR2 <= '0'; LEDO2 <= '1'; LEDV2 <= '0';
 				TAB_LED1 <= "10010000";
 				TAB_LED2 <= "01001000";
+				selecBuzzer <= "01";
 			elsif counter = 2 then --feu 1 au vert et feu 2 au rouge
 				maxV <= 45;
 				temp <= "0011";
 				--LEDR1 <= '0'; LEDO1 <= '0'; LEDV1 <= '1'; LEDR2 <= '1'; LEDO2 <= '0'; LEDV2 <= '0';
 				TAB_LED1 <= "00101000";
 				TAB_LED2 <= "10010000";
+				selecBuzzer <= "11";
 			elsif counter = 3 then -- feu 1 au orange et feu 2 au rouge
 				maxV <= 5;
 				temp <= "0100";
 				--LEDR1 <= '0'; LEDO1 <= '1'; LEDV1 <= '0'; LEDR2 <= '1'; LEDO2 <= '0'; LEDV2 <= '0';
 				TAB_LED1 <= "01001000";
 				TAB_LED2 <= "10010000";
+				selecBuzzer <= "00";
 			end if;
 		elsif stdby = '1' then
 			temp <= "0101";
