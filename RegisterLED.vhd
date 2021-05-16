@@ -9,12 +9,14 @@ entity RegisterLED is
 	valeur : in std_logic_vector(0 to 7);
 	SER : out std_logic;
 	SCLK : out std_logic;
-	SRCLK : inout std_logic);
+	SRCLK : inout std_logic;
+	RESET : out std_logic);
 end RegisterLED;
 
 
 architecture structural of registerLED is
 signal counter : integer := 7;
+signal ENABLE : std_logic := '1';
 begin
 	process(valeur)
 	begin
@@ -22,20 +24,26 @@ begin
 	process(clk)
 	begin
 		if clk'event and clk ='1' then
-			if SRCLK = '1' then
-				if counter = 0 then
-					counter <= 7;
-					SCLK <= '1';
-				elsif counter = 7 then
-					SCLK <= '0';
-					counter <= counter -1;
+			if ENABLE = '0' then
+				RESET <= '0';
+				if SRCLK = '1' then
+					if counter = 0 then
+						counter <= 7;
+						SCLK <= '1';
+					elsif counter = 7 then
+						SCLK <= '0';
+						counter <= counter -1;
+					else
+						counter <= counter -1;
+					end if;
+					SRCLK <= '0';
 				else
-					counter <= counter -1;
+					SER <= valeur(counter);
+					SRCLK <= '1';
 				end if;
-				SRCLK <= '0';
 			else
-				SER <= valeur(counter);
-				SRCLK <= '1';
+				RESET <= '1';
+				ENABLE <= '0';
 			end if;
 		end if;
 	end process;

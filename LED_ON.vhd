@@ -7,7 +7,7 @@ entity LED_ON is
 	clk : in std_logic; -- clock de 50Mhz
 	segment, segment2, segment3, segment4, segment5, segment6 : inout std_logic_vector(7 downto 0);
 -- HEX 0     HEX 1      HEX 2      HEX 3    HEX 4      HEX 5
-	SER1, SCLK1, SER2, SCLK2: out std_logic;
+	SER1, SCLK1, SER2, SCLK2, RESET1, RESET2: out std_logic;
 	SRCLK1, SRCLK2 : inout std_logic := '0';
 	buzzer : out std_logic;
 	boutton : in std_logic;
@@ -26,6 +26,7 @@ signal temp : std_logic; --temp est la clock pour les differents état du system
 signal max : integer :=30; --valeur maximum du compteur pour le comptage et le decomptage peu utile
 signal count : integer := 0; -- count permet de connaitre l'état actuel du systeme utile pour toi pour faire ton affichage visuel
 signal enable1, enable2 : std_logic;
+signal decompte : integer;
 signal stdby : std_logic := '0';
 signal TAB_LED1, TAB_LED2 : std_logic_vector(0 to 7) := "00000000";
 signal selecBuzzer : std_logic_vector(0 to 1);
@@ -43,13 +44,13 @@ begin
 	
 	fs1_buzzer : entity Sirene(structural)
 	generic map(max => 113636, max2 => 83333)
-	port map(clk => clk, selec => selecBuzzer, buzzer => buzzer);
+	port map(clk => clk, selec => selecBuzzer, buzzer => buzzer, valeur => decompte);
 	
 	
 	--FS2 et FS2 value font le comptage et le decomptage pour le programme globale pour simplifier le systeme
 	
 	fs2 : entity EtatFeu(structural) -- gestion des clocks pour les feux elle renvoie dizaine et unite pour affichage
-	port map(clkS => clockUsable, clkOut => temp, maxV => max, dizaine => dizaine, unite => unite, stdby => stdby);
+	port map(clkS => clockUsable, clkOut => temp, maxV => max, dizaine => dizaine, unite => unite, stdby => stdby, valeur => decompte);
 	
 	fs2_value : entity max_value(structural) --gere le passage dans les differents mode du feux
 	port map(clock => temp, maxV => max, result => segment5, result2 => segment6, counter => count, stdby => stdby, TAB_LED1 => TAB_LED1, TAB_LED2 => TAB_LED2, selecBuzzer => selecBuzzer);
@@ -82,10 +83,10 @@ begin
 	port map(cclk => clk, inp => boutton, outp => stdby);
 	
 	FSLED1 : entity registerLED(structural)
-	port map(clk => clockUsable2,valeur => TAB_LED1, SER => SER1, SCLK => SCLK1, SRCLK => SRCLK1);
+	port map(clk => clockUsable2,valeur => TAB_LED1, SER => SER1, SCLK => SCLK1, SRCLK => SRCLK1, RESET => RESET1);
 	
 	FSLED2 : entity registerLED(structural)
-	port map(clk => clockUsable2, valeur => TAB_LED2, SER => SER2, SCLK => SCLK2, SRCLK => SRCLK2);	
+	port map(clk => clockUsable2, valeur => TAB_LED2, SER => SER2, SCLK => SCLK2, SRCLK => SRCLK2, RESET => RESET2);	
 	--FS4
 	
 	FS4 : entity VGA_display(structural)

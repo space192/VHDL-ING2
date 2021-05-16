@@ -8,7 +8,8 @@ entity EtatFeu is
 	clkS, stdby : in std_logic;
 	clkOut : out std_logic;
 	maxV : in integer;
-	signal dizaine, unite : out std_logic_vector(0 to 3));
+	signal dizaine, unite : out std_logic_vector(0 to 3);
+	signal valeur : out integer);
 end EtatFeu;
 
 
@@ -42,6 +43,7 @@ begin
 		temp <= count2 /10;
 		temp2 <= count2 mod 10;
 	end process;
+	valeur <= count2;
 	dizaine <= std_logic_vector(to_unsigned(temp, 4));
 	unite <= std_logic_vector(to_unsigned(temp2, 4));
 end structural;

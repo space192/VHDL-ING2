@@ -1,5 +1,5 @@
 Flow report for LED_ON
-Thu May 13 22:14:42 2021
+Sun May 16 16:49:39 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,21 +40,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 13 22:14:42 2021       ;
+; Flow Status                        ; Successful - Sun May 16 16:49:39 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; LED_ON                                      ;
 ; Top-level Entity Name              ; LED_ON                                      ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 3,957 / 49,760 ( 8 % )                      ;
-;     Total combinational functions  ; 3,949 / 49,760 ( 8 % )                      ;
-;     Dedicated logic registers      ; 182 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 182                                         ;
-; Total pins                         ; 71 / 360 ( 20 % )                           ;
+; Total logic elements               ; 4,428 / 49,760 ( 9 % )                      ;
+;     Total combinational functions  ; 4,416 / 49,760 ( 9 % )                      ;
+;     Dedicated logic registers      ; 322 / 49,760 ( < 1 % )                      ;
+; Total registers                    ; 322                                         ;
+; Total pins                         ; 73 / 360 ( 20 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 10 / 288 ( 3 % )                            ;
+; Embedded Multiplier 9-bit elements ; 22 / 288 ( 8 % )                            ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
 ; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/13/2021 22:11:23 ;
+; Start date & time ; 05/16/2021 16:47:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LED_ON              ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 52243723875.162093668201280            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 52234776526.162117642202816            ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_RUN_TOOL_AUTOMATICALLY          ; Off                                    ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
@@ -99,12 +99,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:13     ; 1.0                     ; 731 MB              ; 00:01:54                           ;
-; Fitter               ; 00:01:26     ; 1.4                     ; 1581 MB             ; 00:02:38                           ;
-; Assembler            ; 00:00:11     ; 1.0                     ; 550 MB              ; 00:00:11                           ;
-; Timing Analyzer      ; 00:00:16     ; 1.9                     ; 715 MB              ; 00:00:28                           ;
-; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 553 MB              ; 00:00:05                           ;
-; Total                ; 00:03:11     ; --                      ; --                  ; 00:05:16                           ;
+; Analysis & Synthesis ; 00:01:07     ; 1.0                     ; 755 MB              ; 00:01:30                           ;
+; Fitter               ; 00:00:55     ; 1.7                     ; 1872 MB             ; 00:02:09                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 562 MB              ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:12     ; 3.1                     ; 768 MB              ; 00:00:29                           ;
+; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 555 MB              ; 00:00:05                           ;
+; Total                ; 00:02:25     ; --                      ; --                  ; 00:04:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
