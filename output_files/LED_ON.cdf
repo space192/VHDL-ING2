@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Users/VHDLING2/Desktop/VHDL-ING2/output_files/") File("LED_ON.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("Z:/VHDL/projet/LED ON/output_files/") File("LED_ON.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

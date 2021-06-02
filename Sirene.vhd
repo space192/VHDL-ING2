@@ -34,6 +34,10 @@ begin
 					temp2 := 0;
 					switch := '0';
 				end if;
+			elsif valeur = 0 then
+				switch := '0';
+			else
+				switch := '0';
 			end if;
 			if selec = "00" then
 				if temp <= (max/2) then

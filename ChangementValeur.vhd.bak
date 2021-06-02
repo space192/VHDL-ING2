@@ -1,0 +1,33 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use work.all;
+
+entity changementValeur is
+port(
+	unite, dizieme, centieme : in std_logic_vector(3 downto 0);
+	maxV1, maxV2, maxV3, maxv4 : out integer);
+end entity;
+
+
+architecture structural of changementValeur is
+
+begin
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+end of structural;

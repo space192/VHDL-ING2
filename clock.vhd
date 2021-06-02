@@ -5,7 +5,7 @@ use work.all;
 
 entity clockM is 
 	generic(	
-		max : in INTEGER);
+		max : in INTEGER:=50000000);
 	port(
 		signal clkS : in std_logic;
 		signal clockout : out std_logic);

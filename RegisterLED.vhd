@@ -25,7 +25,7 @@ begin
 	begin
 		if clk'event and clk ='1' then
 			if ENABLE = '0' then
-				RESET <= '0';
+				RESET <= '1';
 				if SRCLK = '1' then
 					if counter = 0 then
 						counter <= 7;
@@ -42,7 +42,7 @@ begin
 					SRCLK <= '1';
 				end if;
 			else
-				RESET <= '1';
+				RESET <= '0';
 				ENABLE <= '0';
 			end if;
 		end if;
