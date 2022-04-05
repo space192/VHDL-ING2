@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="hello_adc" kind="hello_adc" version="1.0" fabric="QSYS">
- <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2021.05.30.22:53:01 -->
+ <!-- Format version 21.1 842 (Future versions may contain additional information.) -->
+ <!-- 2022.02.18.21:30:14 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1622407981</value>
+  <value>1645216214</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -98,7 +98,7 @@
  <module
    name="adc_control_core"
    kind="altera_modular_adc"
-   version="18.1"
+   version="21.1"
    path="adc_control_core">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -1875,7 +1875,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clock" kind="clock_sink" version="18.1">
+  <interface name="clock" kind="clock_sink" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1936,7 +1936,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="reset_sink" kind="reset_sink" version="18.1">
+  <interface name="reset_sink" kind="reset_sink" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1981,7 +1981,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="adc_pll_clock" kind="clock_sink" version="18.1">
+  <interface name="adc_pll_clock" kind="clock_sink" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2026,7 +2026,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="adc_pll_locked" kind="conduit_end" version="18.1">
+  <interface name="adc_pll_locked" kind="conduit_end" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2071,7 +2071,7 @@ parameters are a RESULT of the module parameters. -->
     <role>export</role>
    </port>
   </interface>
-  <interface name="command" kind="avalon_streaming_sink" version="18.1">
+  <interface name="command" kind="avalon_streaming_sink" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2220,7 +2220,7 @@ parameters are a RESULT of the module parameters. -->
     <role>ready</role>
    </port>
   </interface>
-  <interface name="response" kind="avalon_streaming_source" version="18.1">
+  <interface name="response" kind="avalon_streaming_source" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2370,7 +2370,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module name="altpll" kind="altpll" version="18.1" path="altpll">
+ <module name="altpll" kind="altpll" version="21.1" path="altpll">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="HIDDEN_CUSTOM_ELABORATION">
@@ -3713,7 +3713,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="inclk_interface" kind="clock_sink" version="18.1">
+  <interface name="inclk_interface" kind="clock_sink" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3774,7 +3774,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="inclk_interface_reset" kind="reset_sink" version="18.1">
+  <interface name="inclk_interface_reset" kind="reset_sink" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -3819,7 +3819,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
-  <interface name="pll_slave" kind="avalon_slave" version="18.1">
+  <interface name="pll_slave" kind="avalon_slave" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4180,7 +4180,7 @@ parameters are a RESULT of the module parameters. -->
     <role>writedata</role>
    </port>
   </interface>
-  <interface name="c0" kind="clock_source" version="18.1">
+  <interface name="c0" kind="clock_source" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4255,7 +4255,7 @@ parameters are a RESULT of the module parameters. -->
     <name>adc_control_core.adc_pll_clock</name>
    </clockDomainMember>
   </interface>
-  <interface name="c1" kind="clock_source" version="18.1">
+  <interface name="c1" kind="clock_source" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4336,7 +4336,7 @@ parameters are a RESULT of the module parameters. -->
     <name>clock_bridge.in_clk</name>
    </clockDomainMember>
   </interface>
-  <interface name="areset_conduit" kind="conduit_end" version="18.1">
+  <interface name="areset_conduit" kind="conduit_end" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4381,7 +4381,7 @@ parameters are a RESULT of the module parameters. -->
     <role>export</role>
    </port>
   </interface>
-  <interface name="locked_conduit" kind="conduit_end" version="18.1">
+  <interface name="locked_conduit" kind="conduit_end" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4427,7 +4427,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module name="clk_50" kind="clock_source" version="18.1" path="clk_50">
+ <module name="clk_50" kind="clock_source" version="21.1" path="clk_50">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="clockFrequency">
@@ -4480,7 +4480,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clk_in" kind="clock_sink" version="18.1">
+  <interface name="clk_in" kind="clock_sink" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4545,7 +4545,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="clk_in_reset" kind="reset_sink" version="18.1">
+  <interface name="clk_in_reset" kind="reset_sink" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4594,7 +4594,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="clk" kind="clock_source" version="18.1">
+  <interface name="clk" kind="clock_source" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4669,7 +4669,7 @@ parameters are a RESULT of the module parameters. -->
     <name>altpll.inclk_interface</name>
    </clockDomainMember>
   </interface>
-  <interface name="clk_reset" kind="reset_source" version="18.1">
+  <interface name="clk_reset" kind="reset_source" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4734,7 +4734,7 @@ parameters are a RESULT of the module parameters. -->
  <module
    name="clock_bridge"
    kind="altera_clock_bridge"
-   version="18.1"
+   version="21.1"
    path="clock_bridge">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
@@ -4780,7 +4780,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="in_clk" kind="clock_sink" version="18.1">
+  <interface name="in_clk" kind="clock_sink" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4841,7 +4841,7 @@ parameters are a RESULT of the module parameters. -->
     <role>clk</role>
    </port>
   </interface>
-  <interface name="out_clk" kind="clock_source" version="18.1">
+  <interface name="out_clk" kind="clock_source" version="21.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -4914,7 +4914,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="altpll.c0/adc_control_core.adc_pll_clock"
    kind="clock"
-   version="18.1"
+   version="21.1"
    start="altpll.c0"
    end="adc_control_core.adc_pll_clock">
   <parameter name="deviceFamily">
@@ -4941,7 +4941,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="altpll.c1/adc_control_core.clock"
    kind="clock"
-   version="18.1"
+   version="21.1"
    start="altpll.c1"
    end="adc_control_core.clock">
   <parameter name="deviceFamily">
@@ -4968,7 +4968,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="altpll.c1/clock_bridge.in_clk"
    kind="clock"
-   version="18.1"
+   version="21.1"
    start="altpll.c1"
    end="clock_bridge.in_clk">
   <parameter name="deviceFamily">
@@ -4995,7 +4995,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_50.clk/altpll.inclk_interface"
    kind="clock"
-   version="18.1"
+   version="21.1"
    start="clk_50.clk"
    end="altpll.inclk_interface">
   <parameter name="deviceFamily">
@@ -5022,7 +5022,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="altpll.locked_conduit/adc_control_core.adc_pll_locked"
    kind="conduit"
-   version="18.1"
+   version="21.1"
    start="altpll.locked_conduit"
    end="adc_control_core.adc_pll_locked">
   <parameter name="endPort">
@@ -5089,7 +5089,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_50.clk_reset/altpll.inclk_interface_reset"
    kind="reset"
-   version="18.1"
+   version="21.1"
    start="clk_50.clk_reset"
    end="altpll.inclk_interface_reset">
   <parameter name="deviceFamily">
@@ -5116,7 +5116,7 @@ parameters are a RESULT of the module parameters. -->
  <connection
    name="clk_50.clk_reset/adc_control_core.reset_sink"
    kind="reset"
-   version="18.1"
+   version="21.1"
    start="clk_50.clk_reset"
    end="adc_control_core.reset_sink">
   <parameter name="deviceFamily">
@@ -5146,7 +5146,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>Modular ADC core Intel FPGA IP</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>4</instanceCount>
@@ -5154,7 +5154,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Clock Input</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>2</instanceCount>
@@ -5162,7 +5162,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Input</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>3</instanceCount>
@@ -5170,7 +5170,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Conduit</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -5178,7 +5178,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Avalon Streaming Sink</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -5186,7 +5186,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Avalon Streaming Source</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -5194,7 +5194,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>ALTPLL Intel FPGA IP</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -5202,7 +5202,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Avalon Memory Mapped Slave</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>3</instanceCount>
@@ -5210,7 +5210,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Clock Output</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -5218,7 +5218,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>Clock Source</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -5226,7 +5226,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Clock Input</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -5234,7 +5234,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Input</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -5242,7 +5242,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Clock Output</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -5250,7 +5250,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
   <displayName>Reset Output</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -5258,7 +5258,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
   <displayName>Clock Bridge</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>4</instanceCount>
@@ -5266,7 +5266,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Clock Connection</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -5274,7 +5274,7 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Conduit Connection</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
  <plugin>
   <instanceCount>2</instanceCount>
@@ -5282,8 +5282,8 @@ parameters are a RESULT of the module parameters. -->
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
   <displayName>Reset Connection</displayName>
-  <version>18.1</version>
+  <version>21.1</version>
  </plugin>
- <reportVersion>18.1 625</reportVersion>
+ <reportVersion>21.1 842</reportVersion>
  <uniqueIdentifier></uniqueIdentifier>
 </EnsembleReport>
