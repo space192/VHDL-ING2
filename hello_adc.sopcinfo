@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="hello_adc" kind="hello_adc" version="1.0" fabric="QSYS">
- <!-- Format version 21.1 842 (Future versions may contain additional information.) -->
- <!-- 2022.02.18.21:30:14 -->
+ <!-- Format version 21.1 850 (Future versions may contain additional information.) -->
+ <!-- 2022.09.15.19:33:23 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1645216214</value>
+  <value>1663263203</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -5284,6 +5284,6 @@ parameters are a RESULT of the module parameters. -->
   <displayName>Reset Connection</displayName>
   <version>21.1</version>
  </plugin>
- <reportVersion>21.1 842</reportVersion>
+ <reportVersion>21.1 850</reportVersion>
  <uniqueIdentifier></uniqueIdentifier>
 </EnsembleReport>

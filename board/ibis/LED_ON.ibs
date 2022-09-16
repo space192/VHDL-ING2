@@ -1,14 +1,14 @@
 [IBIS Ver]   4.2
 [File Name]  LED_ON.ibs
 [File Rev]   3.0
-[Date]       May 30, 2021
+[Date]       September 15, 2022
 [Source]     Altera Corporation
 [Notes]      - The models are designated as "Final" and have been correlated against physical device operation.
              - This IBIS model is checked using IBISCHK v5.0.4
                There are no known errors and warnings reported.
              - There are no known limitations for this IBIS model release.
              - Contact point: Altera Corporation, http://www.altera.com/corporate/contact/con-index.html
-             - This file is generated using Quartus II Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+             - This file is generated using Quartus II Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
              - Unused IOs which have been assigned as tri-stated inputs or as outputs driving any signal in Quartus II 
                arerepresented by the NC. 
              - Only general purpose IBIS models are supported.
@@ -23,7 +23,7 @@
              
              
 [Disclaimer] Data is for modeling purposes only and is not guaranteed.
-[Copyright]  Copyright (C) 2018  Intel Corporation. All rights reserved.
+[Copyright]  Copyright (C) 2022  Intel Corporation. All rights reserved.
 [Component]  10M50DAF484C7G_LED_ON                   
 [Manufacturer] Altera Corporation
 [Package]
